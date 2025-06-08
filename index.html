@@ -1,25 +1,33 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DZ Cleaning Services</title>
   <style>
     body {
       font-family: Arial, sans-serif;
-      margin: 0; padding: 0;
-      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
       color: #333;
       line-height: 1.6;
     }
     header, footer {
-      background-color: #004080;
+      background-color: rgba(0, 64, 128, 0.9);
       color: white;
       text-align: center;
       padding: 1rem;
     }
+    header img {
+      max-height: 80px;
+      margin-bottom: 10px;
+    }
     nav {
-      background-color: #007BFF;
+      background-color: rgba(0, 123, 255, 0.95);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -34,10 +42,10 @@
       background-color: #0056b3;
     }
     main {
-      max-width: 900px;
-      margin: 2rem auto;
-      background: white;
       padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+      background-color: rgba(255, 255, 255, 0.95);
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h2 {
@@ -45,7 +53,7 @@
     }
     .lang-switcher {
       text-align: center;
-      margin-bottom: 1rem;
+      margin: 1rem 0;
     }
     .lang-switcher button {
       margin: 0.3rem;
@@ -58,14 +66,17 @@
   </style>
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('[data-lang]').forEach(el => el.classList.remove('visible'));
-      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => el.classList.add('visible'));
+      const sections = document.querySelectorAll('[data-lang]');
+      sections.forEach(s => s.classList.remove('visible'));
+      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
+      active.forEach(s => s.classList.add('visible'));
     }
     window.onload = () => switchLang('ar');
   </script>
 </head>
 <body>
   <header>
+    <img src="images/logo.png" alt="DZ Cleaning Logo">
     <h1>DZ Cleaning Services</h1>
     <div class="lang-switcher">
       <button onclick="switchLang('ar')">العربية</button>
@@ -83,94 +94,89 @@
   </nav>
 
   <main>
-    <!-- About Us -->
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
-      <p>شركة متخصصة في التنظيف للمنازل والمكاتب وغيرها.</p>
+      <p>شركة متخصصة في التنظيف للمنازل والمكاتب والفتريات ونهاية الورشات. نتميز بالاحترافية واستخدام المنتجات البيئية.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Entreprise spécialisée dans le nettoyage pour maisons et bureaux.</p>
+      <p>Entreprise spécialisée dans le nettoyage des maisons, bureaux, vitrines et fin de chantier. Professionnalisme et produits écologiques.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>Specialized cleaning company for homes and offices.</p>
+      <p>A company specialized in cleaning homes, offices, shopfronts, and post-construction sites. We value professionalism and eco-friendly products.</p>
     </section>
 
-    <!-- Services -->
     <section id="services" data-lang="ar" class="visible">
-      <h2>الخدمات</h2>
+      <h2>خدماتنا</h2>
       <ul>
-        <li>تنظيف منازل</li>
-        <li>تنظيف مكاتب</li>
+        <li>تنظيف المنازل</li>
+        <li>تنظيف المكاتب</li>
         <li>تنظيف الفتريات</li>
-        <li>نهاية الورشات</li>
+        <li>تنظيف بعد انتهاء الورشات</li>
       </ul>
     </section>
     <section id="services" data-lang="fr">
       <h2>Nos services</h2>
       <ul>
-        <li>Nettoyage des maisons</li>
+        <li>Nettoyage des domiciles</li>
         <li>Nettoyage des bureaux</li>
-        <li>Nettoyage des filtres</li>
+        <li>Nettoyage des vitrines</li>
         <li>Fin de chantier</li>
       </ul>
     </section>
     <section id="services" data-lang="en">
       <h2>Our Services</h2>
       <ul>
-        <li>Home Cleaning</li>
-        <li>Office Cleaning</li>
-        <li>Filter Cleaning</li>
-        <li>Post-Construction Cleaning</li>
+        <li>Home cleaning</li>
+        <li>Office cleaning</li>
+        <li>Shop window cleaning</li>
+        <li>Post-construction cleaning</li>
       </ul>
     </section>
 
-    <!-- Contact -->
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
-      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com</p>
+      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
     </section>
     <section id="contact" data-lang="fr">
       <h2>Contact</h2>
-      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com</p>
+      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com<br>Adresse : 14b quai d'Arve, Annemasse 74100</p>
     </section>
     <section id="contact" data-lang="en">
       <h2>Contact Us</h2>
-      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com</p>
+      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
     </section>
 
-    <!-- Privacy Policy -->
     <section id="policy" data-lang="ar" class="visible">
       <h2>سياسة الخصوصية</h2>
-      <p>نحترم خصوصيتك ونلتزم بحماية بياناتك.</p>
+      <p>نحن نحترم خصوصيتك ولا نشارك بياناتك مع أي طرف ثالث دون موافقتك.</p>
     </section>
     <section id="policy" data-lang="fr">
       <h2>Politique de confidentialité</h2>
-      <p>Nous respectons votre vie privée et protégeons vos données.</p>
+      <p>Nous respectons votre vie privée et ne partageons vos données avec aucun tiers sans votre consentement.</p>
     </section>
     <section id="policy" data-lang="en">
       <h2>Privacy Policy</h2>
-      <p>We respect your privacy and are committed to protecting your data.</p>
+      <p>We respect your privacy and do not share your data with third parties without your consent.</p>
     </section>
 
-    <!-- Terms of Service -->
     <section id="terms" data-lang="ar" class="visible">
-      <h2>شروط الخدمة</h2>
-      <p>باستخدامك موقعنا، فإنك توافق على شروط الخدمة.</p>
+      <h2>شروط الاستخدام</h2>
+      <p>باستخدامك لموقعنا فإنك توافق على شروط الاستخدام المعلنة.</p>
     </section>
     <section id="terms" data-lang="fr">
       <h2>Conditions d'utilisation</h2>
-      <p>En utilisant notre site, vous acceptez les conditions d'utilisation.</p>
+      <p>En utilisant notre site, vous acceptez les conditions générales publiées.</p>
     </section>
     <section id="terms" data-lang="en">
       <h2>Terms of Service</h2>
-      <p>By using our site, you agree to the terms of service.</p>
+      <p>By using our site, you agree to the published terms of service.</p>
     </section>
   </main>
 
   <footer>
-    <p>&copy; 2025 DZ Cleaning Services</p>
+    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés</p>
   </footer>
 </body>
 </html>
