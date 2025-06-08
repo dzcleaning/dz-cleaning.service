@@ -4,30 +4,69 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DZ Cleaning Services</title>
+  <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
+    :root {
+      --main-color: #004080;
+      --accent-color: #007BFF;
+      --bg-light: #f8f9fa;
+      --text-dark: #333;
+    }
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: url('images/background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #333;
-      line-height: 1.6;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
     }
-    header, footer {
-      background-color: rgba(0, 64, 128, 0.9);
+    header {
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
       color: white;
       text-align: center;
-      padding: 1rem;
+      padding: 4rem 1rem;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1 {
+      position: relative;
+      z-index: 2;
+      font-size: 2.5rem;
     }
     header img {
-      height: 60px;
-      margin-bottom: 0.5rem;
+      width: 100px;
+      height: auto;
+      position: relative;
+      z-index: 2;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-top: 1rem;
+      position: relative;
+      z-index: 2;
+    }
+    .lang-switcher button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: var(--accent-color);
+      color: white;
     }
     nav {
-      background-color: rgba(0, 123, 255, 0.9);
       display: flex;
       justify-content: center;
+      background-color: var(--main-color);
       flex-wrap: wrap;
     }
     nav a {
@@ -37,31 +76,37 @@
       font-weight: bold;
     }
     nav a:hover {
-      background-color: rgba(0, 86, 179, 0.9);
+      background-color: var(--accent-color);
     }
     main {
       padding: 2rem;
-      max-width: 900px;
+      max-width: 960px;
       margin: auto;
-      background-color: rgba(255, 255, 255, 0.95);
+      background-color: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 10px;
     }
     h2 {
-      color: #004080;
-    }
-    .lang-switcher {
-      text-align: center;
-      margin: 1rem 0;
-    }
-    .lang-switcher button {
-      margin: 0.3rem;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      cursor: pointer;
+      color: var(--main-color);
     }
     [data-lang] { display: none; }
     .visible { display: block; }
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .service-box {
+      flex: 1 1 45%;
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 8px;
+    }
   </style>
   <script>
     function switchLang(lang) {
@@ -75,7 +120,7 @@
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="DZ Cleaning Services Logo" />
+    <img src="images/logo.png" alt="DZ Cleaning Services Logo">
     <h1>DZ Cleaning Services</h1>
     <div class="lang-switcher">
       <button onclick="switchLang('ar')">العربية</button>
@@ -83,60 +128,55 @@
       <button onclick="switchLang('en')">English</button>
     </div>
   </header>
-
   <nav>
-    <a href="#about">من نحن</a>
+    <a href="#about">عن الشركة</a>
     <a href="#services">الخدمات</a>
     <a href="#contact">اتصل بنا</a>
     <a href="#policy">الخصوصية</a>
     <a href="#terms">الشروط</a>
   </nav>
-
   <main>
-    <!-- About -->
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
-      <p>شركة متخصصة في التنظيف للمنازل والمكاتب والفتريات وإنهاء الورشات، باستخدام منتجات صديقة للبيئة وفريق محترف.</p>
+      <p>نحن شركة تنظيف محترفة نقدم خدمات شاملة للمنازل والمكاتب والورشات. نستخدم منتجات صديقة للبيئة ولدينا فريق مؤهل يضمن الجودة والموثوقية.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Entreprise spécialisée dans le nettoyage des maisons, bureaux, vitrines et fins de chantier. Produits écologiques et équipe qualifiée.</p>
+      <p>Nous sommes une société de nettoyage professionnelle offrant des services complets pour les maisons, les bureaux et les chantiers. Produits écologiques et équipe qualifiée pour garantir la qualité.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>Specialized cleaning company for homes, offices, storefronts, and post-construction, using eco-friendly products and a professional team.</p>
+      <p>We are a professional cleaning company offering full services for homes, offices, and post-construction sites. We use eco-friendly products and have a skilled team for reliable quality.</p>
     </section>
 
-    <!-- Services -->
     <section id="services" data-lang="ar" class="visible">
-      <h2>الخدمات</h2>
-      <ul>
-        <li>تنظيف المنازل</li>
-        <li>تنظيف المكاتب</li>
-        <li>تنظيف الفتريات</li>
-        <li>تنظيف ما بعد الورشات</li>
-      </ul>
+      <h2>خدماتنا</h2>
+      <div class="services">
+        <div class="service-box">تنظيف منازل</div>
+        <div class="service-box">تنظيف مكاتب</div>
+        <div class="service-box">نهاية الورشات</div>
+        <div class="service-box">تنظيف المحلات</div>
+      </div>
     </section>
     <section id="services" data-lang="fr">
       <h2>Nos services</h2>
-      <ul>
-        <li>Nettoyage de maisons</li>
-        <li>Nettoyage de bureaux</li>
-        <li>Nettoyage de vitrines</li>
-        <li>Nettoyage de fin de chantier</li>
-      </ul>
+      <div class="services">
+        <div class="service-box">Nettoyage des maisons</div>
+        <div class="service-box">Bureaux</div>
+        <div class="service-box">Fin de chantier</div>
+        <div class="service-box">Commerces</div>
+      </div>
     </section>
     <section id="services" data-lang="en">
       <h2>Our Services</h2>
-      <ul>
-        <li>Home cleaning</li>
-        <li>Office cleaning</li>
-        <li>Storefront cleaning</li>
-        <li>Post-construction cleaning</li>
-      </ul>
+      <div class="services">
+        <div class="service-box">Home Cleaning</div>
+        <div class="service-box">Office Cleaning</div>
+        <div class="service-box">Post-Construction</div>
+        <div class="service-box">Shops</div>
+      </div>
     </section>
 
-    <!-- Contact -->
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
       <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
@@ -150,37 +190,34 @@
       <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
     </section>
 
-    <!-- Privacy -->
     <section id="policy" data-lang="ar" class="visible">
       <h2>سياسة الخصوصية</h2>
-      <p>نلتزم بالحفاظ على خصوصيتك ولا نشارك بياناتك مع أي طرف ثالث.</p>
+      <p>نلتزم بحماية خصوصيتك وبياناتك الشخصية. لا نقوم بمشاركة أي بيانات مع جهات خارجية.</p>
     </section>
     <section id="policy" data-lang="fr">
       <h2>Politique de confidentialité</h2>
-      <p>Nous nous engageons à respecter votre vie privée et à ne pas partager vos données.</p>
+      <p>Nous nous engageons à protéger votre vie privée. Aucune information n'est partagée avec des tiers.</p>
     </section>
     <section id="policy" data-lang="en">
       <h2>Privacy Policy</h2>
-      <p>We are committed to protecting your privacy and not sharing your data.</p>
+      <p>We are committed to protecting your privacy. No data is shared with third parties.</p>
     </section>
 
-    <!-- Terms -->
     <section id="terms" data-lang="ar" class="visible">
       <h2>شروط الاستخدام</h2>
-      <p>باستخدامك لهذا الموقع، فإنك توافق على الشروط والأحكام الخاصة بنا.</p>
+      <p>باستخدامك لموقعنا، فإنك توافق على احترام شروطنا وسياساتنا الموضحة هنا.</p>
     </section>
     <section id="terms" data-lang="fr">
       <h2>Conditions d'utilisation</h2>
-      <p>En utilisant ce site, vous acceptez nos conditions d'utilisation.</p>
+      <p>En utilisant notre site, vous acceptez nos conditions et nos politiques.</p>
     </section>
     <section id="terms" data-lang="en">
-      <h2>Terms of Use</h2>
-      <p>By using this site, you agree to our terms and conditions.</p>
+      <h2>Terms of Service</h2>
+      <p>By using our website, you agree to our terms and policies.</p>
     </section>
   </main>
-
   <footer>
-    <p>&copy; 2025 DZ Cleaning Services</p>
+    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
   </footer>
 </body>
 </html>
