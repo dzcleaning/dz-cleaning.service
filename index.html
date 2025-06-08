@@ -14,12 +14,12 @@
     }
     header, footer {
       background-color: #004080;
-      color: #fff;
+      color: white;
       text-align: center;
       padding: 1rem;
     }
     nav {
-      background: #007BFF;
+      background-color: #007BFF;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -37,7 +37,7 @@
       max-width: 900px;
       margin: 2rem auto;
       background: white;
-      padding: 1.5rem;
+      padding: 2rem;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
     h2 {
@@ -45,39 +45,21 @@
     }
     .lang-switcher {
       text-align: center;
-      margin: 1rem 0;
+      margin-bottom: 1rem;
     }
     .lang-switcher button {
       margin: 0.3rem;
       padding: 0.5rem 1rem;
       font-weight: bold;
       cursor: pointer;
-      border: none;
-      background-color: #007BFF;
-      color: white;
-      border-radius: 4px;
-    }
-    .lang-switcher button:hover {
-      background-color: #0056b3;
     }
     [data-lang] { display: none; }
     .visible { display: block; }
-
-    /* بعض التنسيق للصور */
-    img {
-      max-width: 100%;
-      height: auto;
-      margin: 1rem 0;
-      border-radius: 8px;
-      box-shadow: 0 0 5px rgba(0,0,0,0.2);
-    }
   </style>
   <script>
     function switchLang(lang) {
-      const sections = document.querySelectorAll('[data-lang]');
-      sections.forEach(s => s.classList.remove('visible'));
-      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
-      active.forEach(s => s.classList.add('visible'));
+      document.querySelectorAll('[data-lang]').forEach(el => el.classList.remove('visible'));
+      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(el => el.classList.add('visible'));
     }
     window.onload = () => switchLang('ar');
   </script>
@@ -91,43 +73,39 @@
       <button onclick="switchLang('en')">English</button>
     </div>
   </header>
+
   <nav>
     <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
-    <a href="#gallery">المعرض</a>
     <a href="#contact">اتصل بنا</a>
     <a href="#policy">الخصوصية</a>
     <a href="#terms">الشروط</a>
   </nav>
-  <main>
 
-    <!-- عن الشركة -->
+  <main>
+    <!-- About Us -->
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
-      <p>شركة متخصصة في التنظيف للمنازل والمكاتب والفتريات ونهاية الورشات، ملتزمون بالجودة والاحترافية.</p>
-      <img src="images/about_ar.jpg" alt="شركة التنظيف" />
+      <p>شركة متخصصة في التنظيف للمنازل والمكاتب وغيرها.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Entreprise spécialisée dans le nettoyage des maisons, bureaux, filtres et fin de chantier, engagée dans la qualité et le professionnalisme.</p>
-      <img src="images/about_fr.jpg" alt="Entreprise de nettoyage" />
+      <p>Entreprise spécialisée dans le nettoyage pour maisons et bureaux.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>Specialized cleaning company for homes, offices, filters, and post-construction cleaning, committed to quality and professionalism.</p>
-      <img src="images/about_en.jpg" alt="Cleaning company" />
+      <p>Specialized cleaning company for homes and offices.</p>
     </section>
 
-    <!-- الخدمات -->
+    <!-- Services -->
     <section id="services" data-lang="ar" class="visible">
       <h2>الخدمات</h2>
       <ul>
-        <li>تنظيف المنازل</li>
-        <li>تنظيف المكاتب</li>
-        <li>تنظيف الفلترات</li>
-        <li>تنظيف نهاية الورشات</li>
+        <li>تنظيف منازل</li>
+        <li>تنظيف مكاتب</li>
+        <li>تنظيف الفتريات</li>
+        <li>نهاية الورشات</li>
       </ul>
-      <img src="images/services_ar.jpg" alt="خدمات التنظيف" />
     </section>
     <section id="services" data-lang="fr">
       <h2>Nos services</h2>
@@ -135,9 +113,8 @@
         <li>Nettoyage des maisons</li>
         <li>Nettoyage des bureaux</li>
         <li>Nettoyage des filtres</li>
-        <li>Nettoyage de fin de chantier</li>
+        <li>Fin de chantier</li>
       </ul>
-      <img src="images/services_fr.jpg" alt="Services de nettoyage" />
     </section>
     <section id="services" data-lang="en">
       <h2>Our Services</h2>
@@ -147,27 +124,9 @@
         <li>Filter Cleaning</li>
         <li>Post-Construction Cleaning</li>
       </ul>
-      <img src="images/services_en.jpg" alt="Cleaning services" />
     </section>
 
-    <!-- معرض الصور -->
-    <section id="gallery" data-lang="ar" class="visible">
-      <h2>معرض الصور</h2>
-      <img src="images/gallery1.jpg" alt="صور التنظيف" />
-      <img src="images/gallery2.jpg" alt="صور التنظيف" />
-    </section>
-    <section id="gallery" data-lang="fr">
-      <h2>Galerie</h2>
-      <img src="images/gallery1.jpg" alt="Photos nettoyage" />
-      <img src="images/gallery2.jpg" alt="Photos nettoyage" />
-    </section>
-    <section id="gallery" data-lang="en">
-      <h2>Gallery</h2>
-      <img src="images/gallery1.jpg" alt="Cleaning photos" />
-      <img src="images/gallery2.jpg" alt="Cleaning photos" />
-    </section>
-
-    <!-- اتصل بنا -->
+    <!-- Contact -->
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
       <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com</p>
@@ -181,35 +140,35 @@
       <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com</p>
     </section>
 
-    <!-- سياسة الخصوصية -->
+    <!-- Privacy Policy -->
     <section id="policy" data-lang="ar" class="visible">
       <h2>سياسة الخصوصية</h2>
-      <p>نحن نحترم خصوصيتك وملتزمون بحماية بياناتك الشخصية.</p>
+      <p>نحترم خصوصيتك ونلتزم بحماية بياناتك.</p>
     </section>
     <section id="policy" data-lang="fr">
       <h2>Politique de confidentialité</h2>
-      <p>Nous respectons votre vie privée et nous engageons à protéger vos données personnelles.</p>
+      <p>Nous respectons votre vie privée et protégeons vos données.</p>
     </section>
     <section id="policy" data-lang="en">
       <h2>Privacy Policy</h2>
-      <p>We respect your privacy and are committed to protecting your personal data.</p>
+      <p>We respect your privacy and are committed to protecting your data.</p>
     </section>
 
-    <!-- شروط الخدمة -->
+    <!-- Terms of Service -->
     <section id="terms" data-lang="ar" class="visible">
       <h2>شروط الخدمة</h2>
-      <p>باستخدام هذا الموقع، فإنك توافق على شروط الخدمة الخاصة بنا.</p>
+      <p>باستخدامك موقعنا، فإنك توافق على شروط الخدمة.</p>
     </section>
     <section id="terms" data-lang="fr">
       <h2>Conditions d'utilisation</h2>
-      <p>En utilisant ce site, vous acceptez nos conditions d'utilisation.</p>
+      <p>En utilisant notre site, vous acceptez les conditions d'utilisation.</p>
     </section>
     <section id="terms" data-lang="en">
       <h2>Terms of Service</h2>
-      <p>By using this site, you agree to our terms of service.</p>
+      <p>By using our site, you agree to the terms of service.</p>
     </section>
-
   </main>
+
   <footer>
     <p>&copy; 2025 DZ Cleaning Services</p>
   </footer>
