@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DZ Cleaning Services</title>
   <style>
     body {
@@ -15,17 +15,17 @@
       line-height: 1.6;
     }
     header, footer {
-      background-color: #004080cc;
+      background-color: rgba(0, 64, 128, 0.9);
       color: white;
       text-align: center;
       padding: 1rem;
     }
     header img {
-      max-width: 120px;
+      height: 60px;
       margin-bottom: 0.5rem;
     }
     nav {
-      background-color: #007BFFdd;
+      background-color: rgba(0, 123, 255, 0.9);
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
@@ -35,18 +35,17 @@
       padding: 1rem;
       text-decoration: none;
       font-weight: bold;
-      transition: background-color 0.3s;
     }
     nav a:hover {
-      background-color: #0056b3;
+      background-color: rgba(0, 86, 179, 0.9);
     }
     main {
       padding: 2rem;
       max-width: 900px;
       margin: auto;
-      background-color: #ffffffdd;
+      background-color: rgba(255, 255, 255, 0.95);
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 12px;
+      border-radius: 10px;
     }
     h2 {
       color: #004080;
@@ -76,7 +75,7 @@
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="DZ Cleaning Services Logo">
+    <img src="images/logo.png" alt="DZ Cleaning Services Logo" />
     <h1>DZ Cleaning Services</h1>
     <div class="lang-switcher">
       <button onclick="switchLang('ar')">العربية</button>
@@ -84,6 +83,7 @@
       <button onclick="switchLang('en')">English</button>
     </div>
   </header>
+
   <nav>
     <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
@@ -91,72 +91,94 @@
     <a href="#policy">الخصوصية</a>
     <a href="#terms">الشروط</a>
   </nav>
+
   <main>
+    <!-- About -->
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
-      <p>شركة متخصصة في التنظيف للمنازل والمكاتب وغيرها.</p>
+      <p>شركة متخصصة في التنظيف للمنازل والمكاتب والفتريات وإنهاء الورشات، باستخدام منتجات صديقة للبيئة وفريق محترف.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Entreprise spécialisée dans le nettoyage pour maisons et bureaux.</p>
+      <p>Entreprise spécialisée dans le nettoyage des maisons, bureaux, vitrines et fins de chantier. Produits écologiques et équipe qualifiée.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>Specialized cleaning company for homes and offices.</p>
+      <p>Specialized cleaning company for homes, offices, storefronts, and post-construction, using eco-friendly products and a professional team.</p>
     </section>
 
+    <!-- Services -->
     <section id="services" data-lang="ar" class="visible">
       <h2>الخدمات</h2>
-      <ul><li>تنظيف منازل</li><li>مكاتب</li></ul>
+      <ul>
+        <li>تنظيف المنازل</li>
+        <li>تنظيف المكاتب</li>
+        <li>تنظيف الفتريات</li>
+        <li>تنظيف ما بعد الورشات</li>
+      </ul>
     </section>
     <section id="services" data-lang="fr">
       <h2>Nos services</h2>
-      <ul><li>Maisons</li><li>Bureaux</li></ul>
+      <ul>
+        <li>Nettoyage de maisons</li>
+        <li>Nettoyage de bureaux</li>
+        <li>Nettoyage de vitrines</li>
+        <li>Nettoyage de fin de chantier</li>
+      </ul>
     </section>
     <section id="services" data-lang="en">
       <h2>Our Services</h2>
-      <ul><li>Homes</li><li>Offices</li></ul>
+      <ul>
+        <li>Home cleaning</li>
+        <li>Office cleaning</li>
+        <li>Storefront cleaning</li>
+        <li>Post-construction cleaning</li>
+      </ul>
     </section>
 
+    <!-- Contact -->
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
-      <p>الهاتف: 0033615658535<br>البريد: dz.cleaning@yahoo.com</p>
+      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
     </section>
     <section id="contact" data-lang="fr">
       <h2>Contact</h2>
-      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com</p>
+      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com<br>Adresse : 14b quai d'Arve, Annemasse 74100</p>
     </section>
     <section id="contact" data-lang="en">
       <h2>Contact Us</h2>
-      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com</p>
+      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
     </section>
 
+    <!-- Privacy -->
     <section id="policy" data-lang="ar" class="visible">
       <h2>سياسة الخصوصية</h2>
-      <p>نحترم خصوصيتك.</p>
+      <p>نلتزم بالحفاظ على خصوصيتك ولا نشارك بياناتك مع أي طرف ثالث.</p>
     </section>
     <section id="policy" data-lang="fr">
       <h2>Politique de confidentialité</h2>
-      <p>Nous respectons votre vie privée.</p>
+      <p>Nous nous engageons à respecter votre vie privée et à ne pas partager vos données.</p>
     </section>
     <section id="policy" data-lang="en">
       <h2>Privacy Policy</h2>
-      <p>We respect your privacy.</p>
+      <p>We are committed to protecting your privacy and not sharing your data.</p>
     </section>
 
+    <!-- Terms -->
     <section id="terms" data-lang="ar" class="visible">
-      <h2>شروط الخدمة</h2>
-      <p>باستخدامك لموقعنا فإنك توافق على الشروط.</p>
+      <h2>شروط الاستخدام</h2>
+      <p>باستخدامك لهذا الموقع، فإنك توافق على الشروط والأحكام الخاصة بنا.</p>
     </section>
     <section id="terms" data-lang="fr">
       <h2>Conditions d'utilisation</h2>
-      <p>En utilisant notre site, vous acceptez les conditions.</p>
+      <p>En utilisant ce site, vous acceptez nos conditions d'utilisation.</p>
     </section>
     <section id="terms" data-lang="en">
-      <h2>Terms of Service</h2>
-      <p>By using our site you agree to the terms.</p>
+      <h2>Terms of Use</h2>
+      <p>By using this site, you agree to our terms and conditions.</p>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 DZ Cleaning Services</p>
   </footer>
