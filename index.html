@@ -5,100 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DZ Cleaning Services</title>
   <style>
-    :root {
-      --main-color: #007bff;
-      --dark-blue: #004080;
-      --light-bg: #f4f8fc;
-      --gray: #666;
-    }
-    * {
-      box-sizing: border-box;
+    body {
+      font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-    }
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: var(--light-bg) url("images/background.jpg") no-repeat center center fixed;
+      background: url('images/background.jpg') no-repeat center center fixed;
       background-size: cover;
-      color: var(--gray);
+      color: #333;
       line-height: 1.6;
     }
-    header {
-      background: rgba(0, 64, 128, 0.9);
+    header, footer {
+      background-color: #004080cc;
       color: white;
-      padding: 2rem 1rem 1rem;
       text-align: center;
+      padding: 1rem;
     }
     header img {
-      max-height: 100px;
-      margin-bottom: 1rem;
+      max-width: 120px;
+      margin-bottom: 0.5rem;
     }
     nav {
-      background-color: var(--main-color);
+      background-color: #007BFFdd;
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
     }
     nav a {
-      color: #fff;
+      color: white;
       padding: 1rem;
       text-decoration: none;
       font-weight: bold;
+      transition: background-color 0.3s;
     }
     nav a:hover {
       background-color: #0056b3;
     }
     main {
-      background: rgba(255, 255, 255, 0.95);
-      margin: 2rem auto;
       padding: 2rem;
       max-width: 900px;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      margin: auto;
+      background-color: #ffffffdd;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
     }
     h2 {
-      color: var(--dark-blue);
-      margin-bottom: 1rem;
-    }
-    ul li {
-      margin: 0.5rem 0;
+      color: #004080;
     }
     .lang-switcher {
-      margin: 1rem auto;
       text-align: center;
+      margin: 1rem 0;
     }
     .lang-switcher button {
       margin: 0.3rem;
       padding: 0.5rem 1rem;
       font-weight: bold;
-      border: none;
-      background-color: var(--main-color);
-      color: white;
       cursor: pointer;
-      border-radius: 5px;
     }
-    .lang-switcher button:hover {
-      background-color: #0056b3;
-    }
-    [data-lang] {
-      display: none;
-    }
-    .visible {
-      display: block;
-    }
-    footer {
-      background-color: var(--dark-blue);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-      margin-top: 2rem;
-    }
+    [data-lang] { display: none; }
+    .visible { display: block; }
   </style>
   <script>
     function switchLang(lang) {
       const sections = document.querySelectorAll('[data-lang]');
       sections.forEach(s => s.classList.remove('visible'));
-      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(s => s.classList.add('visible'));
+      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
+      active.forEach(s => s.classList.add('visible'));
     }
     window.onload = () => switchLang('ar');
   </script>
