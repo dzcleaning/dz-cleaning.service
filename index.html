@@ -5,35 +5,42 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DZ Cleaning Services</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    :root {
+      --main-color: #007bff;
+      --dark-blue: #004080;
+      --light-bg: #f4f8fc;
+      --gray: #666;
+    }
+    * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      background-image: url('images/background.jpg');
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: var(--light-bg) url("images/background.jpg") no-repeat center center fixed;
       background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      color: #333;
+      color: var(--gray);
       line-height: 1.6;
     }
-    header, footer {
-      background-color: rgba(0, 64, 128, 0.9);
+    header {
+      background: rgba(0, 64, 128, 0.9);
       color: white;
+      padding: 2rem 1rem 1rem;
       text-align: center;
-      padding: 1rem;
     }
     header img {
-      max-height: 80px;
-      margin-bottom: 10px;
+      max-height: 100px;
+      margin-bottom: 1rem;
     }
     nav {
-      background-color: rgba(0, 123, 255, 0.95);
+      background-color: var(--main-color);
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
     }
     nav a {
-      color: white;
+      color: #fff;
       padding: 1rem;
       text-decoration: none;
       font-weight: bold;
@@ -42,41 +49,63 @@
       background-color: #0056b3;
     }
     main {
+      background: rgba(255, 255, 255, 0.95);
+      margin: 2rem auto;
       padding: 2rem;
       max-width: 900px;
-      margin: auto;
-      background-color: rgba(255, 255, 255, 0.95);
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
     h2 {
-      color: #004080;
+      color: var(--dark-blue);
+      margin-bottom: 1rem;
+    }
+    ul li {
+      margin: 0.5rem 0;
     }
     .lang-switcher {
+      margin: 1rem auto;
       text-align: center;
-      margin: 1rem 0;
     }
     .lang-switcher button {
       margin: 0.3rem;
       padding: 0.5rem 1rem;
       font-weight: bold;
+      border: none;
+      background-color: var(--main-color);
+      color: white;
       cursor: pointer;
+      border-radius: 5px;
     }
-    [data-lang] { display: none; }
-    .visible { display: block; }
+    .lang-switcher button:hover {
+      background-color: #0056b3;
+    }
+    [data-lang] {
+      display: none;
+    }
+    .visible {
+      display: block;
+    }
+    footer {
+      background-color: var(--dark-blue);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      margin-top: 2rem;
+    }
   </style>
   <script>
     function switchLang(lang) {
       const sections = document.querySelectorAll('[data-lang]');
       sections.forEach(s => s.classList.remove('visible'));
-      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
-      active.forEach(s => s.classList.add('visible'));
+      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(s => s.classList.add('visible'));
     }
     window.onload = () => switchLang('ar');
   </script>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="DZ Cleaning Logo">
+    <img src="images/logo.png" alt="DZ Cleaning Services Logo">
     <h1>DZ Cleaning Services</h1>
     <div class="lang-switcher">
       <button onclick="switchLang('ar')">العربية</button>
@@ -84,7 +113,6 @@
       <button onclick="switchLang('en')">English</button>
     </div>
   </header>
-
   <nav>
     <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
@@ -92,91 +120,74 @@
     <a href="#policy">الخصوصية</a>
     <a href="#terms">الشروط</a>
   </nav>
-
   <main>
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
-      <p>شركة متخصصة في التنظيف للمنازل والمكاتب والفتريات ونهاية الورشات. نتميز بالاحترافية واستخدام المنتجات البيئية.</p>
+      <p>شركة متخصصة في التنظيف للمنازل والمكاتب وغيرها.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Entreprise spécialisée dans le nettoyage des maisons, bureaux, vitrines et fin de chantier. Professionnalisme et produits écologiques.</p>
+      <p>Entreprise spécialisée dans le nettoyage pour maisons et bureaux.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>A company specialized in cleaning homes, offices, shopfronts, and post-construction sites. We value professionalism and eco-friendly products.</p>
+      <p>Specialized cleaning company for homes and offices.</p>
     </section>
 
     <section id="services" data-lang="ar" class="visible">
-      <h2>خدماتنا</h2>
-      <ul>
-        <li>تنظيف المنازل</li>
-        <li>تنظيف المكاتب</li>
-        <li>تنظيف الفتريات</li>
-        <li>تنظيف بعد انتهاء الورشات</li>
-      </ul>
+      <h2>الخدمات</h2>
+      <ul><li>تنظيف منازل</li><li>مكاتب</li></ul>
     </section>
     <section id="services" data-lang="fr">
       <h2>Nos services</h2>
-      <ul>
-        <li>Nettoyage des domiciles</li>
-        <li>Nettoyage des bureaux</li>
-        <li>Nettoyage des vitrines</li>
-        <li>Fin de chantier</li>
-      </ul>
+      <ul><li>Maisons</li><li>Bureaux</li></ul>
     </section>
     <section id="services" data-lang="en">
       <h2>Our Services</h2>
-      <ul>
-        <li>Home cleaning</li>
-        <li>Office cleaning</li>
-        <li>Shop window cleaning</li>
-        <li>Post-construction cleaning</li>
-      </ul>
+      <ul><li>Homes</li><li>Offices</li></ul>
     </section>
 
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
-      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
+      <p>الهاتف: 0033615658535<br>البريد: dz.cleaning@yahoo.com</p>
     </section>
     <section id="contact" data-lang="fr">
       <h2>Contact</h2>
-      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com<br>Adresse : 14b quai d'Arve, Annemasse 74100</p>
+      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com</p>
     </section>
     <section id="contact" data-lang="en">
       <h2>Contact Us</h2>
-      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
+      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com</p>
     </section>
 
     <section id="policy" data-lang="ar" class="visible">
       <h2>سياسة الخصوصية</h2>
-      <p>نحن نحترم خصوصيتك ولا نشارك بياناتك مع أي طرف ثالث دون موافقتك.</p>
+      <p>نحترم خصوصيتك.</p>
     </section>
     <section id="policy" data-lang="fr">
       <h2>Politique de confidentialité</h2>
-      <p>Nous respectons votre vie privée et ne partageons vos données avec aucun tiers sans votre consentement.</p>
+      <p>Nous respectons votre vie privée.</p>
     </section>
     <section id="policy" data-lang="en">
       <h2>Privacy Policy</h2>
-      <p>We respect your privacy and do not share your data with third parties without your consent.</p>
+      <p>We respect your privacy.</p>
     </section>
 
     <section id="terms" data-lang="ar" class="visible">
-      <h2>شروط الاستخدام</h2>
-      <p>باستخدامك لموقعنا فإنك توافق على شروط الاستخدام المعلنة.</p>
+      <h2>شروط الخدمة</h2>
+      <p>باستخدامك لموقعنا فإنك توافق على الشروط.</p>
     </section>
     <section id="terms" data-lang="fr">
       <h2>Conditions d'utilisation</h2>
-      <p>En utilisant notre site, vous acceptez les conditions générales publiées.</p>
+      <p>En utilisant notre site, vous acceptez les conditions.</p>
     </section>
     <section id="terms" data-lang="en">
       <h2>Terms of Service</h2>
-      <p>By using our site, you agree to the published terms of service.</p>
+      <p>By using our site you agree to the terms.</p>
     </section>
   </main>
-
   <footer>
-    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés</p>
+    <p>&copy; 2025 DZ Cleaning Services</p>
   </footer>
 </body>
 </html>
