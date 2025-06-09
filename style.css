@@ -1,1 +1,83 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+}
+header {
+  background: url('images/background.jpg') center/cover no-repeat;
+  text-align: center;
+  color: white;
+  padding: 4rem 1rem;
+  position: relative;
+}
+header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+header img {
+  width: 100px;
+  z-index: 2;
+  position: relative;
+}
+header h1 {
+  position: relative;
+  z-index: 2;
+}
+.lang-switcher button {
+  margin: 0.3rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 4px;
+  background-color: #007BFF;
+  color: white;
+  cursor: pointer;
+}
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #004080;
+  flex-wrap: wrap;
+}
+nav a {
+  color: white;
+  padding: 1rem;
+  text-decoration: none;
+}
+nav a:hover {
+  background-color: #007BFF;
+}
+main {
+  padding: 2rem;
+  max-width: 960px;
+  margin: auto;
+  background: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+h2 {
+  color: #004080;
+}
+[data-lang] { display: none; }
+.visible { display: block; }
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.service-box {
+  flex: 1 1 45%;
+  background: #f1f1f1;
+  padding: 1rem;
+  border-radius: 8px;
+}
+footer {
+  background: #004080;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
 
