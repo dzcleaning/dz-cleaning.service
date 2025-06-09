@@ -1,15 +1,92 @@
-DZ Cleaning Services body { margin: 0; font-family: sans-serif; background-color: #f9f9f9; color: #333; direction: rtl; } header, footer { background-color: #007B8A; color: white; padding: 1em; text-align: center; } nav { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin-top: 0.5em; } nav a { color: white; text-decoration: none; font-weight: bold; } .lang-switcher { margin-top: 1em; text-align: center; } .lang-switcher button { margin: 0 0.25em; padding: 0.3em 0.6em; font-weight: bold; border: none; background-color: #005c63; color: white; cursor: pointer; } .container { max-width: 900px; margin: auto; padding: 1em; line-height: 1.6; } section { margin-bottom: 2em; } h1, h2 { color: #007B8A; } form input, form textarea, form button { width: 100%; padding: 0.7em; margin-top: 0.5em; margin-bottom: 1em; border-radius: 5px; border: 1px solid #ccc; } form button { background-color: #007B8A; color: white; border: none; cursor: pointer; } @media (max-width: 600px) { nav { flex-direction: column; } } 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="شركة تنظيف محترفة للمنازل والمكاتب والورشات. خدمات عالية الجودة في أنسي ومحيطها.">
+  <meta name="keywords" content="تنظيف, منازل, مكاتب, شركة تنظيف, خدمات التنظيف, Annemasse, France">
+  <meta name="author" content="DZ Cleaning Services">
+  <title>DZ Cleaning Services</title>
+  <style>
+    body { margin: 0; font-family: sans-serif; background-color: #f9f9f9; color: #333; direction: rtl; }
+    header, footer { background-color: #007B8A; color: white; padding: 1em; text-align: center; }
+    nav { display: flex; justify-content: center; gap: 1em; flex-wrap: wrap; margin-top: 0.5em; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    .lang-switcher { margin-top: 1em; text-align: center; }
+    .lang-switcher button { margin: 0 0.25em; padding: 0.3em 0.6em; font-weight: bold; border: none; background-color: #005c63; color: white; cursor: pointer; }
+    .container { max-width: 900px; margin: auto; padding: 1em; line-height: 1.6; }
+    section { margin-bottom: 2em; }
+    h1, h2 { color: #007B8A; }
+    form input, form textarea, form button { width: 100%; padding: 0.7em; margin-top: 0.5em; margin-bottom: 1em; border-radius: 5px; border: 1px solid #ccc; }
+    form button { background-color: #007B8A; color: white; border: none; cursor: pointer; }
+    @media (max-width: 600px) { nav { flex-direction: column; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="title">DZ Cleaning Services</h1>
+    <nav>
+      <a href="#home" class="nav-home">الرئيسية</a>
+      <a href="#about" class="nav-about">من نحن</a>
+      <a href="#services" class="nav-services">خدماتنا</a>
+      <a href="#booking" class="nav-booking">الحجز</a>
+      <a href="#contact" class="nav-contact">اتصل بنا</a>
+      <a href="#privacy" class="nav-privacy">الخصوصية</a>
+      <a href="#terms" class="nav-terms">الشروط</a>
+    </nav>
+    <div class="lang-switcher">
+      <button onclick="setLanguage('ar')">العربية</button>
+      <button onclick="setLanguage('fr')">Français</button>
+      <button onclick="setLanguage('en')">English</button>
+    </div>
+  </header>
 
-DZ Cleaning Services
+  <div class="container">
+    <section id="home">
+      <h2 class="section-home-title">مرحباً بكم في DZ Cleaning Services</h2>
+      <p class="section-home-text">نحن نقدم خدمات تنظيف احترافية للمنازل، المكاتب، المتاجر، ونهاية الورشات باستخدام منتجات صديقة للبيئة وفريق متميز.</p>
+    </section>
+    <section id="about">
+      <h2 class="section-about-title">من نحن</h2>
+      <p class="section-about-text">شركة متخصصة في خدمات التنظيف مقرها أنماص، فرنسا. نضمن الجودة والاحترافية في كل خدمة نقدمها.</p>
+    </section>
+    <section id="services">
+      <h2 class="section-services-title">خدماتنا</h2>
+      <ul class="section-services-list">
+        <li>تنظيف المنازل</li>
+        <li>تنظيف المكاتب والشركات</li>
+        <li>تنظيف نهاية الورشات</li>
+        <li>تنظيف الفتريات والمتاجر</li>
+      </ul>
+    </section>
+    <section id="booking">
+      <h2 class="section-booking-title">احجز موعداً</h2>
+      <form>
+        <input type="text" placeholder="الاسم الكامل" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <input type="date" required>
+        <textarea placeholder="تفاصيل الطلب" rows="4"></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+    <section id="contact">
+      <h2 class="section-contact-title">اتصل بنا</h2>
+      <p>📞 الهاتف: 0033615658535</p>
+      <p>📧 البريد: dz.cleaning@yahoo.com</p>
+      <p>📍 العنوان: 14b quai d'Arve, Annemasse 74100</p>
+    </section>
+    <section id="privacy">
+      <h2 class="section-privacy-title">سياسة الخصوصية</h2>
+      <p class="section-privacy-text">نحترم خصوصيتك ولا نشارك معلوماتك الشخصية مع أي جهة خارجية. يتم استخدام بياناتك فقط لأغراض الخدمة.</p>
+    </section>
+    <section id="terms">
+      <h2 class="section-terms-title">شروط الخدمة</h2>
+      <p class="section-terms-text">يجب حجز الخدمات قبل 24 ساعة على الأقل. يحق لنا رفض الطلبات التي لا تطابق معايير الخدمة أو غير مكتملة.</p>
+    </section>
+  </div>
 
-الرئيسية من نحن خدماتنا الحجز اتصل بنا الخصوصية الشروط 
-
-العربية Français English 
-
-مرحباً بكم في DZ Cleaning Services
-
-نحن نقدم خدمات تنظيف احترافية للمنازل، المكاتب، المتاجر، ونهاية الورشات باستخدام منتجات صديقة للبيئة وفريق متميز.
-<section id="about"> <h2 data-key="section-about-title">من نحن</h2> <p data-key="section-about-text">شركة متخصصة في خدمات التنظيف مقرها أنماص، فرنسا. نضمن الجودة والاحترافية في كل خدمة نقدمها.</p> </section> <section id="services"> <h2 data-key="section-services-title">خدماتنا</h2> <ul data-key="section-services-list"> <li>تنظيف المنازل</li> <li>تنظيف المكاتب والشركات</li> <li>تنظيف نهاية الورشات</li> <li>تنظيف الفتريات والمتاجر</li> </ul> </section> <section id="booking"> <h2 data-key="section-booking-title">احجز موعداً</h2> <form> <input type="text" placeholder="الاسم الكامل" required> <input type="email" placeholder="البريد الإلكتروني" required> <input type="date" required> <textarea placeholder="تفاصيل الطلب" rows="4"></textarea> <button type="submit">إرسال</button> </form> </section> <section id="contact"> <h2 data-key="section-contact-title">اتصل بنا</h2> <p data-key="phone">📞 الهاتف: 0033615658535</p> <p data-key="email">📧 البريد: dz.cleaning@yahoo.com</p> <p data-key="address">📍 العنوان: 14b quai d'Arve, Annemasse 74100</p> </section> <section id="privacy"> <h2 data-key="section-privacy-title">سياسة الخصوصية</h2> <p data-key="section-privacy-text">نحترم خصوصيتك ولا نشارك معلوماتك الشخصية مع أي جهة خارجية. يتم استخدام بياناتك فقط لأغراض الخدمة.</p> </section> <section id="terms"> <h2 data-key="section-terms-title">شروط الخدمة</h2> <p data-key="section-terms-text">يجب حجز الخدمات قبل 24 ساعة على الأقل. يحق لنا رفض الطلبات التي لا تطابق معايير الخدمة أو غير مكتملة.</p> </section> 
-
-© 2025 DZ Cleaning Services
-const translations = { ar: { title: "DZ Cleaning Services", "nav-home": "الرئيسية", "nav-about": "من نحن", "nav-services": "خدماتنا", "nav-booking": "الحجز", "nav-contact": "اتصل بنا", "nav-privacy": "الخصوصية", "nav-terms": "الشروط", "section-home-title": "مرحباً بكم في DZ Cleaning Services", "section-home-text": "نحن نقدم خدمات تنظيف احترافية للمنازل، المكاتب، المتاجر، ونهاية الورشات باستخدام منتجات صديقة للبيئة وفريق متميز.", "section-about-title": "من نحن", "section-about-text": "شركة متخصصة في خدمات التنظيف مقرها أنماص، فرنسا. نضمن الجودة والاحترافية في كل خدمة نقدمها.", "section-services-title": "خدماتنا", "section-booking-title": "احجز موعداً", "section-contact-title": "اتصل بنا", "section-privacy-title": "سياسة الخصوصية", "section-privacy-text": "نحترم خصوصيتك ولا نشارك معلوماتك الشخصية مع أي جهة خارجية. يتم استخدام بياناتك فقط لأغراض الخدمة.", "section-terms-title": "شروط الخدمة", "section-terms-text": "يجب حجز الخدمات قبل 24 ساعة على الأقل. يحق لنا رفض الطلبات التي لا تطابق معايير الخدمة أو غير مكتملة." }, fr: { title: "DZ Cleaning Services", "nav-home": "Accueil", "nav-about": "À propos", "nav-services": "Nos services", "nav-booking": "Réservation", "nav-contact": "Contact", "nav-privacy": "Confidentialité", "nav-terms": "Conditions", "section-home-title": "Bienvenue chez DZ Cleaning Services", "section-home-text": "Nous offrons des services de nettoyage professionnels pour les maisons, bureaux, magasins et fins de chantier.", "section-about-title": "À propos", "section-about-text": "Entreprise de nettoyage située à Annemasse, France. Nous garantissons qualité et professionnalisme.", "section-services-title": "Nos services", "section-booking-title": "Réserver un rendez-vous", "section-contact-title": "Contactez-nous", "section-privacy-title": "Politique de confidentialité", "section-privacy-text": "Nous respectons votre vie privée et n'utilisons vos données que pour le service.", "section-terms-title": "Conditions de service", "section-terms-text": "Les réservations doivent être faites au moins 24h à l'avance. Nous nous réservons le droit de refuser les demandes incomplètes." }, en: { title: "DZ Cleaning Services", "nav-home": "Home", "nav-about": "About Us", "nav-services": "Services", "nav-booking": "Booking", "nav-contact": "Contact", "nav-privacy": "Privacy", "nav-terms": "Terms", "section-home-title": "Welcome to DZ Cleaning Services", "section-home-text": "We offer professional cleaning services for homes, offices, shops, and post-construction using eco-friendly products.", "section-about-title": "About Us", "section-about-text": "A cleaning company based in Annemasse, France. We guarantee quality and professionalism.", "section-services-title": "Our Services", "section-booking-title": "Book an Appointment", "section-contact-title": "Contact Us", "section-privacy-title": "Privacy Policy", "section-privacy-text": "We respect your privacy and only use your information to provide services.", "section-terms-title": "Terms of Service", "section-terms-text": "Services must be booked at least 24 hours in advance. We reserve the right to refuse incomplete requests." } }; function setLanguage(lang) { document.querySelectorAll("[data-key]").forEach(el => { const key = el.getAttribute("data-key"); if (translations[lang][key]) { el.textContent = translations[lang][key]; } }); document.querySelectorAll("nav a").forEach(link => { const key = link.className; if (translations[lang][key]) { link.textContent = translations[lang][key]; } }); document.title = translations[lang].title; }
+  <footer>
+    <p>© 2025 DZ Cleaning Services</p>
+  </footer>
+</body>
+</html>
