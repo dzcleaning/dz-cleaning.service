@@ -3,221 +3,240 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="شركة تنظيف محترفة للمنازل والمكاتب والورشات. خدمات عالية الجودة في أنسي ومحيطها.">
+  <meta name="keywords" content="تنظيف, منازل, مكاتب, شركة تنظيف, خدمات التنظيف, Annemasse, France">
+  <meta name="author" content="DZ Cleaning Services">
   <title>DZ Cleaning Services</title>
-  <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <style>
-    :root {
-      --main-color: #004080;
-      --accent-color: #007BFF;
-      --bg-light: #f8f9fa;
-      --text-dark: #333;
-    }
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-dark);
+      font-family: sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      direction: rtl;
     }
-    header {
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
+    header, footer {
+      background-color: #007B8A;
       color: white;
+      padding: 1em;
       text-align: center;
-      padding: 4rem 1rem;
-      position: relative;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-    header h1 {
-      position: relative;
-      z-index: 2;
-      font-size: 2.5rem;
-    }
-    header img {
-      width: 100px;
-      height: auto;
-      position: relative;
-      z-index: 2;
-    }
-    .lang-switcher {
-      text-align: center;
-      margin-top: 1rem;
-      position: relative;
-      z-index: 2;
-    }
-    .lang-switcher button {
-      margin: 0.3rem;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      border-radius: 4px;
-      background-color: var(--accent-color);
-      color: white;
     }
     nav {
       display: flex;
       justify-content: center;
-      background-color: var(--main-color);
+      gap: 1em;
       flex-wrap: wrap;
+      margin-top: 0.5em;
     }
     nav a {
       color: white;
-      padding: 1rem;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      background-color: var(--accent-color);
-    }
-    main {
-      padding: 2rem;
-      max-width: 960px;
-      margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    h2 {
-      color: var(--main-color);
-    }
-    [data-lang] { display: none; }
-    .visible { display: block; }
-    footer {
-      background-color: var(--main-color);
-      color: white;
+    .lang-switcher {
+      margin-top: 1em;
       text-align: center;
-      padding: 1rem;
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
+    .lang-switcher button {
+      margin: 0 0.25em;
+      padding: 0.3em 0.6em;
+      font-weight: bold;
+      border: none;
+      background-color: #005c63;
+      color: white;
+      cursor: pointer;
     }
-    .service-box {
-      flex: 1 1 45%;
-      background: #f1f1f1;
-      padding: 1rem;
-      border-radius: 8px;
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 1em;
+      line-height: 1.6;
+    }
+    section {
+      margin-bottom: 2em;
+    }
+    h1, h2 {
+      color: #007B8A;
+    }
+    form input, form textarea, form button {
+      width: 100%;
+      padding: 0.7em;
+      margin-top: 0.5em;
+      margin-bottom: 1em;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #007B8A;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    @media (max-width: 600px) {
+      nav {
+        flex-direction: column;
+      }
     }
   </style>
-  <script>
-    function switchLang(lang) {
-      const sections = document.querySelectorAll('[data-lang]');
-      sections.forEach(s => s.classList.remove('visible'));
-      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
-      active.forEach(s => s.classList.add('visible'));
-    }
-    window.onload = () => switchLang('ar');
-  </script>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="DZ Cleaning Services Logo">
-    <h1>DZ Cleaning Services</h1>
+    <h1 id="title">DZ Cleaning Services</h1>
+    <nav>
+      <a href="#home" class="nav-home">الرئيسية</a>
+      <a href="#about" class="nav-about">من نحن</a>
+      <a href="#services" class="nav-services">خدماتنا</a>
+      <a href="#booking" class="nav-booking">الحجز</a>
+      <a href="#contact" class="nav-contact">اتصل بنا</a>
+      <a href="#privacy" class="nav-privacy">الخصوصية</a>
+      <a href="#terms" class="nav-terms">الشروط</a>
+    </nav>
     <div class="lang-switcher">
-      <button onclick="switchLang('ar')">العربية</button>
-      <button onclick="switchLang('fr')">Français</button>
-      <button onclick="switchLang('en')">English</button>
+      <button onclick="setLanguage('ar')">العربية</button>
+      <button onclick="setLanguage('fr')">Français</button>
+      <button onclick="setLanguage('en')">English</button>
     </div>
   </header>
-  <nav>
-    <a href="#about">عن الشركة</a>
-    <a href="#services">الخدمات</a>
-    <a href="#contact">اتصل بنا</a>
-    <a href="#policy">الخصوصية</a>
-    <a href="#terms">الشروط</a>
-  </nav>
-  <main>
-    <section id="about" data-lang="ar" class="visible">
-      <h2>من نحن</h2>
-      <p>نحن شركة تنظيف محترفة نقدم خدمات شاملة للمنازل والمكاتب والورشات. نستخدم منتجات صديقة للبيئة ولدينا فريق مؤهل يضمن الجودة والموثوقية.</p>
-    </section>
-    <section id="about" data-lang="fr">
-      <h2>À propos</h2>
-      <p>Nous sommes une société de nettoyage professionnelle offrant des services complets pour les maisons, les bureaux et les chantiers. Produits écologiques et équipe qualifiée pour garantir la qualité.</p>
-    </section>
-    <section id="about" data-lang="en">
-      <h2>About Us</h2>
-      <p>We are a professional cleaning company offering full services for homes, offices, and post-construction sites. We use eco-friendly products and have a skilled team for reliable quality.</p>
+
+  <div class="container">
+    <section id="home">
+      <h2 class="section-home-title">مرحباً بكم في DZ Cleaning Services</h2>
+      <p class="section-home-text">نحن نقدم خدمات تنظيف احترافية للمنازل، المكاتب، المتاجر، ونهاية الورشات باستخدام منتجات صديقة للبيئة وفريق متميز.</p>
     </section>
 
-    <section id="services" data-lang="ar" class="visible">
-      <h2>خدماتنا</h2>
-      <div class="services">
-        <div class="service-box">تنظيف منازل</div>
-        <div class="service-box">تنظيف مكاتب</div>
-        <div class="service-box">نهاية الورشات</div>
-        <div class="service-box">تنظيف المحلات</div>
-      </div>
-    </section>
-    <section id="services" data-lang="fr">
-      <h2>Nos services</h2>
-      <div class="services">
-        <div class="service-box">Nettoyage des maisons</div>
-        <div class="service-box">Bureaux</div>
-        <div class="service-box">Fin de chantier</div>
-        <div class="service-box">Commerces</div>
-      </div>
-    </section>
-    <section id="services" data-lang="en">
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="service-box">Home Cleaning</div>
-        <div class="service-box">Office Cleaning</div>
-        <div class="service-box">Post-Construction</div>
-        <div class="service-box">Shops</div>
-      </div>
+    <section id="about">
+      <h2 class="section-about-title">من نحن</h2>
+      <p class="section-about-text">شركة متخصصة في خدمات التنظيف مقرها أنماص، فرنسا. نضمن الجودة والاحترافية في كل خدمة نقدمها.</p>
     </section>
 
-    <section id="contact" data-lang="ar" class="visible">
-      <h2>اتصل بنا</h2>
-      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
-    </section>
-    <section id="contact" data-lang="fr">
-      <h2>Contact</h2>
-      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com<br>Adresse : 14b quai d'Arve, Annemasse 74100</p>
-    </section>
-    <section id="contact" data-lang="en">
-      <h2>Contact Us</h2>
-      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
+    <section id="services">
+      <h2 class="section-services-title">خدماتنا</h2>
+      <ul class="section-services-list">
+        <li>تنظيف المنازل</li>
+        <li>تنظيف المكاتب والشركات</li>
+        <li>تنظيف نهاية الورشات</li>
+        <li>تنظيف الفتريات والمتاجر</li>
+      </ul>
     </section>
 
-    <section id="policy" data-lang="ar" class="visible">
-      <h2>سياسة الخصوصية</h2>
-      <p>نلتزم بحماية خصوصيتك وبياناتك الشخصية. لا نقوم بمشاركة أي بيانات مع جهات خارجية.</p>
-    </section>
-    <section id="policy" data-lang="fr">
-      <h2>Politique de confidentialité</h2>
-      <p>Nous nous engageons à protéger votre vie privée. Aucune information n'est partagée avec des tiers.</p>
-    </section>
-    <section id="policy" data-lang="en">
-      <h2>Privacy Policy</h2>
-      <p>We are committed to protecting your privacy. No data is shared with third parties.</p>
+    <section id="booking">
+      <h2 class="section-booking-title">احجز موعداً</h2>
+      <form>
+        <input type="text" placeholder="الاسم الكامل" required>
+        <input type="email" placeholder="البريد الإلكتروني" required>
+        <input type="date" required>
+        <textarea placeholder="تفاصيل الطلب" rows="4"></textarea>
+        <button type="submit">إرسال</button>
+      </form>
     </section>
 
-    <section id="terms" data-lang="ar" class="visible">
-      <h2>شروط الاستخدام</h2>
-      <p>باستخدامك لموقعنا، فإنك توافق على احترام شروطنا وسياساتنا الموضحة هنا.</p>
+    <section id="contact">
+      <h2 class="section-contact-title">اتصل بنا</h2>
+      <p>📞 الهاتف: 0033615658535</p>
+      <p>📧 البريد: dz.cleaning@yahoo.com</p>
+      <p>📍 العنوان: 14b quai d'Arve, Annemasse 74100</p>
     </section>
-    <section id="terms" data-lang="fr">
-      <h2>Conditions d'utilisation</h2>
-      <p>En utilisant notre site, vous acceptez nos conditions et nos politiques.</p>
+
+    <section id="privacy">
+      <h2 class="section-privacy-title">سياسة الخصوصية</h2>
+      <p class="section-privacy-text">نحترم خصوصيتك ولا نشارك معلوماتك الشخصية مع أي جهة خارجية. يتم استخدام بياناتك فقط لأغراض الخدمة.</p>
     </section>
-    <section id="terms" data-lang="en">
-      <h2>Terms of Service</h2>
-      <p>By using our website, you agree to our terms and policies.</p>
+
+    <section id="terms">
+      <h2 class="section-terms-title">شروط الخدمة</h2>
+      <p class="section-terms-text">يجب حجز الخدمات قبل 24 ساعة على الأقل. يحق لنا رفض الطلبات التي لا تطابق معايير الخدمة أو غير مكتملة.</p>
     </section>
-  </main>
+  </div>
+
   <footer>
-    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
+    <p>© 2025 DZ Cleaning Services</p>
   </footer>
+
+  <script>
+    const translations = {
+      ar: {
+        title: "DZ Cleaning Services",
+        'nav-home': "الرئيسية",
+        'nav-about': "من نحن",
+        'nav-services': "خدماتنا",
+        'nav-booking': "الحجز",
+        'nav-contact': "اتصل بنا",
+        'nav-privacy': "الخصوصية",
+        'nav-terms': "الشروط",
+        'section-home-title': "مرحباً بكم في DZ Cleaning Services",
+        'section-home-text': "نحن نقدم خدمات تنظيف احترافية للمنازل، المكاتب، المتاجر، ونهاية الورشات باستخدام منتجات صديقة للبيئة وفريق متميز.",
+        'section-about-title': "من نحن",
+        'section-about-text': "شركة متخصصة في خدمات التنظيف مقرها أنماص، فرنسا. نضمن الجودة والاحترافية في كل خدمة نقدمها.",
+        'section-services-title': "خدماتنا",
+        'section-services-list': ["تنظيف المنازل", "تنظيف المكاتب والشركات", "تنظيف نهاية الورشات", "تنظيف الفتريات والمتاجر"],
+        'section-booking-title': "احجز موعداً",
+        'section-contact-title': "اتصل بنا",
+        'section-privacy-title': "سياسة الخصوصية",
+        'section-privacy-text': "نحترم خصوصيتك ولا نشارك معلوماتك الشخصية مع أي جهة خارجية.",
+        'section-terms-title': "شروط الخدمة",
+        'section-terms-text': "يجب حجز الخدمات قبل 24 ساعة على الأقل."
+      },
+      fr: {
+        title: "DZ Cleaning Services",
+        'nav-home': "Accueil",
+        'nav-about': "À propos",
+        'nav-services': "Services",
+        'nav-booking': "Réservation",
+        'nav-contact': "Contact",
+        'nav-privacy': "Confidentialité",
+        'nav-terms': "Conditions",
+        'section-home-title': "Bienvenue chez DZ Cleaning Services",
+        'section-home-text': "Nous offrons des services de nettoyage professionnels pour maisons, bureaux, vitrines et fin de chantiers.",
+        'section-about-title': "À propos de nous",
+        'section-about-text': "Entreprise spécialisée dans le nettoyage basée à Annemasse, France. Qualité et professionnalisme garantis.",
+        'section-services-title': "Nos Services",
+        'section-services-list': ["Nettoyage des maisons", "Nettoyage des bureaux", "Fin de chantier", "Nettoyage des vitrines"],
+        'section-booking-title': "Réserver un rendez-vous",
+        'section-contact-title': "Contactez-nous",
+        'section-privacy-title': "Politique de confidentialité",
+        'section-privacy-text': "Nous respectons votre vie privée et n'utilisons vos données que pour le service.",
+        'section-terms-title': "Conditions de service",
+        'section-terms-text': "Les réservations doivent être faites au moins 24h à l'avance."
+      },
+      en: {
+        title: "DZ Cleaning Services",
+        'nav-home': "Home",
+        'nav-about': "About",
+        'nav-services': "Services",
+        'nav-booking': "Booking",
+        'nav-contact': "Contact",
+        'nav-privacy': "Privacy",
+        'nav-terms': "Terms",
+        'section-home-title': "Welcome to DZ Cleaning Services",
+        'section-home-text': "We offer professional cleaning services for homes, offices, shops, and post-construction with eco-friendly products.",
+        'section-about-title': "About Us",
+        'section-about-text': "A cleaning company based in Annemasse, France. We guarantee quality and professionalism.",
+        'section-services-title': "Our Services",
+        'section-services-list': ["Home cleaning", "Office cleaning", "Post-construction", "Shop window cleaning"],
+        'section-booking-title': "Book an Appointment",
+        'section-contact-title': "Contact Us",
+        'section-privacy-title': "Privacy Policy",
+        'section-privacy-text': "We respect your privacy and only use your data for service purposes.",
+        'section-terms-title': "Terms of Service",
+        'section-terms-text': "Services must be booked at least 24 hours in advance."
+      }
+    };
+
+    function setLanguage(lang) {
+      document.documentElement.lang = lang;
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+      const t = translations[lang];
+      for (const key in t) {
+        const el = document.querySelector(`.${key}`);
+        if (el) {
+          if (Array.isArray(t[key])) {
+            el.innerHTML = t[key].map(i => `<li>${i}</li>`).join("");
+          } else {
+            el.textContent = t[key];
+          }
+        }
+      }
+    }
+  </script>
 </body>
 </html>
