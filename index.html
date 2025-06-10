@@ -4,12 +4,118 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DZ Cleaning Services</title>
-  <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
+  <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --main-color: #004080;
+      --accent-color: #007BFF;
+      --bg-light: #f8f9fa;
+      --text-dark: #333;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+    header {
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1, header img, .lang-switcher {
+      position: relative;
+      z-index: 2;
+    }
+    header img {
+      width: 100px;
+      height: auto;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .lang-switcher button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: var(--accent-color);
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--main-color);
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: var(--accent-color);
+    }
+    main {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: var(--main-color);
+    }
+    [data-lang] { display: none; }
+    .visible { display: block; }
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .service-box {
+      flex: 1 1 45%;
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      const sections = document.querySelectorAll('[data-lang]');
+      sections.forEach(s => s.classList.remove('visible'));
+      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
+      active.forEach(s => s.classList.add('visible'));
+    }
+    window.onload = () => switchLang('ar');
+  </script>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="DZ Cleaning Services Logo" />
+    <img src="images/logo.png" alt="DZ Cleaning Services Logo">
     <h1>DZ Cleaning Services</h1>
     <div class="lang-switcher">
       <button onclick="switchLang('ar')">العربية</button>
@@ -25,64 +131,88 @@
     <a href="#terms">الشروط</a>
   </nav>
   <main>
-    <!-- عن الشركة -->
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
-      <p>شركة تنظيف محترفة بخدمات متكاملة.</p>
+      <p>نحن شركة تنظيف محترفة نقدم خدمات شاملة للمنازل والمكاتب والورشات. نستخدم منتجات صديقة للبيئة ولدينا فريق مؤهل يضمن الجودة والموثوقية.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Entreprise de nettoyage professionnelle.</p>
+      <p>Nous sommes une société de nettoyage professionnelle offrant des services complets pour les maisons, les bureaux et les chantiers. Produits écologiques et équipe qualifiée pour garantir la qualité.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>Professional cleaning company.</p>
+      <p>We are a professional cleaning company offering full services for homes, offices, and post-construction sites. We use eco-friendly products and have a skilled team for reliable quality.</p>
     </section>
 
-    <!-- التواصل -->
+    <section id="services" data-lang="ar" class="visible">
+      <h2>خدماتنا</h2>
+      <div class="services">
+        <div class="service-box">تنظيف منازل</div>
+        <div class="service-box">تنظيف مكاتب</div>
+        <div class="service-box">نهاية الورشات</div>
+        <div class="service-box">تنظيف المحلات</div>
+      </div>
+    </section>
+    <section id="services" data-lang="fr">
+      <h2>Nos services</h2>
+      <div class="services">
+        <div class="service-box">Nettoyage des maisons</div>
+        <div class="service-box">Bureaux</div>
+        <div class="service-box">Fin de chantier</div>
+        <div class="service-box">Commerces</div>
+      </div>
+    </section>
+    <section id="services" data-lang="en">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="service-box">Home Cleaning</div>
+        <div class="service-box">Office Cleaning</div>
+        <div class="service-box">Post-Construction</div>
+        <div class="service-box">Shops</div>
+      </div>
+    </section>
+
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
-      <p>الهاتف: 0033615658535<br>البريد: dz.cleaning@yahoo.com</p>
+      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
     </section>
     <section id="contact" data-lang="fr">
       <h2>Contact</h2>
-      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com</p>
+      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com<br>Adresse : 14b quai d'Arve, Annemasse 74100</p>
     </section>
     <section id="contact" data-lang="en">
-      <h2>Contact</h2>
-      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com</p>
+      <h2>Contact Us</h2>
+      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
     </section>
 
-    <!-- سياسة الخصوصية -->
     <section id="policy" data-lang="ar" class="visible">
       <h2>سياسة الخصوصية</h2>
-      <p>نلتزم بحماية خصوصيتك.</p>
+      <p>نلتزم بحماية خصوصيتك وبياناتك الشخصية. لا نقوم بمشاركة أي بيانات مع جهات خارجية.</p>
     </section>
     <section id="policy" data-lang="fr">
       <h2>Politique de confidentialité</h2>
-      <p>Nous respectons votre vie privée.</p>
+      <p>Nous nous engageons à protéger votre vie privée. Aucune information n'est partagée avec des tiers.</p>
     </section>
     <section id="policy" data-lang="en">
       <h2>Privacy Policy</h2>
-      <p>We respect your privacy.</p>
+      <p>We are committed to protecting your privacy. No data is shared with third parties.</p>
     </section>
 
-    <!-- الشروط -->
     <section id="terms" data-lang="ar" class="visible">
-      <h2>الشروط</h2>
-      <p>باستخدامك للموقع، أنت توافق على الشروط.</p>
+      <h2>شروط الاستخدام</h2>
+      <p>باستخدامك لموقعنا، فإنك توافق على احترام شروطنا وسياساتنا الموضحة هنا.</p>
     </section>
     <section id="terms" data-lang="fr">
-      <h2>Conditions</h2>
-      <p>En utilisant ce site, vous acceptez les conditions.</p>
+      <h2>Conditions d'utilisation</h2>
+      <p>En utilisant notre site, vous acceptez nos conditions et nos politiques.</p>
     </section>
     <section id="terms" data-lang="en">
-      <h2>Terms</h2>
-      <p>By using this site, you agree to the terms.</p>
+      <h2>Terms of Service</h2>
+      <p>By using our website, you agree to our terms and policies.</p>
     </section>
   </main>
   <footer>
-    <p>&copy; 2025 DZ Cleaning Services</p>
+    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
   </footer>
 </body>
 </html>
