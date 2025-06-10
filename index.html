@@ -40,6 +40,9 @@
       position: relative;
       z-index: 2;
     }
+    header h1 {
+      font-size: 2.5rem;
+    }
     header img {
       width: 100px;
       height: auto;
@@ -105,10 +108,12 @@
   </style>
   <script>
     function switchLang(lang) {
-      const sections = document.querySelectorAll('[data-lang]');
-      sections.forEach(s => s.classList.remove('visible'));
-      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
-      active.forEach(s => s.classList.add('visible'));
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.remove('visible');
+      });
+      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => {
+        el.classList.add('visible');
+      });
     }
     window.onload = () => switchLang('ar');
   </script>
@@ -123,6 +128,7 @@
       <button onclick="switchLang('en')">English</button>
     </div>
   </header>
+
   <nav>
     <a href="#about">عن الشركة</a>
     <a href="#services">الخدمات</a>
@@ -130,20 +136,23 @@
     <a href="#policy">الخصوصية</a>
     <a href="#terms">الشروط</a>
   </nav>
+
   <main>
+    <!-- Section: About -->
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
       <p>نحن شركة تنظيف محترفة نقدم خدمات شاملة للمنازل والمكاتب والورشات. نستخدم منتجات صديقة للبيئة ولدينا فريق مؤهل يضمن الجودة والموثوقية.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Nous sommes une société de nettoyage professionnelle offrant des services complets pour les maisons, les bureaux et les chantiers. Produits écologiques et équipe qualifiée pour garantir la qualité.</p>
+      <p>Nous sommes une société de nettoyage professionnelle offrant des services complets pour les maisons, les bureaux et les chantiers.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>We are a professional cleaning company offering full services for homes, offices, and post-construction sites. We use eco-friendly products and have a skilled team for reliable quality.</p>
+      <p>We are a professional cleaning company offering full services for homes, offices, and construction sites.</p>
     </section>
 
+    <!-- Section: Services -->
     <section id="services" data-lang="ar" class="visible">
       <h2>خدماتنا</h2>
       <div class="services">
@@ -156,7 +165,7 @@
     <section id="services" data-lang="fr">
       <h2>Nos services</h2>
       <div class="services">
-        <div class="service-box">Nettoyage des maisons</div>
+        <div class="service-box">Nettoyage de maisons</div>
         <div class="service-box">Bureaux</div>
         <div class="service-box">Fin de chantier</div>
         <div class="service-box">Commerces</div>
@@ -167,11 +176,12 @@
       <div class="services">
         <div class="service-box">Home Cleaning</div>
         <div class="service-box">Office Cleaning</div>
-        <div class="service-box">Post-Construction</div>
+        <div class="service-box">Post-construction</div>
         <div class="service-box">Shops</div>
       </div>
     </section>
 
+    <!-- Section: Contact -->
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
       <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
@@ -185,34 +195,37 @@
       <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
     </section>
 
+    <!-- Section: Policy -->
     <section id="policy" data-lang="ar" class="visible">
       <h2>سياسة الخصوصية</h2>
       <p>نلتزم بحماية خصوصيتك وبياناتك الشخصية. لا نقوم بمشاركة أي بيانات مع جهات خارجية.</p>
     </section>
     <section id="policy" data-lang="fr">
       <h2>Politique de confidentialité</h2>
-      <p>Nous nous engageons à protéger votre vie privée. Aucune information n'est partagée avec des tiers.</p>
+      <p>Nous respectons votre vie privée. Aucune donnée n’est partagée avec des tiers.</p>
     </section>
     <section id="policy" data-lang="en">
       <h2>Privacy Policy</h2>
-      <p>We are committed to protecting your privacy. No data is shared with third parties.</p>
+      <p>We respect your privacy. No data is shared with third parties.</p>
     </section>
 
+    <!-- Section: Terms -->
     <section id="terms" data-lang="ar" class="visible">
       <h2>شروط الاستخدام</h2>
-      <p>باستخدامك لموقعنا، فإنك توافق على احترام شروطنا وسياساتنا الموضحة هنا.</p>
+      <p>باستخدامك لموقعنا، فإنك توافق على احترام شروطنا وسياساتنا.</p>
     </section>
     <section id="terms" data-lang="fr">
       <h2>Conditions d'utilisation</h2>
-      <p>En utilisant notre site, vous acceptez nos conditions et nos politiques.</p>
+      <p>En utilisant notre site, vous acceptez nos conditions et politiques.</p>
     </section>
     <section id="terms" data-lang="en">
       <h2>Terms of Service</h2>
-      <p>By using our website, you agree to our terms and policies.</p>
+      <p>By using our site, you agree to our terms and policies.</p>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
+    <p>&copy; 2025 DZ Cleaning Services - جميع الحقوق محفوظة.</p>
   </footer>
 </body>
 </html>
