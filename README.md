@@ -11,5 +11,5 @@ git init
 git add .
 git commit -m "Initial commit - DZ Cleaning site"
 git branch -M main
-git remote add origin https://github.com/dzcleaning/dz-cleaning-service.git
+git remote add origin https://github.com/dzcleaning/dz-cleaning.service.git
 git push -u origin main
