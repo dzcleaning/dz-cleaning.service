@@ -10,42 +10,65 @@
 <body>
   <header>
     <h1>DZ Cleaning Services</h1>
-    <p>نظافة بجودة عالية واحترافية</p>
+    <nav>
+      <a href="#about">عن الشركة</a>
+      <a href="#services">الخدمات</a>
+      <a href="#booking">الحجز</a>
+      <a href="#contact">اتصل بنا</a>
+      <a href="#map">خريطة</a>
+    </nav>
   </header>
-  <nav>
-    <a href="#about">عن الشركة</a>
-    <a href="#services">الخدمات</a>
-    <a href="#contact">اتصل بنا</a>
-    <a href="#policy">الخصوصية</a>
-    <a href="#terms">الشروط</a>
-  </nav>
+
   <main>
     <section id="about">
       <h2>من نحن</h2>
-      <p>نحن شركة تنظيف محترفة تقدم خدمات شاملة للمنازل والمكاتب والمتاجر ونهاية الورشات. نستخدم منتجات صديقة للبيئة.</p>
+      <p>نحن شركة تنظيف محترفة نقدم خدمات شاملة للمنازل والمكاتب والورشات. نستخدم منتجات صديقة للبيئة ولدينا فريق مؤهل يضمن الجودة والموثوقية.</p>
     </section>
+
     <section id="services">
       <h2>خدماتنا</h2>
       <ul>
-        <li>✅ تنظيف منازل</li>
-        <li>✅ تنظيف مكاتب</li>
-        <li>✅ تنظيف نهاية الورشات</li>
-        <li>✅ تنظيف النوافذ</li>
+        <li>تنظيف المنازل</li>
+        <li>تنظيف المكاتب</li>
+        <li>تنظيف نهاية الورشات</li>
+        <li>تنظيف الواجهات والنوافذ</li>
       </ul>
     </section>
+
+    <section id="booking">
+      <h2>نموذج الحجز</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <label for="name">الاسم الكامل:</label>
+        <input type="text" name="name" id="name" required>
+
+        <label for="email">البريد الإلكتروني:</label>
+        <input type="email" name="_replyto" id="email" required>
+
+        <label for="message">الخدمة المطلوبة:</label>
+        <textarea name="message" id="message" required></textarea>
+
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+
     <section id="contact">
       <h2>اتصل بنا</h2>
-      <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>📍 14b quai d'Arve, Annemasse 74100</p>
+      <p>
+        الهاتف: 0033615658535<br>
+        البريد الإلكتروني: dz.cleaning@yahoo.com<br>
+        العنوان: 14b quai d'Arve, Annemasse 74100
+      </p>
     </section>
-    <section id="policy">
-      <h2>سياسة الخصوصية</h2>
-      <p>نلتزم بحماية بياناتكم الشخصية وعدم مشاركتها مع أي جهة خارجية.</p>
-    </section>
-    <section id="terms">
-      <h2>الشروط</h2>
-      <p>باستخدامكم لموقعنا، أنتم توافقون على شروط الاستخدام وسياسة الخصوصية.</p>
+
+    <section id="map">
+      <h2>موقعنا على الخريطة</h2>
+      <iframe 
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2762.235067195583!2d6.237544115583339!3d46.1934669791165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64f0c6a4be5d%3A0x13b8e8d4e3bcb2e9!2s14%20Quai%20d&#39;Arve%2C%2074100%20Annemasse%2C%20France!5e0!3m2!1sen!2sfr!4v1623148311111"
+        width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+      </iframe>
     </section>
   </main>
+
   <footer>
     <p>&copy; 2025 DZ Cleaning Services. جميع الحقوق محفوظة.</p>
   </footer>
