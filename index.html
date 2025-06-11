@@ -1,64 +1,330 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب من DZ Cleaning Services.">
-  <meta name="keywords" content="تنظيف, خدمات, مكاتب, منازل, Annemasse, France">
-  <meta name="author" content="DZ Cleaning Services">
-  <title>DZ Cleaning Services</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DZ Cleaning Services</title>
+<style>
+  /* CSS Reset */
+  * { box-sizing: border-box; margin:0; padding:0; }
+  body { font-family: Arial, sans-serif; background: #f9f9f9; color: #222; line-height: 1.6; }
+  header, nav, main, footer { max-width: 900px; margin: auto; padding: 1rem; }
+  nav { margin-bottom: 1rem; background: #005f73; border-radius: 5px; }
+  nav a { color: white; text-decoration: none; margin: 0 1rem; font-weight: bold; cursor: pointer; }
+  nav a:hover, nav a.active { text-decoration: underline; }
+  section { background: white; padding: 1rem 1.5rem; border-radius: 5px; box-shadow: 0 0 5px #ccc; margin-bottom: 1rem; }
+  h2 { margin-bottom: 0.5rem; color: #0a9396; }
+  ul { list-style: inside disc; margin-bottom: 1rem; }
+  label { display: block; margin-top: 0.8rem; font-weight: bold; }
+  input, select, textarea, button {
+    width: 100%; padding: 0.5rem; margin-top: 0.3rem; border: 1px solid #ccc; border-radius: 3px;
+    font-size: 1rem;
+  }
+  button {
+    background: #0a9396; color: white; border: none; margin-top: 1rem; cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  button:hover { background: #007f7f; }
+  #form-response { font-weight: bold; margin-top: 1rem; }
+
+  /* Responsive */
+  @media (max-width: 600px) {
+    nav a { margin: 0 0.5rem; font-size: 0.9rem; }
+  }
+
+</style>
 </head>
 <body>
-  <header>
-    <h1 data-i18n="title">DZ Cleaning Services</h1>
-    <nav>
-      <a href="#home" data-i18n="home">الرئيسية</a>
-      <a href="#about" data-i18n="about">من نحن</a>
-      <a href="#services" data-i18n="services">خدماتنا</a>
-      <a href="#booking" data-i18n="booking">الحجز</a>
-      <a href="#contact" data-i18n="contact">اتصل بنا</a>
-    </nav>
-    <div class="lang-switcher">
-      <button onclick="setLanguage('ar')">العربية</button>
-      <button onclick="setLanguage('fr')">Français</button>
-      <button onclick="setLanguage('en')">English</button>
-    </div>
-  </header>
 
-  <main class="container">
-    <section id="home">
-      <h2 data-i18n="welcome_title">مرحباً بكم في DZ Cleaning Services</h2>
-      <p data-i18n="welcome_text">نقدم خدمات تنظيف عالية الجودة باستخدام منتجات صديقة للبيئة وفريق متخصص.</p>
-    </section>
+<header>
+  <h1 id="title">DZ Cleaning Services</h1>
+  <nav>
+    <a href="#" class="nav-link active" data-section="home-section">الرئيسية</a>
+    <a href="#" class="nav-link" data-section="about-section">من نحن</a>
+    <a href="#" class="nav-link" data-section="services-section">خدماتنا</a>
+    <a href="#" class="nav-link" data-section="contact-section">اتصل بنا</a>
+  </nav>
 
-    <section id="about">
-      <h2 data-i18n="about_title">من نحن</h2>
-      <p data-i18n="about_text">شركة تنظيف مقرها في أنماص، فرنسا. نحرص على تقديم خدمة احترافية وموثوقة لجميع عملائنا.</p>
-    </section>
+  <div style="text-align:center; margin-bottom:1rem;">
+    <button id="lang-ar">عربي</button>
+    <button id="lang-fr">Français</button>
+    <button id="lang-en">English</button>
+  </div>
+</header>
 
-    <section id="services">
-      <h2 data-i18n="services_title">خدماتنا</h2>
-      <ul>
-        <li data-i18n="service1">تنظيف المنازل</li>
-        <li data-i18n="service2">تنظيف المكاتب</li>
-        <li data-i18n="service3">تنظيف نهاية الورشات</li>
-        <li data-i18n="service4">تنظيف المحلات التجارية</li>
-      </ul>
-    </section>
+<main>
+  <section id="home-section">
+    <h2></h2>
+    <p></p>
+  </section>
 
-    <section id="contact">
-      <h2 data-i18n="contact_title">اتصل بنا</h2>
-      <p><strong>📞</strong> 0033615658535</p>
-      <p><strong>📧</strong> dz.cleaning@yahoo.com</p>
-      <p><strong>📍</strong> 14b quai d'Arve, Annemasse 74100</p>
-    </section>
-  </main>
+  <section id="about-section" style="display:none;">
+    <h2></h2>
+    <p></p>
+  </section>
 
-  <footer>
-    <p>© 2025 DZ Cleaning Services</p>
-  </footer>
+  <section id="services-section" style="display:none;">
+    <h2></h2>
+    <ul></ul>
+  </section>
 
-  <script src="lang.js"></script>
-</body>
-</html>
+  <section id="contact-section" style="display:none;">
+    <h2></h2>
+    <form id="booking-form">
+      <label for="fullname"></label>
+      <input type="text" id="fullname" name="fullname" required />
+
+      <label for="email"></label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="phone"></label>
+      <input type="tel" id="phone" name="phone" required />
+
+      <label for="service"></label>
+      <select id="service" name="service" required></select>
+
+      <label for="date"></label>
+      <input type="datetime-local" id="date" name="date" required />
+
+      <label for="message"></label>
+      <textarea id="message" name="message" rows="4"></textarea>
+
+      <button type="submit"></button>
+    </form>
+    <div id="form-response"></div>
+  </section>
+</main>
+
+<footer style="text-align:center; font-size:0.9rem; color:#555; margin-bottom:1rem;">
+  &copy; 2025 DZ Cleaning Services
+</footer>
+
+<script>
+  // نصوص اللغات
+  const data = {
+    ar: {
+      title: "خدمات التنظيف DZ Cleaning Services",
+      nav: ["الرئيسية", "من نحن", "خدماتنا", "اتصل بنا"],
+      home: {
+        h2: "مرحبا بكم في DZ Cleaning Services",
+        p: "نحن متخصصون في خدمات التنظيف للمنازل والمكاتب والمحلات، مع الالتزام بالاحترافية واستخدام منتجات صديقة للبيئة."
+      },
+      about: {
+        h2: "من نحن",
+        p: "شركة DZ Cleaning Services هي مؤسسة صغيرة متخصصة في التنظيف الكامل للمنازل والمكاتب والمحلات التجارية، تتميز بالاحترافية والصرامة واستخدام المنتجات البيئية."
+      },
+      services: {
+        h2: "خدماتنا",
+        list: [
+          "تنظيف المنازل",
+          "تنظيف المكاتب",
+          "تنظيف المحلات التجارية"
+        ]
+      },
+      contact: {
+        h2: "اتصل بنا / حجز خدمة",
+        fullname: "الاسم الكامل",
+        email: "البريد الإلكتروني",
+        phone: "رقم الهاتف",
+        service: "الخدمة المطلوبة",
+        serviceOptions: [
+          {value: "", text: "اختر الخدمة"},
+          {value: "home-cleaning", text: "تنظيف المنازل"},
+          {value: "office-cleaning", text: "تنظيف المكاتب"},
+          {value: "shop-cleaning", text: "تنظيف المحلات"}
+        ],
+        date: "التاريخ والوقت المفضل",
+        message: "ملاحظات إضافية",
+        submitBtn: "إرسال الطلب",
+        successMsg: "تم إرسال طلبك بنجاح، شكرًا لك!",
+        errorMsg: "حدث خطأ أثناء الإرسال، يرجى المحاولة لاحقًا."
+      },
+      direction: "rtl"
+    },
+    fr: {
+      title: "DZ Cleaning Services",
+      nav: ["Accueil", "À propos", "Services", "Contact"],
+      home: {
+        h2: "Bienvenue chez DZ Cleaning Services",
+        p: "Nous sommes spécialisés dans les services de nettoyage pour maisons, bureaux et commerces, avec un engagement professionnel et l'utilisation de produits écologiques."
+      },
+      about: {
+        h2: "À propos de nous",
+        p: "DZ Cleaning Services est une micro-entreprise spécialisée dans le nettoyage complet des domiciles, bureaux et commerces, reconnue pour son professionnalisme, sa rigueur et l’utilisation de produits écologiques."
+      },
+      services: {
+        h2: "Nos services",
+        list: [
+          "Nettoyage des maisons",
+          "Nettoyage des bureaux",
+          "Nettoyage des commerces"
+        ]
+      },
+      contact: {
+        h2: "Contactez-nous / Réservation",
+        fullname: "Nom complet",
+        email: "Email",
+        phone: "Téléphone",
+        service: "Service demandé",
+        serviceOptions: [
+          {value: "", text: "Choisissez un service"},
+          {value: "home-cleaning", text: "Nettoyage des maisons"},
+          {value: "office-cleaning", text: "Nettoyage des bureaux"},
+          {value: "shop-cleaning", text: "Nettoyage des commerces"}
+        ],
+        date: "Date et heure préférées",
+        message: "Remarques supplémentaires",
+        submitBtn: "Envoyer la demande",
+        successMsg: "Votre demande a été envoyée avec succès, merci!",
+        errorMsg: "Une erreur s'est produite, veuillez réessayer plus tard."
+      },
+      direction: "ltr"
+    },
+    en: {
+      title: "DZ Cleaning Services",
+      nav: ["Home", "About Us", "Services", "Contact"],
+      home: {
+        h2: "Welcome to DZ Cleaning Services",
+        p: "We specialize in cleaning services for homes, offices, and shops, committed to professionalism and using eco-friendly products."
+      },
+      about: {
+        h2: "About Us",
+        p: "DZ Cleaning Services is a small enterprise specialized in complete cleaning for homes, offices, and shops, known for professionalism, rigor, and using ecological products."
+      },
+      services: {
+        h2: "Our Services",
+        list: [
+          "Home Cleaning",
+          "Office Cleaning",
+          "Shop Cleaning"
+        ]
+      },
+      contact: {
+        h2: "Contact Us / Booking",
+        fullname: "Full Name",
+        email: "Email",
+        phone: "Phone Number",
+        service: "Requested Service",
+        serviceOptions: [
+          {value: "", text: "Select a service"},
+          {value: "home-cleaning", text: "Home Cleaning"},
+          {value: "office-cleaning", text: "Office Cleaning"},
+          {value: "shop-cleaning", text: "Shop Cleaning"}
+        ],
+        date: "Preferred Date & Time",
+        message: "Additional Notes",
+        submitBtn: "Submit Request",
+        successMsg: "Your request has been sent successfully, thank you!",
+        errorMsg: "An error occurred. Please try again later."
+      },
+      direction: "ltr"
+    }
+  };
+
+  // تحديث نصوص نموذج الحجز
+  function updateContactForm(langData) {
+    const form = document.getElementById('booking-form');
+    form.querySelector('label[for="fullname"]').textContent = langData.fullname + ":";
+    form.querySelector('label[for="email"]').textContent = langData.email + ":";
+    form.querySelector('label[for="phone"]').textContent = langData.phone + ":";
+    form.querySelector('label[for="service"]').textContent = langData.service + ":";
+    const select = form.querySelector('select#service');
+    select.innerHTML = '';
+    langData.serviceOptions.forEach(opt => {
+      const option = document.createElement('option');
+      option.value = opt.value;
+      option.textContent = opt.text;
+      select.appendChild(option);
+    });
+    form.querySelector('label[for="date"]').textContent = langData.date + ":";
+    form.querySelector('label[for="message"]').textContent = langData.message + ":";
+    form.querySelector('button[type="submit"]').textContent = langData.submitBtn;
+  }
+
+  // تغيير اللغة والصفحة
+  function changeLanguage(lang) {
+    const d = data[lang];
+    document.documentElement.lang = lang;
+    document.documentElement.dir = d.direction;
+    document.body.style.direction = d.direction;
+
+    document.getElementById('title').textContent = d.title;
+
+    document.querySelectorAll('nav a.nav-link').forEach((link,i) => {
+      link.textContent = d.nav[i];
+    });
+
+    // إظهار الصفحة الرئيسية تلقائياً عند تغيير اللغة
+    showSection('home-section');
+
+    // تحديث محتويات الصفحات
+    document.querySelector('#home-section h2').textContent = d.home.h2;
+    document.querySelector('#home-section p').textContent = d.home.p;
+
+    document.querySelector('#about-section h2').textContent = d.about.h2;
+    document.querySelector('#about-section p').textContent = d.about.p;
+
+    const servicesSection = document.querySelector('#services-section');
+    servicesSection.querySelector('h2').textContent = d.services.h2;
+    let ul = servicesSection.querySelector('ul');
+    ul.innerHTML = '';
+    d.services.list.forEach(item => {
+      const li = document.createElement('li');
+      li.textContent = item;
+      ul.appendChild(li);
+    });
+
+    const contactSection = document.querySelector('#contact-section');
+    contactSection.querySelector('h2').textContent = d.contact.h2;
+    updateContactForm(d.contact);
+
+    // تفريغ رد النموذج
+    document.getElementById('form-response').textContent = "";
+  }
+
+  // عرض قسم معين وإخفاء الباقي
+  function showSection(id) {
+    document.querySelectorAll('main section').forEach(sec => {
+      sec.style.display = (sec.id === id) ? 'block' : 'none';
+    });
+    // تمييز رابط التنقل النشط
+    document.querySelectorAll('nav a.nav-link').forEach(link => {
+      link.classList.toggle('active', link.dataset.section === id);
+    });
+    // تفريغ رد النموذج عند عرض صفحة الاتصال
+    if(id === 'contact-section') {
+      document.getElementById('form-response').textContent = "";
+    }
+  }
+
+  // أحداث التنقل
+  document.querySelectorAll('nav a.nav-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      showSection(link.dataset.section);
+    });
+  });
+
+  // تغيير اللغة
+  document.getElementById('lang-ar').addEventListener('click', () => changeLanguage('ar'));
+  document.getElementById('lang-fr').addEventListener('click', () => changeLanguage('fr'));
+  document.getElementById('lang-en').addEventListener('click', () => changeLanguage('en'));
+
+  // معالجة إرسال نموذج الحجز - استخدم Formspree أو عدل الرابط إلى خادمك
+  document.getElementById('booking-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const formData = new FormData(this);
+    const responseDiv = document.getElementById('form-response');
+    responseDiv.textContent = "";
+
+    fetch('https://formspree.io/f/your-form-id', { // ضع رابط Formspree الخاص بك هنا
+      method: 'POST',
+      body: formData,
+      headers: {
+        'Accept': 'application/json'
+      }
+    })
+    .then(response => {
+      if(response.ok) {
+        responseDiv.style.color = 'green';
+        responseDiv.textContent = data[document.documentElement.lang].
