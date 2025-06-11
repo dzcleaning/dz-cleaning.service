@@ -1,0 +1,193 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DZ Cleaning Services</title>
+  <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <style>
+    :root {
+      --main-color: #004080;
+      --accent-color: #007BFF;
+      --bg-light: #f8f9fa;
+      --text-dark: #333;
+    }
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+    header {
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1, header img, .lang-switcher {
+      position: relative;
+      z-index: 2;
+    }
+    header img {
+      width: 100px;
+      height: auto;
+    }
+    .lang-switcher {
+      margin-top: 1rem;
+    }
+    .lang-switcher button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: var(--accent-color);
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--main-color);
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: var(--accent-color);
+    }
+    main {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: var(--main-color);
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .service-box {
+      flex: 1 1 45%;
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    [data-lang] { display: none; }
+    .visible { display: block; }
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background-color: var(--main-color);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: var(--accent-color);
+    }
+  </style>
+</head>
+<body>
+  <header data-aos="fade-down">
+    <img src="images/logo.png" alt="DZ Cleaning Services Logo" />
+    <h1>DZ Cleaning Services</h1>
+    <div class="lang-switcher">
+      <button onclick="switchLang('ar')">العربية</button>
+      <button onclick="switchLang('fr')">Français</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">عن الشركة</a>
+    <a href="#services">الخدمات</a>
+    <a href="#contact">اتصل بنا</a>
+    <a href="#policy">الخصوصية</a>
+    <a href="#terms">الشروط</a>
+  </nav>
+
+  <main>
+    <section id="about" data-lang="ar" class="visible" data-aos="fade-up">
+      <h2>من نحن</h2>
+      <p>نحن شركة تنظيف محترفة تقدم خدمات شاملة للمنازل والمكاتب والورشات. نستخدم منتجات صديقة للبيئة ولدينا فريق مؤهل يضمن الجودة والموثوقية.</p>
+    </section>
+
+    <section id="services" data-lang="ar" class="visible" data-aos="fade-up">
+      <h2>خدماتنا</h2>
+      <div class="services">
+        <div class="service-box">تنظيف منازل</div>
+        <div class="service-box">تنظيف مكاتب</div>
+        <div class="service-box">نهاية الورشات</div>
+        <div class="service-box">تنظيف المحلات</div>
+      </div>
+    </section>
+
+    <section id="contact" data-lang="ar" class="visible" data-aos="fade-up">
+      <h2>اتصل بنا</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <input type="text" name="name" placeholder="الاسم الكامل" required>
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+        <textarea name="message" placeholder="رسالتك" rows="4" required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+
+    <section id="policy" data-lang="ar" class="visible">
+      <h2>سياسة الخصوصية</h2>
+      <p>نلتزم بحماية خصوصيتك وبياناتك الشخصية. لا نقوم بمشاركة أي بيانات مع جهات خارجية.</p>
+    </section>
+
+    <section id="terms" data-lang="ar" class="visible">
+      <h2>شروط الاستخدام</h2>
+      <p>باستخدامك لموقعنا، فإنك توافق على احترام شروطنا وسياساتنا الموضحة هنا.</p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 DZ Cleaning Services</p>
+  </footer>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => el.classList.remove('visible'));
+      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => el.classList.add('visible'));
+    }
+  </script>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>AOS.init({ duration: 1000 });</script>
+</body>
+</html>
