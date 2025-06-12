@@ -111,6 +111,11 @@
     }
     [data-lang] { display: none; }
     .visible { display: block; }
+    .map {
+      margin-top: 2rem;
+      width: 100%;
+      height: 300px;
+    }
   </style>
   <script>
     function switchLang(lang) {
@@ -135,23 +140,13 @@
     <a href="#services">الخدمات</a>
     <a href="#contact">اتصل بنا</a>
     <a href="#booking">الحجز</a>
+    <a href="#map">خريطة</a>
   </nav>
   <main>
-    <!-- About -->
     <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
       <p>شركة تنظيف تقدم خدمات احترافية للمنازل والمكاتب، باستخدام منتجات صديقة للبيئة.</p>
     </section>
-    <section id="about" data-lang="fr">
-      <h2>À propos</h2>
-      <p>Entreprise de nettoyage professionnelle pour maisons et bureaux. Produits écologiques.</p>
-    </section>
-    <section id="about" data-lang="en">
-      <h2>About Us</h2>
-      <p>Professional cleaning company for homes and offices. Eco-friendly products.</p>
-    </section>
-
-    <!-- Services -->
     <section id="services" data-lang="ar" class="visible">
       <h2>خدماتنا</h2>
       <div class="services">
@@ -161,40 +156,10 @@
         <div class="service-box">تنظيف نهاية الورشات</div>
       </div>
     </section>
-    <section id="services" data-lang="fr">
-      <h2>Nos services</h2>
-      <div class="services">
-        <div class="service-box">Nettoyage des maisons</div>
-        <div class="service-box">Bureaux</div>
-        <div class="service-box">Vitrines</div>
-        <div class="service-box">Fin de chantier</div>
-      </div>
-    </section>
-    <section id="services" data-lang="en">
-      <h2>Our Services</h2>
-      <div class="services">
-        <div class="service-box">Home Cleaning</div>
-        <div class="service-box">Office Cleaning</div>
-        <div class="service-box">Windows</div>
-        <div class="service-box">Post-construction</div>
-      </div>
-    </section>
-
-    <!-- Contact -->
     <section id="contact" data-lang="ar" class="visible">
       <h2>اتصل بنا</h2>
       <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>🏠 14b quai d'Arve, Annemasse 74100</p>
     </section>
-    <section id="contact" data-lang="fr">
-      <h2>Contact</h2>
-      <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>🏠 14b quai d'Arve, Annemasse 74100</p>
-    </section>
-    <section id="contact" data-lang="en">
-      <h2>Contact Us</h2>
-      <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>🏠 14b quai d'Arve, Annemasse 74100</p>
-    </section>
-
-    <!-- Booking Form -->
     <section id="booking" data-lang="ar" class="visible">
       <h2>احجز الآن</h2>
       <form action="https://formspree.io/f/mrbkpwkl" method="POST">
@@ -204,7 +169,10 @@
         <button type="submit">إرسال</button>
       </form>
     </section>
-    <!-- Repeat form in other languages if desired -->
+    <section id="map" class="visible">
+      <h2>موقعنا على الخريطة</h2>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.0364644732985!2d6.242442315824659!3d46.19096547911667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64b67db0fd29%3A0x2cfc9fdcb6c77b80!2s14%20Quai%20d&#39;Arve%2C%2074100%20Annemasse%2C%20France!5e0!3m2!1sar!2sfr!4v1683916357351!5m2!1sar!2sfr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
   </main>
   <footer>
     <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
