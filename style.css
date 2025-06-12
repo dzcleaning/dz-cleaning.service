@@ -1,59 +1,219 @@
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: #f9f9f9;
-}
-header {
-  background: #004080;
-  color: white;
-  padding: 2rem;
-  text-align: center;
-}
-header img {
-  width: 120px;
-}
-.lang-switcher button {
-  margin: 0.2rem;
-  padding: 0.5rem 1rem;
-  font-weight: bold;
-}
-nav {
-  display: flex;
-  justify-content: center;
-  background: #007BFF;
-}
-nav a {
-  color: white;
-  padding: 1rem;
-  text-decoration: none;
-}
-main {
-  max-width: 900px;
-  margin: 2rem auto;
-  background: white;
-  padding: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-input, textarea {
-  padding: 0.7rem;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-}
-button {
-  background: #004080;
-  color: white;
-  padding: 0.7rem;
-  border: none;
-  cursor: pointer;
-}
-footer {
-  background: #222;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-}
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DZ Cleaning Services</title>
+  <meta name="description" content="شركة تنظيف محترفة في Annemasse - DZ Cleaning Services">
+  <style>
+    :root {
+      --main-color: #004080;
+      --accent-color: #007BFF;
+      --bg-light: #f8f9fa;
+      --text-dark: #333;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: var(--bg-light);
+      color: var(--text-dark);
+    }
+    header {
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1, header img, .lang-switcher {
+      position: relative;
+      z-index: 2;
+    }
+    header img {
+      width: 100px;
+      height: auto;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .lang-switcher button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+      border-radius: 4px;
+      background-color: var(--accent-color);
+      color: white;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      background-color: var(--main-color);
+      flex-wrap: wrap;
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background-color: var(--accent-color);
+    }
+    main {
+      padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: var(--main-color);
+    }
+    [data-lang] { display: none; }
+    footer {
+      background-color: var(--main-color);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    form input, form textarea {
+      padding: 0.7rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.7rem;
+      background-color: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    form button:hover {
+      background-color: var(--accent-color);
+    }
+  </style>
+  <script>
+    function switchLang(lang) {
+      const all = document.querySelectorAll('[data-lang]');
+      all.forEach(el => el.style.display = 'none');
+      const selected = document.querySelectorAll(`[data-lang="${lang}"]`);
+      selected.forEach(el => el.style.display = 'block');
+    }
+    window.onload = () => switchLang('ar');
+  </script>
+</head>
+<body>
+  <header>
+    <img src="images/logo.png" alt="DZ Cleaning Logo">
+    <h1>DZ Cleaning Services</h1>
+    <div class="lang-switcher">
+      <button onclick="switchLang('ar')">العربية</button>
+      <button onclick="switchLang('fr')">Français</button>
+      <button onclick="switchLang('en')">English</button>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#about">عن الشركة</a>
+    <a href="#services">الخدمات</a>
+    <a href="#contact">اتصل بنا</a>
+  </nav>
+
+  <main>
+    <!-- عن الشركة -->
+    <section id="about" data-lang="ar">
+      <h2>من نحن</h2>
+      <p>شركة تنظيف محترفة في آنماس وضواحيها. نضمن الجودة والمهنية والالتزام.</p>
+    </section>
+    <section id="about" data-lang="fr">
+      <h2>À propos</h2>
+      <p>Entreprise de nettoyage professionnelle à Annemasse. Qualité, sérieux et engagement.</p>
+    </section>
+    <section id="about" data-lang="en">
+      <h2>About Us</h2>
+      <p>Professional cleaning company in Annemasse. We ensure quality, reliability and professionalism.</p>
+    </section>
+
+    <!-- الخدمات -->
+    <section id="services" data-lang="ar">
+      <h2>خدماتنا</h2>
+      <ul>
+        <li>تنظيف المنازل والمكاتب</li>
+        <li>تنظيف ما بعد الورشات</li>
+        <li>تنظيف الزجاج والفتريات</li>
+      </ul>
+    </section>
+    <section id="services" data-lang="fr">
+      <h2>Nos services</h2>
+      <ul>
+        <li>Nettoyage des maisons et bureaux</li>
+        <li>Nettoyage après chantier</li>
+        <li>Nettoyage de vitres</li>
+      </ul>
+    </section>
+    <section id="services" data-lang="en">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Home and office cleaning</li>
+        <li>Post-construction cleanup</li>
+        <li>Window and storefront cleaning</li>
+      </ul>
+    </section>
+
+    <!-- الاتصال -->
+    <section id="contact" data-lang="ar">
+      <h2>اتصل بنا</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <input type="text" name="name" placeholder="الاسم الكامل" required />
+        <input type="email" name="email" placeholder="البريد الإلكتروني" required />
+        <textarea name="message" placeholder="رسالتك" required></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
+    <section id="contact" data-lang="fr">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <input type="text" name="name" placeholder="Nom complet" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Votre message" required></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+    <section id="contact" data-lang="en">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <input type="text" name="name" placeholder="Full Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <textarea name="message" placeholder="Your message" required></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>📞 0033615658535 | ✉️ dz.cleaning@yahoo.com</p>
+    <p>&copy; 2025 DZ Cleaning Services</p>
+  </footer>
+</body>
+</html>
