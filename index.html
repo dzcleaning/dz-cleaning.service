@@ -1,181 +1,185 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DZ Cleaning Services</title>
-  <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <meta name="description" content="Services de nettoyage professionnel à Annemasse et environs">
   <style>
-    :root {
-      --main-color: #004080;
-      --accent-color: #007BFF;
-      --bg-light: #f8f9fa;
-      --text-dark: #333;
-    }
     body {
-      margin: 0;
-      font-family: 'Arial', sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
+      font-family: Arial, sans-serif;
+      margin: 0; padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
     }
     header {
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
+      background-color: #004080;
       color: white;
       text-align: center;
-      padding: 4rem 1rem;
-      position: relative;
-    }
-    header::after {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
-    }
-    header h1, header img, .lang-switcher {
-      position: relative;
-      z-index: 2;
-    }
-    header img {
-      width: 100px;
-    }
-    .lang-switcher {
-      margin-top: 1rem;
-    }
-    .lang-switcher button {
-      margin: 0.2rem;
-      padding: 0.4rem 0.8rem;
-      background: var(--accent-color);
-      border: none;
-      color: white;
-      font-weight: bold;
-      border-radius: 4px;
-      cursor: pointer;
+      padding: 1rem;
     }
     nav {
+      background-color: #007BFF;
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      background: var(--main-color);
     }
     nav a {
-      padding: 1rem;
       color: white;
+      padding: 1rem;
       text-decoration: none;
       font-weight: bold;
     }
     nav a:hover {
-      background: var(--accent-color);
+      background-color: #0056b3;
     }
     main {
-      max-width: 960px;
-      margin: 2rem auto;
-      background: white;
       padding: 2rem;
+      max-width: 960px;
+      margin: auto;
+      background-color: white;
       box-shadow: 0 0 10px rgba(0,0,0,0.1);
     }
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .service-box {
-      flex: 1 1 45%;
-      background: #f1f1f1;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    form input, form textarea {
-      width: 100%;
-      padding: 0.6rem;
-      margin: 0.5rem 0;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-    }
-    form button {
-      padding: 0.7rem 1.5rem;
-      background: var(--main-color);
-      color: white;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-    }
     footer {
+      background-color: #004080;
+      color: white;
       text-align: center;
       padding: 1rem;
-      background: var(--main-color);
-      color: white;
+    }
+    .lang-switcher {
+      text-align: center;
+      margin: 1rem 0;
+    }
+    .lang-switcher button {
+      margin: 0.3rem;
+      padding: 0.5rem 1rem;
+      font-weight: bold;
+      cursor: pointer;
     }
     [data-lang] { display: none; }
     .visible { display: block; }
-    .map {
-      margin-top: 2rem;
-      width: 100%;
-      height: 300px;
-    }
   </style>
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('[data-lang]').forEach(e => e.classList.remove('visible'));
-      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(e => e.classList.add('visible'));
+      localStorage.setItem('lang', lang);
+      const sections = document.querySelectorAll('[data-lang]');
+      sections.forEach(s => s.classList.remove('visible'));
+      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
+      active.forEach(s => s.classList.add('visible'));
     }
-    window.onload = () => switchLang('ar');
+    window.onload = () => {
+      const lang = localStorage.getItem('lang') || 'fr';
+      switchLang(lang);
+    };
   </script>
 </head>
 <body>
   <header>
-    <img src="images/logo.png" alt="DZ Cleaning Logo" />
     <h1>DZ Cleaning Services</h1>
     <div class="lang-switcher">
-      <button onclick="switchLang('ar')">العربية</button>
-      <button onclick="switchLang('fr')">Français</button>
-      <button onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('fr')">FR</button>
+      <button onclick="switchLang('en')">EN</button>
+      <button onclick="switchLang('ar')">AR</button>
     </div>
   </header>
+
   <nav>
-    <a href="#about">من نحن</a>
-    <a href="#services">الخدمات</a>
-    <a href="#contact">اتصل بنا</a>
-    <a href="#booking">الحجز</a>
-    <a href="#map">خريطة</a>
+    <a href="#about">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#policy">Confidentialité</a>
+    <a href="#terms">Conditions</a>
   </nav>
+
   <main>
-    <section id="about" data-lang="ar" class="visible">
+    <!-- À propos -->
+    <section id="about" data-lang="fr" class="visible">
+      <h2>À propos</h2>
+      <p>Entreprise spécialisée dans le nettoyage de maisons, bureaux, chantiers, et vitrines.</p>
+    </section>
+    <section id="about" data-lang="en">
+      <h2>About Us</h2>
+      <p>Specialized cleaning company for homes, offices, construction sites, and windows.</p>
+    </section>
+    <section id="about" data-lang="ar">
       <h2>من نحن</h2>
-      <p>شركة تنظيف تقدم خدمات احترافية للمنازل والمكاتب، باستخدام منتجات صديقة للبيئة.</p>
+      <p>شركة تنظيف متخصصة للمنازل والمكاتب والمواقع الإنشائية والواجهات الزجاجية.</p>
     </section>
-    <section id="services" data-lang="ar" class="visible">
+
+    <!-- Services -->
+    <section id="services" data-lang="fr" class="visible">
+      <h2>Nos Services</h2>
+      <ul>
+        <li>Nettoyage de maisons</li>
+        <li>Nettoyage de bureaux</li>
+        <li>Nettoyage après chantier</li>
+        <li>Nettoyage de vitrines</li>
+      </ul>
+    </section>
+    <section id="services" data-lang="en">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Home cleaning</li>
+        <li>Office cleaning</li>
+        <li>Post-construction cleaning</li>
+        <li>Window cleaning</li>
+      </ul>
+    </section>
+    <section id="services" data-lang="ar">
       <h2>خدماتنا</h2>
-      <div class="services">
-        <div class="service-box">تنظيف منازل</div>
-        <div class="service-box">تنظيف مكاتب</div>
-        <div class="service-box">تنظيف الفتريات</div>
-        <div class="service-box">تنظيف نهاية الورشات</div>
-      </div>
+      <ul>
+        <li>تنظيف المنازل</li>
+        <li>تنظيف المكاتب</li>
+        <li>تنظيف ما بعد الورشات</li>
+        <li>تنظيف الواجهات الزجاجية</li>
+      </ul>
     </section>
-    <section id="contact" data-lang="ar" class="visible">
+
+    <!-- Contact -->
+    <section id="contact" data-lang="fr" class="visible">
+      <h2>Contact</h2>
+      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com</p>
+    </section>
+    <section id="contact" data-lang="en">
+      <h2>Contact</h2>
+      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com</p>
+    </section>
+    <section id="contact" data-lang="ar">
       <h2>اتصل بنا</h2>
-      <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>🏠 14b quai d'Arve, Annemasse 74100</p>
+      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com</p>
     </section>
-    <section id="booking" data-lang="ar" class="visible">
-      <h2>احجز الآن</h2>
-      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
-        <input type="text" name="name" placeholder="الاسم الكامل" required>
-        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-        <textarea name="message" placeholder="اكتب رسالتك..." required></textarea>
-        <button type="submit">إرسال</button>
-      </form>
+
+    <!-- Politique -->
+    <section id="policy" data-lang="fr" class="visible">
+      <h2>Politique de confidentialité</h2>
+      <p>Nous respectons votre vie privée. Vos données ne sont pas partagées.</p>
     </section>
-    <section id="map" class="visible">
-      <h2>موقعنا على الخريطة</h2>
-      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2760.0364644732985!2d6.242442315824659!3d46.19096547911667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c64b67db0fd29%3A0x2cfc9fdcb6c77b80!2s14%20Quai%20d&#39;Arve%2C%2074100%20Annemasse%2C%20France!5e0!3m2!1sar!2sfr!4v1683916357351!5m2!1sar!2sfr" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    <section id="policy" data-lang="en">
+      <h2>Privacy Policy</h2>
+      <p>We respect your privacy. Your data is not shared.</p>
+    </section>
+    <section id="policy" data-lang="ar">
+      <h2>سياسة الخصوصية</h2>
+      <p>نحترم خصوصيتك. لا تتم مشاركة بياناتك مع أي طرف ثالث.</p>
+    </section>
+
+    <!-- Conditions -->
+    <section id="terms" data-lang="fr" class="visible">
+      <h2>Conditions d'utilisation</h2>
+      <p>En utilisant ce site, vous acceptez nos conditions générales.</p>
+    </section>
+    <section id="terms" data-lang="en">
+      <h2>Terms of Service</h2>
+      <p>By using this website, you agree to our terms and policies.</p>
+    </section>
+    <section id="terms" data-lang="ar">
+      <h2>شروط الاستخدام</h2>
+      <p>باستخدام هذا الموقع، فإنك توافق على الشروط والأحكام.</p>
     </section>
   </main>
+
   <footer>
-    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
+    <p>&copy; 2025 DZ Cleaning Services. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
