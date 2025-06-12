@@ -5,11 +5,117 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DZ Cleaning Services</title>
   <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --main-color: #004080;
+      --accent-color: #007BFF;
+      --bg-light: #f8f9fa;
+      --text-dark: #333;
+    }
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+    }
+    header {
+      background-image: url('images/background.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      text-align: center;
+      padding: 4rem 1rem;
+      position: relative;
+    }
+    header::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 1;
+    }
+    header h1, header img, .lang-switcher {
+      position: relative;
+      z-index: 2;
+    }
+    header img {
+      width: 100px;
+    }
+    .lang-switcher {
+      margin-top: 1rem;
+    }
+    .lang-switcher button {
+      margin: 0.2rem;
+      padding: 0.4rem 0.8rem;
+      background: var(--accent-color);
+      border: none;
+      color: white;
+      font-weight: bold;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: var(--main-color);
+    }
+    nav a {
+      padding: 1rem;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      background: var(--accent-color);
+    }
+    main {
+      max-width: 960px;
+      margin: 2rem auto;
+      background: white;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .services {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .service-box {
+      flex: 1 1 45%;
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    form input, form textarea {
+      width: 100%;
+      padding: 0.6rem;
+      margin: 0.5rem 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      padding: 0.7rem 1.5rem;
+      background: var(--main-color);
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: var(--main-color);
+      color: white;
+    }
+    [data-lang] { display: none; }
+    .visible { display: block; }
+  </style>
   <script>
     function switchLang(lang) {
-      document.querySelectorAll('[data-lang]').forEach(el => el.style.display = 'none');
-      document.querySelectorAll(`[data-lang="${lang}"]`).forEach(el => el.style.display = 'block');
+      document.querySelectorAll('[data-lang]').forEach(e => e.classList.remove('visible'));
+      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(e => e.classList.add('visible'));
     }
     window.onload = () => switchLang('ar');
   </script>
@@ -24,82 +130,84 @@
       <button onclick="switchLang('en')">English</button>
     </div>
   </header>
-
   <nav>
-    <a href="#about">عن الشركة</a>
+    <a href="#about">من نحن</a>
     <a href="#services">الخدمات</a>
-    <a href="#booking">الحجز</a>
     <a href="#contact">اتصل بنا</a>
+    <a href="#booking">الحجز</a>
   </nav>
-
   <main>
-    <!-- من نحن -->
-    <section id="about" data-lang="ar">
+    <!-- About -->
+    <section id="about" data-lang="ar" class="visible">
       <h2>من نحن</h2>
-      <p>نحن شركة تنظيف محترفة مقرها في أنماص، نقدم خدمات تنظيف مخصصة للمنازل والمكاتب.</p>
+      <p>شركة تنظيف تقدم خدمات احترافية للمنازل والمكاتب، باستخدام منتجات صديقة للبيئة.</p>
     </section>
     <section id="about" data-lang="fr">
       <h2>À propos</h2>
-      <p>Entreprise de nettoyage professionnelle située à Annemasse, proposant des services sur mesure.</p>
+      <p>Entreprise de nettoyage professionnelle pour maisons et bureaux. Produits écologiques.</p>
     </section>
     <section id="about" data-lang="en">
       <h2>About Us</h2>
-      <p>Professional cleaning company based in Annemasse, offering customized services.</p>
+      <p>Professional cleaning company for homes and offices. Eco-friendly products.</p>
     </section>
 
-    <!-- خدماتنا -->
-    <section id="services" data-lang="ar">
+    <!-- Services -->
+    <section id="services" data-lang="ar" class="visible">
       <h2>خدماتنا</h2>
-      <ul>
-        <li>تنظيف منازل</li>
-        <li>تنظيف مكاتب</li>
-        <li>تنظيف نهاية الورشات</li>
-        <li>صيانة دورية</li>
-      </ul>
+      <div class="services">
+        <div class="service-box">تنظيف منازل</div>
+        <div class="service-box">تنظيف مكاتب</div>
+        <div class="service-box">تنظيف الفتريات</div>
+        <div class="service-box">تنظيف نهاية الورشات</div>
+      </div>
     </section>
     <section id="services" data-lang="fr">
-      <h2>Nos Services</h2>
-      <ul>
-        <li>Nettoyage de maisons</li>
-        <li>Nettoyage de bureaux</li>
-        <li>Fin de chantier</li>
-        <li>Entretien régulier</li>
-      </ul>
+      <h2>Nos services</h2>
+      <div class="services">
+        <div class="service-box">Nettoyage des maisons</div>
+        <div class="service-box">Bureaux</div>
+        <div class="service-box">Vitrines</div>
+        <div class="service-box">Fin de chantier</div>
+      </div>
     </section>
     <section id="services" data-lang="en">
       <h2>Our Services</h2>
-      <ul>
-        <li>House Cleaning</li>
-        <li>Office Cleaning</li>
-        <li>Post-construction Cleaning</li>
-        <li>Regular Maintenance</li>
-      </ul>
+      <div class="services">
+        <div class="service-box">Home Cleaning</div>
+        <div class="service-box">Office Cleaning</div>
+        <div class="service-box">Windows</div>
+        <div class="service-box">Post-construction</div>
+      </div>
     </section>
 
-    <!-- نموذج الحجز -->
-    <section id="booking" data-lang="ar">
-      <h2>احجز موعداً</h2>
+    <!-- Contact -->
+    <section id="contact" data-lang="ar" class="visible">
+      <h2>اتصل بنا</h2>
+      <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>🏠 14b quai d'Arve, Annemasse 74100</p>
+    </section>
+    <section id="contact" data-lang="fr">
+      <h2>Contact</h2>
+      <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>🏠 14b quai d'Arve, Annemasse 74100</p>
+    </section>
+    <section id="contact" data-lang="en">
+      <h2>Contact Us</h2>
+      <p>📞 0033615658535<br>📧 dz.cleaning@yahoo.com<br>🏠 14b quai d'Arve, Annemasse 74100</p>
+    </section>
+
+    <!-- Booking Form -->
+    <section id="booking" data-lang="ar" class="visible">
+      <h2>احجز الآن</h2>
       <form action="https://formspree.io/f/mrbkpwkl" method="POST">
         <input type="text" name="name" placeholder="الاسم الكامل" required>
         <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-        <textarea name="message" placeholder="نوع الخدمة المطلوبة" required></textarea>
+        <textarea name="message" placeholder="اكتب رسالتك..." required></textarea>
         <button type="submit">إرسال</button>
       </form>
     </section>
-
-    <!-- Google Map -->
-    <section id="contact" data-lang="ar">
-      <h2>موقعنا</h2>
-      <p>14b quai d'Arve, Annemasse 74100</p>
-      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed" width="100%" height="300" style="border:0;" allowfullscreen loading="lazy"></iframe>
-    </section>
+    <!-- Repeat form in other languages if desired -->
   </main>
-
   <footer>
-    <p>📞 0033615658535 | ✉️ dz.cleaning@yahoo.com</p>
-    <p>&copy; 2025 DZ Cleaning Services</p>
+    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
   </footer>
 </body>
 </html>
-
-
