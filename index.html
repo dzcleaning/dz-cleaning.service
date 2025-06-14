@@ -34,6 +34,7 @@
     header h1, header img, .lang-switcher {
       position: relative;
       z-index: 2;
+      text-align: center;
     }
     header img {
       max-width: 120px;
@@ -106,13 +107,13 @@
       padding: 1rem;
     }
     [data-lang] { display: none; }
-    .visible { display: block; }
+    [data-lang].visible { display: block; }
   </style>
   <script>
     function switchLang(lang) {
       document.documentElement.lang = lang;
-      document.querySelectorAll('[data-lang]').forEach(e => e.style.display = 'none');
-      document.querySelectorAll('[data-lang="'+lang+'"]').forEach(e => e.style.display = 'block');
+      document.querySelectorAll('[data-lang]').forEach(e => e.classList.remove('visible'));
+      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(e => e.classList.add('visible'));
     }
     window.onload = () => switchLang('fr');
   </script>
@@ -136,7 +137,7 @@
   </nav>
 
   <main>
-    <section id="about" data-lang="fr">
+    <section id="about" data-lang="fr" class="visible">
       <h2>À propos</h2>
       <p>Entreprise spécialisée dans le nettoyage des bureaux, vitres, chantiers, et commerces.</p>
     </section>
@@ -149,7 +150,7 @@
       <p>شركة متخصصة في تنظيف المكاتب، النوافذ، نهاية الورشات، والمتاجر.</p>
     </section>
 
-    <section id="services" data-lang="fr">
+    <section id="services" data-lang="fr" class="visible">
       <h2>Nos Services</h2>
       <div class="services">
         <div>Nettoyage bureaux</div>
@@ -177,7 +178,7 @@
       </div>
     </section>
 
-    <section id="contact" data-lang="fr">
+    <section id="contact" data-lang="fr" class="visible">
       <h2>Contact</h2>
       <form action="https://formspree.io/f/mrbkpwkl" method="POST">
         <input type="text" name="name" placeholder="Nom" required>
@@ -207,6 +208,14 @@
 
     <section id="map" data-lang="fr" class="visible">
       <h2>Notre Emplacement</h2>
+      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+    <section id="map" data-lang="en">
+      <h2>Our Location</h2>
+      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+    <section id="map" data-lang="ar">
+      <h2>موقعنا</h2>
       <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
     </section>
   </main>
