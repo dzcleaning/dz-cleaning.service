@@ -1,33 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>DZ Cleaning Services</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Entreprise de nettoyage à Annemasse. Maisons, bureaux, fin de chantier.">
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Entreprise de nettoyage à Annemasse – Services multilingues" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>DZ Cleaning Services</h1>
-    <nav>
-      <a href="index.html">FR</a> |
-      <a href="index_en.html">EN</a> |
-      <a href="index_ar.html">AR</a>
-    </nav>
-    <p>Services de nettoyage professionnels à Annemasse</p>
-    <a href="#contact" class="btn">Demandez un devis gratuit</a>
-  </header>
-  <section>
-    <h2>Nos prestations</h2>
-    <ul>
-      <li>Nettoyage de bureaux</li>
-      <li>Fin de chantier</li>
-      <li>Désinfection</li>
-    </ul>
-  </section>
-  <footer>
-    <p>© 2025 DZ Cleaning Services | dz.cleaning@yahoo.com</p>
-  </footer>
+
+<header>
+  <h1 data-fr="Nettoyage professionnel à Annemasse"
+      data-en="Professional Cleaning in Annemasse"
+      data-ar="خدمات تنظيف احترافية في آنِماس">Nettoyage professionnel à Annemasse</h1>
+  <p data-fr="Maisons, bureaux, fin de chantier – Devis gratuit"
+     data-en="Homes, offices, post-construction – Free quote"
+     data-ar="منازل، مكاتب، نهاية ورش – عرض مجاني">Maisons, bureaux, fin de chantier – Devis gratuit</p>
+  <a href="#contact" class="btn"
+     data-fr="Demander un devis"
+     data-en="Request a Quote"
+     data-ar="اطلب عرض">Demander un devis</a>
+  <div class="lang-switch">
+    <button onclick="switchLang('fr')">🇫🇷</button>
+    <button onclick="switchLang('en')">🇬🇧</button>
+    <button onclick="switchLang('ar')">🇸🇦</button>
+  </div>
+</header>
+
+<section class="services">
+  <div class="card">
+    <h3 data-fr="Nettoyage de bureaux" data-en="Office Cleaning" data-ar="تنظيف المكاتب">Nettoyage de bureaux</h3>
+    <p data-fr="Pour vos locaux professionnels" data-en="For your office spaces" data-ar="للمكاتب والمساحات المهنية">Pour vos locaux professionnels</p>
+  </div>
+  <div class="card">
+    <h3 data-fr="Nettoyage de maisons" data-en="Home Cleaning" data-ar="تنظيف المنازل">Nettoyage de maisons</h3>
+    <p data-fr="Service pour particuliers" data-en="Service for individuals" data-ar="خدمة للأفراد">Service pour particuliers</p>
+  </div>
+</section>
+
+<section class="about">
+  <h2 data-fr="À propos de nous" data-en="About Us" data-ar="من نحن">À propos de nous</h2>
+  <p data-fr="DZ Cleaning Services est une entreprise locale à Annemasse spécialisée dans le nettoyage écologique pour particuliers et professionnels."
+     data-en="DZ Cleaning Services is a local company in Annemasse specializing in eco-friendly cleaning for individuals and businesses."
+     data-ar="دي زد كلينينغ سيرفيس هي شركة محلية في آنِماس متخصصة في التنظيف البيئي للأفراد والشركات.">
+     DZ Cleaning Services est une entreprise locale à Annemasse spécialisée dans le nettoyage écologique pour particuliers et professionnels.
+  </p>
+</section>
+
+<section id="contact" class="contact">
+  <h2 data-fr="Contactez-nous" data-en="Contact Us" data-ar="اتصل بنا">Contactez-nous</h2>
+  <form action="mailto:dz.cleaning@yahoo.com" method="post" enctype="text/plain">
+    <input type="text" name="name" placeholder="Nom / Name / الاسم" required />
+    <input type="email" name="email" placeholder="Email" required />
+    <textarea name="message" placeholder="Message / الرسالة" required></textarea>
+    <button type="submit"
+      data-fr="Envoyer"
+      data-en="Send"
+      data-ar="إرسال">Envoyer</button>
+  </form>
+</section>
+
+<a href="https://wa.me/33615658535" class="whatsapp-float" target="_blank" title="Contact via WhatsApp">💬</a>
+
+<footer>
+  <p>© 2025 DZ Cleaning Services – dz.cleaning@yahoo.com – 06 15 65 85 35</p>
+</footer>
+
+<script>
+function switchLang(lang) {
+  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
+    el.innerText = el.getAttribute('data-' + lang);
+  });
+  document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+}
+</script>
+
 </body>
 </html>
