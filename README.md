@@ -1,57 +1,81 @@
+# DZ Cleaning Services
 
-# DZ Cleaning Services Website
+Bienvenue sur le site officiel de **DZ Cleaning Services**, une entreprise spécialisée dans le nettoyage écologique à Annemasse.
 
-الموقع الرسمي لشركة **DZ Cleaning Services**، متخصص في خدمات التنظيف للمنازل، المكاتب، والورشات.
+## 🌐 Aperçu
+- ✅ Multilingue (Français, Anglais, Arabe)
+- ✅ Services : nettoyage bureaux, maisons, fin de chantier
+- ✅ Design responsive
+- ✅ SEO : sitemap.xml, robots.txt
+- ✅ Contact : Formulaire + WhatsApp + Appel
+- ✅ Google Map intégrée
 
-## 🌐 العنوان المباشر للموقع
+## 📁 Contenu
+- `index.html` : page principale
+- `style.css` : style du site
+- `images/` : images optimisées WebP
+- `sitemap.xml` + `robots.txt` : pour SEO
+- `README.md` : ce fichier
 
-- GitHub Pages: [https://dzcleaning.github.io/dz-cleaning.service](https://dzcleaning.github.io/dz-cleaning.service)
-- Netlify (اختياري): [https://dz-cleaning.netlify.app](https://dz-cleaning.netlify.app) (في حال تم النشر عبر Netlify)
+## 🚀 Déploiement
+1. Cloner ou extraire ce projet.
+2. Glisser tous les fichiers sur GitHub Pages ou un hébergeur web.
+3. Votre site est prêt !
 
----
-
-## 🛠️ كيفية تعديل ورفع الموقع
-
-### 1. نسخ المستودع (Clone)
-git clone https://github.com/dzcleaning/dz-cleaning.service.git
-cd dz-cleaning.service
-
-### 2. تعديل الموقع
-- عدل الملفات مثل: index.html, assets/css/, assets/images/, الخ.
-
-### 3. إضافة التعديلات ورفعها إلى GitHub
-git add .
-git commit -m "تحديث تصميم الموقع"
-git push origin main
-
-### 4. تأكد من تفعيل GitHub Pages
-- ادخل إلى: Settings > Pages
-- اختر: Branch: main والمجلد / (root)
-- ثم اضغط "Save"
+📧 Contact : dz.cleaning@yahoo.com
 
 ---
 
-## 📁 محتويات المشروع
+# DZ Cleaning Services (English)
 
-- index.html: الصفحة الرئيسية (متعددة اللغات)
-- assets/: الصور، ملفات CSS، إلخ.
-- README.md: هذا الدليل.
+Welcome to the official website of **DZ Cleaning Services**, a company specialized in eco-friendly cleaning services in Annemasse.
+
+## 🌐 Overview
+- ✅ Multilingual (French, English, Arabic)
+- ✅ Services: office cleaning, home cleaning, post-construction
+- ✅ Responsive design
+- ✅ SEO: sitemap.xml, robots.txt
+- ✅ Contact: Form + WhatsApp + Phone Call
+- ✅ Integrated Google Map
+
+## 📁 Contents
+- `index.html` – main page
+- `style.css` – site styling
+- `images/` – optimized WebP images
+- `sitemap.xml` + `robots.txt` – SEO tools
+- `README.md` – this file
+
+## 🚀 Deployment
+1. Clone or unzip this project.
+2. Upload all files to GitHub Pages or any web host.
+3. Your site is ready!
+
+📧 Contact: dz.cleaning@yahoo.com
 
 ---
 
-## 🚀 النشر على Netlify (اختياري)
-1. ادخل إلى: [https://app.netlify.com/](https://app.netlify.com/)
-2. اختر *"Add new site" > "Import an existing project"*
-3. اختر GitHub ثم حدد هذا المستودع
-4. اضغط "Deploy site"
+# خدمات التنظيف دي زد (DZ Cleaning Services)
 
----
+مرحبًا بكم في الموقع الرسمي لشركة **DZ Cleaning Services**، شركة متخصصة في خدمات التنظيف البيئي في مدينة آنِماس – فرنسا.
 
-## 📞 معلومات التواصل
-- الهاتف: 0033615658535
-- البريد: dz.cleaning@yahoo.com
-- العنوان: 14b quai d'Arve, Annemasse 74100
+## 🌐 نظرة عامة
+- ✅ دعم ثلاث لغات (فرنسي، إنجليزي، عربي)
+- ✅ الخدمات: تنظيف المنازل، المكاتب، بعد انتهاء الورش
+- ✅ تصميم متجاوب لجميع الأجهزة
+- ✅ تحسين محركات البحث: sitemap.xml و robots.txt
+- ✅ تواصل مباشر: نموذج – واتساب – مكالمة هاتفية
+- ✅ خريطة Google مدمجة
 
----
+## 📁 المحتويات
+- `index.html` – الصفحة الرئيسية
+- `style.css` – التنسيقات
+- `images/` – صور WebP مضغوطة
+- `sitemap.xml` + `robots.txt` – لأرشفة الموقع
+- `README.md` – هذا الملف
 
-تم إعداد هذا الموقع من طرف فريق التطوير الرسمي لـ DZ Cleaning Services.
+## 🚀 النشر
+1. قم بتحميل أو نسخ المشروع إلى جهازك.
+2. ارفع جميع الملفات إلى GitHub Pages أو أي استضافة.
+3. موقعك أصبح جاهزًا!
+
+📧 البريد الإلكتروني: dz.cleaning@yahoo.com
