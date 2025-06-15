@@ -1,80 +1,229 @@
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>DZ Cleaning Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Entreprise de nettoyage à Annemasse – Services multilingues" />
-  <link rel="stylesheet" href="style.css" />
+  <title>DZ Cleaning Services</title>
+  <meta name="description" content="Services de nettoyage à Annemasse, bureaux, maisons et fin de chantier.">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    :root {
+      --main: #004080;
+      --accent: #007BFF;
+      --light: #f8f9fa;
+      --text: #333;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--light);
+      color: var(--text);
+    }
+    header {
+      background: url('images/background.jpg') center/cover no-repeat;
+      padding: 3rem 1rem;
+      color: white;
+      position: relative;
+    }
+    header::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4);
+    }
+    header h1, header img, .lang-switcher {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+    header img {
+      max-width: 120px;
+      display: block;
+      margin: auto;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      background: var(--main);
+    }
+    nav a {
+      color: white;
+      padding: 1rem;
+      text-decoration: none;
+    }
+    nav a:hover {
+      background: var(--accent);
+    }
+    .lang-switcher {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .lang-switcher button {
+      margin: 0 5px;
+      padding: 0.4rem 1rem;
+      border: none;
+      background: var(--accent);
+      color: white;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+    main {
+      max-width: 960px;
+      margin: auto;
+      padding: 2rem;
+      background: white;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    section { margin-bottom: 2rem; }
+    h2 { color: var(--main); }
+    .services { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .services div {
+      flex: 1 1 45%;
+      background: #eee;
+      padding: 1rem;
+      border-radius: 6px;
+    }
+    form input, form textarea {
+      width: 100%;
+      margin-top: 0.5rem;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: var(--main);
+      color: white;
+      padding: 0.7rem 1.5rem;
+      border: none;
+      border-radius: 4px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+    footer {
+      background: var(--main);
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    [data-lang] { display: none; }
+    [data-lang].visible { display: block; }
+  </style>
+  <script>
+    function switchLang(lang) {
+      document.documentElement.lang = lang;
+      document.querySelectorAll('[data-lang]').forEach(e => e.classList.remove('visible'));
+      document.querySelectorAll('[data-lang="' + lang + '"]').forEach(e => e.classList.add('visible'));
+    }
+    window.onload = () => switchLang('fr');
+  </script>
 </head>
 <body>
+  <header>
+    <img src="images/logo.png" alt="Logo">
+    <h1>DZ Cleaning Services</h1>
+    <div class="lang-switcher">
+      <button onclick="switchLang('fr')">Français</button>
+      <button onclick="switchLang('en')">English</button>
+      <button onclick="switchLang('ar')">العربية</button>
+    </div>
+  </header>
 
-<header>
-  <h1 data-fr="Nettoyage professionnel à Annemasse"
-      data-en="Professional Cleaning in Annemasse"
-      data-ar="خدمات تنظيف احترافية في آنِماس">Nettoyage professionnel à Annemasse</h1>
-  <p data-fr="Maisons, bureaux, fin de chantier – Devis gratuit"
-     data-en="Homes, offices, post-construction – Free quote"
-     data-ar="منازل، مكاتب، نهاية ورش – عرض مجاني">Maisons, bureaux, fin de chantier – Devis gratuit</p>
-  <a href="#contact" class="btn"
-     data-fr="Demander un devis"
-     data-en="Request a Quote"
-     data-ar="اطلب عرض">Demander un devis</a>
-  <div class="lang-switch">
-    <button onclick="switchLang('fr')">🇫🇷</button>
-    <button onclick="switchLang('en')">🇬🇧</button>
-    <button onclick="switchLang('ar')">🇸🇦</button>
-  </div>
-</header>
+  <nav>
+    <a href="#about">À propos</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+    <a href="#map">Plan</a>
+  </nav>
 
-<section class="services">
-  <div class="card">
-    <h3 data-fr="Nettoyage de bureaux" data-en="Office Cleaning" data-ar="تنظيف المكاتب">Nettoyage de bureaux</h3>
-    <p data-fr="Pour vos locaux professionnels" data-en="For your office spaces" data-ar="للمكاتب والمساحات المهنية">Pour vos locaux professionnels</p>
-  </div>
-  <div class="card">
-    <h3 data-fr="Nettoyage de maisons" data-en="Home Cleaning" data-ar="تنظيف المنازل">Nettoyage de maisons</h3>
-    <p data-fr="Service pour particuliers" data-en="Service for individuals" data-ar="خدمة للأفراد">Service pour particuliers</p>
-  </div>
-</section>
+  <main>
+    <section id="about" data-lang="fr" class="visible">
+      <h2>À propos</h2>
+      <p>Entreprise spécialisée dans le nettoyage des bureaux, vitres, chantiers, et commerces.</p>
+    </section>
+    <section id="about" data-lang="en">
+      <h2>About Us</h2>
+      <p>Specialized in cleaning offices, windows, post-construction sites, and shops.</p>
+    </section>
+    <section id="about" data-lang="ar">
+      <h2>من نحن</h2>
+      <p>شركة متخصصة في تنظيف المكاتب، النوافذ، نهاية الورشات، والمتاجر.</p>
+    </section>
 
-<section class="about">
-  <h2 data-fr="À propos de nous" data-en="About Us" data-ar="من نحن">À propos de nous</h2>
-  <p data-fr="DZ Cleaning Services est une entreprise locale à Annemasse spécialisée dans le nettoyage écologique pour particuliers et professionnels."
-     data-en="DZ Cleaning Services is a local company in Annemasse specializing in eco-friendly cleaning for individuals and businesses."
-     data-ar="دي زد كلينينغ سيرفيس هي شركة محلية في آنِماس متخصصة في التنظيف البيئي للأفراد والشركات.">
-     DZ Cleaning Services est une entreprise locale à Annemasse spécialisée dans le nettoyage écologique pour particuliers et professionnels.
-  </p>
-</section>
+    <section id="services" data-lang="fr" class="visible">
+      <h2>Nos Services</h2>
+      <div class="services">
+        <div>Nettoyage bureaux</div>
+        <div>Vitres</div>
+        <div>Fin de chantier</div>
+        <div>Commerces</div>
+      </div>
+    </section>
+    <section id="services" data-lang="en">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div>Office Cleaning</div>
+        <div>Window Washing</div>
+        <div>Post-construction</div>
+        <div>Shops</div>
+      </div>
+    </section>
+    <section id="services" data-lang="ar">
+      <h2>خدماتنا</h2>
+      <div class="services">
+        <div>تنظيف المكاتب</div>
+        <div>تنظيف النوافذ</div>
+        <div>نهاية الورشات</div>
+        <div>تنظيف المحلات</div>
+      </div>
+    </section>
 
-<section id="contact" class="contact">
-  <h2 data-fr="Contactez-nous" data-en="Contact Us" data-ar="اتصل بنا">Contactez-nous</h2>
-  <form action="mailto:dz.cleaning@yahoo.com" method="post" enctype="text/plain">
-    <input type="text" name="name" placeholder="Nom / Name / الاسم" required />
-    <input type="email" name="email" placeholder="Email" required />
-    <textarea name="message" placeholder="Message / الرسالة" required></textarea>
-    <button type="submit"
-      data-fr="Envoyer"
-      data-en="Send"
-      data-ar="إرسال">Envoyer</button>
-  </form>
-</section>
+    <section id="contact" data-lang="fr" class="visible">
+      <h2>Contact</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <input type="text" name="name" placeholder="Nom" required>
+        <input type="email" name="_replyto" placeholder="Email" required>
+        <textarea name="message" placeholder="Votre message" rows="5"></textarea>
+        <button type="submit">Envoyer</button>
+      </form>
+    </section>
+    <section id="contact" data-lang="en">
+      <h2>Contact Us</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="email" name="_replyto" placeholder="Email" required>
+        <textarea name="message" placeholder="Your message" rows="5"></textarea>
+        <button type="submit">Send</button>
+      </form>
+    </section>
+    <section id="contact" data-lang="ar">
+      <h2>اتصل بنا</h2>
+      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+        <input type="text" name="name" placeholder="الاسم" required>
+        <input type="email" name="_replyto" placeholder="البريد الإلكتروني" required>
+        <textarea name="message" placeholder="رسالتك" rows="5"></textarea>
+        <button type="submit">إرسال</button>
+      </form>
+    </section>
 
-<a href="https://wa.me/33615658535" class="whatsapp-float" target="_blank" title="Contact via WhatsApp">💬</a>
+    <section id="map" data-lang="fr" class="visible">
+      <h2>Notre Emplacement</h2>
+      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+    <section id="map" data-lang="en">
+      <h2>Our Location</h2>
+      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+    <section id="map" data-lang="ar">
+      <h2>موقعنا</h2>
+      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed" width="100%" height="300" frameborder="0" style="border:0;" allowfullscreen></iframe>
+    </section>
+  </main>
 
-<footer>
-  <p>© 2025 DZ Cleaning Services – dz.cleaning@yahoo.com – 06 15 65 85 35</p>
-</footer>
-
-<script>
-function switchLang(lang) {
-  document.querySelectorAll('[data-' + lang + ']').forEach(el => {
-    el.innerText = el.getAttribute('data-' + lang);
-  });
-  document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-  document.documentElement.lang = lang;
-}
-</script>
-
+  <footer>
+    <p>&copy; 2025 DZ Cleaning Services</p>
+    <p>📍 Annemasse | 📞 06 15 65 85 35 | ✉️ dz.cleaning@yahoo.com</p>
+  </footer>
 </body>
 </html>
