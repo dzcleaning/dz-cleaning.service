@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dzcleaning.github.io/dz-cleaning.service/sitemap.xml
