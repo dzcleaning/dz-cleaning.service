@@ -1,11 +1,41 @@
-<form action="https://formspree.io/f/mrbkpwkl" method="POST" novalidate>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Contact – DZ Cleaning Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <input type="text" name="name" id="name" placeholder="Votre nom" required>
+<section class="contact-section">
+  <h1>Contactez-nous</h1>
+  <p>
+    Si vous souhaitez nous contacter pour toute demande d’information ou de service,
+    veuillez nous envoyer votre message via le formulaire ci-dessous.
+  </p>
 
-  <input type="email" name="email" id="email" placeholder="Votre email" required>
+  <form action="https://formspree.io/f/mrbkpwkl" method="POST">
 
-  <textarea name="message" id="message" placeholder="Votre message" required></textarea>
+    <label>
+      Nom :
+      <input type="text" name="name" required>
+    </label>
 
-  <button type="submit">Envoyer</button>
+    <label>
+      Email :
+      <input type="email" name="email" required>
+    </label>
 
-</form>
+    <label>
+      Message :
+      <textarea name="message" required></textarea>
+    </label>
+
+    <button type="submit">Envoyer</button>
+
+  </form>
+</section>
+
+</body>
+</html>
