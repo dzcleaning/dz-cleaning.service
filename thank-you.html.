@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <title>Merci – DZ Cleaning Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Merci pour votre message !</h1>
-  <p>Nous avons bien reçu votre demande et nous vous répondrons sous peu.</p>
-  <a href="index.html">Retour à la page d'accueil</a>
+
+<section class="contact-section">
+  <h1>Merci 🙏</h1>
+  <p>Votre message a bien été pris en compte.</p>
+  <p>Nous vous répondrons dans les plus brefs délais.</p>
+
+  <a href="index.html" class="btn btn-email">Retour à l’accueil</a>
+</section>
+
 </body>
 </html>
