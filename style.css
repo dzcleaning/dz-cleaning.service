@@ -2,94 +2,70 @@ body {
   font-family: Arial, sans-serif;
   background: #f4f6f8;
   margin: 0;
-  padding: 0;
-  color: #333;
 }
-header {
-  background: #007acc;
-  color: white;
-  text-align: center;
-  padding: 2em 1em;
-}
-.btn {
-  margin-top: 1em;
-  display: inline-block;
-  padding: 0.75em 1.5em;
-  background: white;
-  color: #007acc;
-  text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
-}
-.lang-switch {
-  margin-top: 1.5em;
-}
-.lang-switch button {
-  font-size: 1.2em;
-  margin: 0 0.25em;
-  background: white;
-  border: none;
-  padding: 0.5em;
-  border-radius: 4px;
-  cursor: pointer;
-}
-.services, .about, .contact form {
+
+.contact-section {
   max-width: 800px;
-  margin: auto;
-  padding: 2em;
+  margin: 60px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
 }
-.services {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1.5em;
+
+.contact-section h1 {
+  color: #1e88e5;
+  margin-bottom: 10px;
 }
-.card {
-  background: white;
-  padding: 1.5em;
+
+.contact-section p {
+  color: #555;
+  margin-bottom: 25px;
+  font-size: 16px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 26px;
   border-radius: 10px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-align: center;
-}
-.about p, .contact form {
-  margin-top: 1em;
-}
-.contact form input, .contact form textarea {
-  width: 100%;
-  margin: 0.5em 0;
-  padding: 1em;
-  border-radius: 6px;
-  border: 1px solid #ccc;
-}
-.contact form button {
-  background: #007acc;
-  color: white;
-  padding: 1em 2em;
-  border: none;
-  border-radius: 6px;
-  cursor: pointer;
-}
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25d366;
-  color: white;
-  font-size: 28px;
-  padding: 0.5em 0.7em;
-  border-radius: 50%;
-  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
   text-decoration: none;
-  z-index: 1000;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.2s;
+  transition: all 0.2s ease;
 }
-.whatsapp-float:hover {
-  transform: scale(1.1);
+
+.btn:hover {
+  transform: translateY(-2px);
 }
-footer {
-  text-align: center;
-  background: #222;
+
+.btn-whatsapp {
+  background: #25D366;
   color: white;
-  padding: 2em;
-  margin-top: 2em;
+}
+
+.btn-email {
+  background: #1e88e5;
+  color: white;
+}
+
+.map-container {
+  margin-top: 30px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 300px;
+  border: 0;
 }
