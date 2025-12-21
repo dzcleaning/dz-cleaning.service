@@ -1,24 +1,28 @@
 <script>
-  function switchLang(lang) {
-    // إظهار / إخفاء المحتوى حسب اللغة
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.remove('visible');
-      if (el.getAttribute('data-lang') === lang) {
-        el.classList.add('visible');
+  const form = document.getElementById("contactForm");
+  const statusEl = document.getElementById("formStatus");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    statusEl.textContent = "⏳ Envoi en cours...";
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: new FormData(form),
+        headers: {
+          "Accept": "application/json"
+        }
+      });
+
+      if (response.ok) {
+        statusEl.textContent = "✅ Message envoyé avec succès.";
+        form.reset();
+      } else {
+        statusEl.textContent = "❌ Erreur lors de l’envoi. Réessayez.";
       }
-    });
-
-    // تغيير لغة واتجاه الصفحة
-    document.documentElement.lang = lang;
-    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-
-    // حفظ اللغة المختارة
-    localStorage.setItem('lang', lang);
-  }
-
-  // تحميل اللغة المحفوظة عند فتح الصفحة
-  window.addEventListener('DOMContentLoaded', () => {
-    const savedLang = localStorage.getItem('lang') || 'fr';
-    switchLang(savedLang);
+    } catch (error) {
+      statusEl.textContent = "❌ Problème de connexion.";
+    }
   });
 </script>
