@@ -4,8 +4,10 @@
   <meta charset="UTF-8">
   <title>DZ Cleaning Services – Booking</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <meta name="description" content="حجز موعد تنظيف مع DZ Cleaning Services في Annemasse.">
+
+  <!-- Font Awesome (WhatsApp icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
   <style>
     body {
@@ -67,7 +69,7 @@
       font-size: 1rem;
     }
 
-    button {
+    button[type="submit"] {
       background: #004080;
       color: #fff;
       padding: 0.9rem;
@@ -78,7 +80,7 @@
       width: 100%;
     }
 
-    button:hover {
+    button[type="submit"]:hover {
       background: #007BFF;
     }
 
@@ -90,8 +92,32 @@
       margin-top: 3rem;
     }
 
+    /* Language visibility */
     [data-lang] { display: none; }
     .visible { display: block; }
+
+    /* WhatsApp floating button */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 60px;
+      height: 60px;
+      background: #25D366;
+      color: #fff;
+      border-radius: 50%;
+      font-size: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+
+    html[dir="rtl"] .whatsapp-float {
+      right: auto;
+      left: 20px;
+    }
   </style>
 
   <script>
@@ -109,6 +135,21 @@
     window.addEventListener('DOMContentLoaded', () => {
       switchLang(localStorage.getItem('lang') || 'ar');
     });
+
+    /* WhatsApp click tracking (GA4 ready) */
+    document.addEventListener("DOMContentLoaded", function () {
+      const waBtn = document.querySelector(".whatsapp-float");
+      if (waBtn) {
+        waBtn.addEventListener("click", function () {
+          if (typeof gtag === "function") {
+            gtag('event', 'click_whatsapp', {
+              event_category: 'engagement',
+              event_label: 'WhatsApp Booking Page'
+            });
+          }
+        });
+      }
+    });
   </script>
 </head>
 
@@ -116,7 +157,6 @@
 
 <header>
   <h1>DZ Cleaning Services</h1>
-
   <div class="lang-switch">
     <button onclick="switchLang('ar')">AR</button>
     <button onclick="switchLang('fr')">FR</button>
@@ -124,17 +164,14 @@
   </div>
 </header>
 
-<!-- ===== AR ===== -->
 <section data-lang="ar" class="visible">
   <h2>📅 حجز موعد</h2>
 </section>
 
-<!-- ===== FR ===== -->
 <section data-lang="fr">
   <h2>📅 Prendre rendez-vous</h2>
 </section>
 
-<!-- ===== EN ===== -->
 <section data-lang="en">
   <h2>📅 Book an Appointment</h2>
 </section>
@@ -156,8 +193,8 @@
   <input type="tel" name="phone">
 
   <label data-lang="ar" class="visible">تاريخ الموعد</label>
-  <label data-lang="fr">Date du rendez-vous</label>
-  <label data-lang="en">Appointment date</label>
+  <label data-lang="fr">Date</label>
+  <label data-lang="en">Date</label>
   <input type="date" name="date">
 
   <label data-lang="ar" class="visible">وقت الموعد</label>
@@ -170,7 +207,7 @@
   <label data-lang="en">Message</label>
   <textarea name="message" rows="4"></textarea>
 
-  <button type="submit">📩 Submit</button>
+  <button type="submit">📩 Envoyer</button>
 </form>
 
 <footer>
@@ -180,7 +217,13 @@
   <p>© 2025 DZ Cleaning Services</p>
 </footer>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/33615658535?text=Bonjour%20DZ%20Cleaning%20Services%2C%20je%20souhaite%20un%20devis%20de%20nettoyage%20%C3%A0%20Annemasse."
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp DZ Cleaning Services">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 </body>
 </html>
-
-</body></html>
