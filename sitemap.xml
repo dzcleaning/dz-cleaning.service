@@ -1,10 +1,40 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
-<url><loc>https://dzcleaning.github.io/dz-cleaning.service/about.html</loc></url>
-<url><loc>https://dzcleaning.github.io/dz-cleaning.service/booking.html</loc></url>
-<url><loc>https://dzcleaning.github.io/dz-cleaning.service/contact.html</loc></url>
-<url><loc>https://dzcleaning.github.io/dz-cleaning.service/dz-policy-final.html</loc></url>
-<url><loc>https://dzcleaning.github.io/dz-cleaning.service/index (6).html</loc></url>
-<url><loc>https://dzcleaning.github.io/dz-cleaning.service/index.html</loc></url>
-<url><loc>https://dzcleaning.github.io/dz-cleaning.service/services.html</loc></url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <url>
+    <loc>https://dzcleaning.github.io/dz-cleaning.service/</loc>
+    <lastmod>2025-03-08</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://dzcleaning.github.io/dz-cleaning.service/index.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <priority>1.00</priority>
+  </url>
+
+  <url>
+    <loc>https://dzcleaning.github.io/dz-cleaning.service/services.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://dzcleaning.github.io/dz-cleaning.service/contact.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://dzcleaning.github.io/dz-cleaning.service/booking.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://dzcleaning.github.io/dz-cleaning.service/terms-policy.html</loc>
+    <lastmod>2025-03-08</lastmod>
+    <priority>0.60</priority>
+  </url>
+
 </urlset>
