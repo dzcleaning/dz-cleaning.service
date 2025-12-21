@@ -2,104 +2,185 @@
 <html lang="ar" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>DZ Cleaning Services - حجز موعد</title>
+  <title>DZ Cleaning Services – Booking</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="description" content="حجز موعد تنظيف مع DZ Cleaning Services في Annemasse.">
+
   <style>
     body {
-      font-family: 'Arial', sans-serif;
-      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
       margin: 0;
-      padding: 0;
       color: #333;
     }
+
     header {
-      background-color: #004080;
-      color: white;
+      background: #004080;
+      color: #fff;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
     }
+
+    .lang-switch {
+      margin-top: 1rem;
+    }
+
+    .lang-switch button {
+      margin: 4px;
+      padding: 6px 14px;
+      border: none;
+      border-radius: 5px;
+      background: #007BFF;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
     h2 {
       color: #004080;
       text-align: center;
-      margin-top: 1rem;
+      margin-top: 1.5rem;
     }
+
     form {
       max-width: 600px;
       margin: 2rem auto;
       background: #fff;
       padding: 2rem;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      border-radius: 8px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
+
     label {
       display: block;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
       font-weight: bold;
     }
+
     input, textarea {
       width: 100%;
       padding: 0.8rem;
       margin-bottom: 1rem;
+      border-radius: 6px;
       border: 1px solid #ccc;
-      border-radius: 4px;
       font-size: 1rem;
     }
+
     button {
-      background-color: #004080;
-      color: white;
-      padding: 0.8rem 1.5rem;
+      background: #004080;
+      color: #fff;
+      padding: 0.9rem;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       font-size: 1rem;
       cursor: pointer;
+      width: 100%;
     }
+
     button:hover {
-      background-color: #007BFF;
+      background: #007BFF;
     }
+
     footer {
-      text-align: center;
-      padding: 1rem;
       background: #004080;
-      color: white;
-      margin-top: 2rem;
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 3rem;
     }
+
+    [data-lang] { display: none; }
+    .visible { display: block; }
   </style>
+
+  <script>
+    function switchLang(lang) {
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.remove('visible');
+        if (el.dataset.lang === lang) el.classList.add('visible');
+      });
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+      localStorage.setItem('lang', lang);
+    }
+
+    window.addEventListener('DOMContentLoaded', () => {
+      switchLang(localStorage.getItem('lang') || 'ar');
+    });
+  </script>
 </head>
+
 <body>
-  <header>
-    <h1>DZ Cleaning Services</h1>
-    <p>نموذج حجز موعد</p>
-  </header>
 
-  <h2>📅 احجز معنا</h2>
-  fetch('https://formspree.io/f/your-form-id', {...})
-    <label for="name">الاسم الكامل *</label>
-    <input type="text" name="name" id="name" required>
+<header>
+  <h1>DZ Cleaning Services</h1>
 
-    <label for="email">البريد الإلكتروني *</label>
-    <input type="email" name="email" id="email" required>
+  <div class="lang-switch">
+    <button onclick="switchLang('ar')">AR</button>
+    <button onclick="switchLang('fr')">FR</button>
+    <button onclick="switchLang('en')">EN</button>
+  </div>
+</header>
 
-    <label for="phone">رقم الهاتف</label>
-    <input type="tel" name="phone" id="phone">
+<!-- ===== AR ===== -->
+<section data-lang="ar" class="visible">
+  <h2>📅 حجز موعد</h2>
+</section>
 
-    <label for="message">ملاحظات إضافية</label>
-    <textarea name="message" id="message" rows="5"></textarea>
+<!-- ===== FR ===== -->
+<section data-lang="fr">
+  <h2>📅 Prendre rendez-vous</h2>
+</section>
 
-    <button type="submit">📩 إرسال الحجز</button>
-  </form>
+<!-- ===== EN ===== -->
+<section data-lang="en">
+  <h2>📅 Book an Appointment</h2>
+</section>
 
-  <footer>
-    &copy; 2025 DZ Cleaning Services - جميع الحقوق محفوظة.
-  
+<form action="https://formspree.io/f/mrbkpwkl" method="POST">
+  <label data-lang="ar" class="visible">الاسم الكامل *</label>
+  <label data-lang="fr">Nom complet *</label>
+  <label data-lang="en">Full name *</label>
+  <input type="text" name="name" required>
+
+  <label data-lang="ar" class="visible">البريد الإلكتروني *</label>
+  <label data-lang="fr">Email *</label>
+  <label data-lang="en">Email *</label>
+  <input type="email" name="email" required>
+
+  <label data-lang="ar" class="visible">رقم الهاتف</label>
+  <label data-lang="fr">Téléphone</label>
+  <label data-lang="en">Phone</label>
+  <input type="tel" name="phone">
+
+  <label data-lang="ar" class="visible">تاريخ الموعد</label>
+  <label data-lang="fr">Date du rendez-vous</label>
+  <label data-lang="en">Appointment date</label>
+  <input type="date" name="date">
+
+  <label data-lang="ar" class="visible">وقت الموعد</label>
+  <label data-lang="fr">Heure</label>
+  <label data-lang="en">Time</label>
+  <input type="time" name="time">
+
+  <label data-lang="ar" class="visible">ملاحظات إضافية</label>
+  <label data-lang="fr">Message</label>
+  <label data-lang="en">Message</label>
+  <textarea name="message" rows="4"></textarea>
+
+  <button type="submit">📩 Submit</button>
+</form>
+
 <footer>
-  <div class="footer-info">
-    <p><strong>Dz Cleaning Services</strong></p>
-    <p>14 rue d'Arve, Annemasse 74100</p>
-    <p>Tel: 0033615658535 | Email: dz.cleaning@yahoo.com</p>
-  </div>
-  <div class="footer-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.2176300120364!2d6.235!3d46.195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6484f4cfcd0f%3A0x123!2s14%20Rue%20d'Arve%2C%2074100%20Annemasse!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
-  </div>
+  <p><strong>DZ Cleaning Services</strong></p>
+  <p>Annemasse – France</p>
+  <p>📞 06 15 65 85 35 | ✉️ dz.cleaning@yahoo.com</p>
+  <p>© 2025 DZ Cleaning Services</p>
 </footer>
+
+</body>
+</html>
 
 </body></html>
