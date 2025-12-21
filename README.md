@@ -1,81 +1,114 @@
 # DZ Cleaning Services
 
-Bienvenue sur le site officiel de **DZ Cleaning Services**, une entreprise spécialisée dans le nettoyage écologique à Annemasse.
+Bienvenue sur le site officiel de **DZ Cleaning Services**,  
+une entreprise spécialisée dans le **nettoyage écologique** à **Annemasse – France**.
+
+---
 
 ## 🌐 Aperçu
-- ✅ Multilingue (Français, Anglais, Arabe)
-- ✅ Services : nettoyage bureaux, maisons, fin de chantier
-- ✅ Design responsive
-- ✅ SEO : sitemap.xml, robots.txt
-- ✅ Contact : Formulaire + WhatsApp + Appel
-- ✅ Google Map intégrée
+- ✅ Multilingue : **Français / English / العربية**
+- ✅ Services : nettoyage **bureaux**, **maisons**, **vitrages**, **commerces**, **fin de chantier**
+- ✅ Design **responsive** (mobile / tablette / desktop)
+- ✅ SEO : `sitemap.xml`, `robots.txt`
+- ✅ Contact : **Formulaire**, **WhatsApp**, **Appel**
+- ✅ **Google Map** intégrée
 
-## 📁 Contenu
-- `index.html` : page principale
-- `style.css` : style du site
-- `images/` : images optimisées WebP
-- `sitemap.xml` + `robots.txt` : pour SEO
-- `README.md` : ce fichier
+---
+
+## 📁 Contenu du projet
+- `index.html` : page principale  
+- `services.html` : services proposés  
+- `contact.html` : page contact  
+- `style.css` : styles du site  
+- `script.js` : gestion des langues  
+- `images/` : images optimisées (WebP / PNG)  
+- `sitemap.xml` + `robots.txt` : SEO  
+- `README.md` : ce fichier  
+
+---
 
 ## 🚀 Déploiement
-1. Cloner ou extraire ce projet.
-2. Glisser tous les fichiers sur GitHub Pages ou un hébergeur web.
-3. Votre site est prêt !
+1. Cloner ou télécharger ce projet.
+2. Uploader tous les fichiers sur **GitHub Pages** ou un hébergeur web.
+3. Le site est immédiatement accessible en ligne.
 
-📧 Contact : dz.cleaning@yahoo.com
+📧 **Contact** : dz.cleaning@yahoo.com  
+📍 **Localisation** : Annemasse – France  
 
 ---
 
 # DZ Cleaning Services (English)
 
-Welcome to the official website of **DZ Cleaning Services**, a company specialized in eco-friendly cleaning services in Annemasse.
-
-## 🌐 Overview
-- ✅ Multilingual (French, English, Arabic)
-- ✅ Services: office cleaning, home cleaning, post-construction
-- ✅ Responsive design
-- ✅ SEO: sitemap.xml, robots.txt
-- ✅ Contact: Form + WhatsApp + Phone Call
-- ✅ Integrated Google Map
-
-## 📁 Contents
-- `index.html` – main page
-- `style.css` – site styling
-- `images/` – optimized WebP images
-- `sitemap.xml` + `robots.txt` – SEO tools
-- `README.md` – this file
-
-## 🚀 Deployment
-1. Clone or unzip this project.
-2. Upload all files to GitHub Pages or any web host.
-3. Your site is ready!
-
-📧 Contact: dz.cleaning@yahoo.com
+Welcome to the official website of **DZ Cleaning Services**,  
+a company specialized in **eco-friendly cleaning services** in **Annemasse, France**.
 
 ---
 
-# خدمات التنظيف دي زد (DZ Cleaning Services)
+## 🌐 Overview
+- ✅ Multilingual: **French / English / Arabic**
+- ✅ Services: **office**, **home**, **window**, **shop**, **post-construction cleaning**
+- ✅ Fully **responsive design**
+- ✅ SEO ready: `sitemap.xml`, `robots.txt`
+- ✅ Contact: **Form**, **WhatsApp**, **Phone**
+- ✅ Integrated **Google Map**
 
-مرحبًا بكم في الموقع الرسمي لشركة **DZ Cleaning Services**، شركة متخصصة في خدمات التنظيف البيئي في مدينة آنِماس – فرنسا.
+---
+
+## 📁 Project contents
+- `index.html` – main page  
+- `services.html` – services page  
+- `contact.html` – contact page  
+- `style.css` – site styling  
+- `script.js` – language switch  
+- `images/` – optimized images  
+- `sitemap.xml` + `robots.txt` – SEO tools  
+- `README.md` – this file  
+
+---
+
+## 🚀 Deployment
+1. Clone or download this repository.
+2. Upload all files to **GitHub Pages** or any web host.
+3. Your website is ready!
+
+📧 **Contact**: dz.cleaning@yahoo.com  
+📍 **Location**: Annemasse, France  
+
+---
+
+# خدمات التنظيف DZ Cleaning Services (العربية)
+
+مرحبًا بكم في الموقع الرسمي لشركة **DZ Cleaning Services**،  
+شركة متخصصة في **خدمات التنظيف البيئي** بمدينة **آنِماس – فرنسا**.
+
+---
 
 ## 🌐 نظرة عامة
-- ✅ دعم ثلاث لغات (فرنسي، إنجليزي، عربي)
-- ✅ الخدمات: تنظيف المنازل، المكاتب، بعد انتهاء الورش
+- ✅ دعم ثلاث لغات: **العربية / الفرنسية / الإنجليزية**
+- ✅ الخدمات: تنظيف **المنازل**، **المكاتب**، **الزجاج**، **المحلات**، **بعد انتهاء الورش**
 - ✅ تصميم متجاوب لجميع الأجهزة
-- ✅ تحسين محركات البحث: sitemap.xml و robots.txt
-- ✅ تواصل مباشر: نموذج – واتساب – مكالمة هاتفية
-- ✅ خريطة Google مدمجة
+- ✅ تحسين محركات البحث: `sitemap.xml` و `robots.txt`
+- ✅ تواصل مباشر: **نموذج – واتساب – مكالمة هاتفية**
+- ✅ خريطة **Google** مدمجة
 
-## 📁 المحتويات
-- `index.html` – الصفحة الرئيسية
-- `style.css` – التنسيقات
-- `images/` – صور WebP مضغوطة
-- `sitemap.xml` + `robots.txt` – لأرشفة الموقع
-- `README.md` – هذا الملف
+---
+
+## 📁 محتويات المشروع
+- `index.html` – الصفحة الرئيسية  
+- `services.html` – صفحة الخدمات  
+- `contact.html` – صفحة الاتصال  
+- `style.css` – التنسيقات  
+- `script.js` – إدارة اللغات  
+- `images/` – صور محسّنة  
+- `sitemap.xml` + `robots.txt` – أرشفة الموقع  
+- `README.md` – هذا الملف  
+
+---
 
 ## 🚀 النشر
-1. قم بتحميل أو نسخ المشروع إلى جهازك.
-2. ارفع جميع الملفات إلى GitHub Pages أو أي استضافة.
-3. موقعك أصبح جاهزًا!
+1. تحميل أو نسخ المشروع.
+2. رفع جميع الملفات إلى **GitHub Pages** أو أي استضافة.
+3. الموقع يصبح جاهزًا للعمل مباشرة.
 
-📧 البريد الإلكتروني: dz.cleaning@yahoo.com
+📧 **البريد الإلكتروني**: dz.cleaning@yahoo.com  
+📍 **الموقع**: آنِماس – فرنسا
