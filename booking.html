@@ -6,8 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="حجز موعد تنظيف مع DZ Cleaning Services في Annemasse.">
 
-  <!-- Font Awesome (WhatsApp icon) -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- ===== Google Analytics 4 ===== -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 
   <style>
     body {
@@ -16,18 +25,12 @@
       margin: 0;
       color: #333;
     }
-
     header {
       background: #004080;
       color: #fff;
       text-align: center;
       padding: 2rem 1rem;
     }
-
-    .lang-switch {
-      margin-top: 1rem;
-    }
-
     .lang-switch button {
       margin: 4px;
       padding: 6px 14px;
@@ -38,13 +41,11 @@
       font-weight: bold;
       cursor: pointer;
     }
-
     h2 {
       color: #004080;
       text-align: center;
       margin-top: 1.5rem;
     }
-
     form {
       max-width: 600px;
       margin: 2rem auto;
@@ -53,23 +54,19 @@
       border-radius: 12px;
       box-shadow: 0 10px 25px rgba(0,0,0,0.1);
     }
-
     label {
       display: block;
       margin-bottom: 0.4rem;
       font-weight: bold;
     }
-
     input, textarea {
       width: 100%;
       padding: 0.8rem;
       margin-bottom: 1rem;
       border-radius: 6px;
       border: 1px solid #ccc;
-      font-size: 1rem;
     }
-
-    button[type="submit"] {
+    button {
       background: #004080;
       color: #fff;
       padding: 0.9rem;
@@ -79,11 +76,6 @@
       cursor: pointer;
       width: 100%;
     }
-
-    button[type="submit"]:hover {
-      background: #007BFF;
-    }
-
     footer {
       background: #004080;
       color: #fff;
@@ -92,11 +84,9 @@
       margin-top: 3rem;
     }
 
-    /* Language visibility */
-    [data-lang] { display: none; }
-    .visible { display: block; }
+    [data-lang]{display:none}
+    .visible{display:block}
 
-    /* WhatsApp floating button */
     .whatsapp-float {
       position: fixed;
       bottom: 20px;
@@ -113,7 +103,6 @@
       z-index: 999;
       box-shadow: 0 4px 10px rgba(0,0,0,0.3);
     }
-
     html[dir="rtl"] .whatsapp-float {
       right: auto;
       left: 20px;
@@ -121,34 +110,22 @@
   </style>
 
   <script>
-    function switchLang(lang) {
-      document.querySelectorAll('[data-lang]').forEach(el => {
-        el.classList.remove('visible');
-        if (el.dataset.lang === lang) el.classList.add('visible');
+    function switchLang(lang){
+      document.querySelectorAll('[data-lang]').forEach(el=>{
+        el.classList.toggle('visible', el.dataset.lang === lang);
       });
-
       document.documentElement.lang = lang;
-      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+      document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
       localStorage.setItem('lang', lang);
     }
 
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', ()=>{
       switchLang(localStorage.getItem('lang') || 'ar');
-    });
 
-    /* WhatsApp click tracking (GA4 ready) */
-    document.addEventListener("DOMContentLoaded", function () {
-      const waBtn = document.querySelector(".whatsapp-float");
-      if (waBtn) {
-        waBtn.addEventListener("click", function () {
-          if (typeof gtag === "function") {
-            gtag('event', 'click_whatsapp', {
-              event_category: 'engagement',
-              event_label: 'WhatsApp Booking Page'
-            });
-          }
-        });
-      }
+      // Conversion tracking
+      document.querySelector("form").addEventListener("submit", ()=>{
+        gtag('event','submit_booking_form',{event_category:'conversion'});
+      });
     });
   </script>
 </head>
@@ -164,17 +141,9 @@
   </div>
 </header>
 
-<section data-lang="ar" class="visible">
-  <h2>📅 حجز موعد</h2>
-</section>
-
-<section data-lang="fr">
-  <h2>📅 Prendre rendez-vous</h2>
-</section>
-
-<section data-lang="en">
-  <h2>📅 Book an Appointment</h2>
-</section>
+<section data-lang="ar" class="visible"><h2>📅 حجز موعد</h2></section>
+<section data-lang="fr"><h2>📅 Prendre rendez-vous</h2></section>
+<section data-lang="en"><h2>📅 Book an Appointment</h2></section>
 
 <form action="https://formspree.io/f/mrbkpwkl" method="POST">
   <label data-lang="ar" class="visible">الاسم الكامل *</label>
@@ -187,26 +156,7 @@
   <label data-lang="en">Email *</label>
   <input type="email" name="email" required>
 
-  <label data-lang="ar" class="visible">رقم الهاتف</label>
-  <label data-lang="fr">Téléphone</label>
-  <label data-lang="en">Phone</label>
-  <input type="tel" name="phone">
-
-  <label data-lang="ar" class="visible">تاريخ الموعد</label>
-  <label data-lang="fr">Date</label>
-  <label data-lang="en">Date</label>
-  <input type="date" name="date">
-
-  <label data-lang="ar" class="visible">وقت الموعد</label>
-  <label data-lang="fr">Heure</label>
-  <label data-lang="en">Time</label>
-  <input type="time" name="time">
-
-  <label data-lang="ar" class="visible">ملاحظات إضافية</label>
-  <label data-lang="fr">Message</label>
-  <label data-lang="en">Message</label>
-  <textarea name="message" rows="4"></textarea>
-
+  <textarea name="message" placeholder="Message"></textarea>
   <button type="submit">📩 Envoyer</button>
 </form>
 
@@ -214,14 +164,12 @@
   <p><strong>DZ Cleaning Services</strong></p>
   <p>Annemasse – France</p>
   <p>📞 06 15 65 85 35 | ✉️ dz.cleaning@yahoo.com</p>
-  <p>© 2025 DZ Cleaning Services</p>
 </footer>
 
-<!-- WhatsApp Floating Button -->
-<a href="https://wa.me/33615658535?text=Bonjour%20DZ%20Cleaning%20Services%2C%20je%20souhaite%20un%20devis%20de%20nettoyage%20%C3%A0%20Annemasse."
+<a href="https://wa.me/33615658535?text=Bonjour%20DZ%20Cleaning%20Services%2C%20je%20souhaite%20un%20devis."
    class="whatsapp-float"
    target="_blank"
-   aria-label="WhatsApp DZ Cleaning Services">
+   onclick="gtag('event','click_whatsapp',{event_category:'conversion'});">
   <i class="fab fa-whatsapp"></i>
 </a>
 
