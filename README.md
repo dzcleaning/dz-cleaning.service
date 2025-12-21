@@ -1,3 +1,24 @@
+<p align="center">
+  <img src="images/logo.png" alt="DZ Cleaning Services Logo" width="120">
+</p>
+
+<p align="center">
+  <strong>Entreprise de nettoyage écologique à Annemasse – France</strong>
+</p>
+
+<p align="center">
+  <img src="images/background.jpg" alt="DZ Cleaning Services Website Preview" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/SEO-Optimized-success?style=flat-square" />
+  <img src="https://img.shields.io/badge/Responsive-Yes-blue?style=flat-square" />
+  <img src="https://img.shields.io/badge/WhatsApp-Integrated-25D366?style=flat-square&logo=whatsapp&logoColor=white" />
+  <img src="https://img.shields.io/badge/Languages-FR%20%7C%20EN%20%7C%20AR-orange?style=flat-square" />
+</p>
+
+---
+
 # DZ Cleaning Services
 
 Bienvenue sur le site officiel de **DZ Cleaning Services**,  
@@ -6,12 +27,12 @@ une entreprise spécialisée dans le **nettoyage écologique** à **Annemasse �
 ---
 
 ## 🌐 Aperçu
-- ✅ Multilingue : **Français / English / العربية**
-- ✅ Services : nettoyage **bureaux**, **maisons**, **vitrages**, **commerces**, **fin de chantier**
-- ✅ Design **responsive** (mobile / tablette / desktop)
-- ✅ SEO : `sitemap.xml`, `robots.txt`
-- ✅ Contact : **Formulaire**, **WhatsApp**, **Appel**
-- ✅ **Google Map** intégrée
+✅ Multilingue : **Français / English / العربية**  
+✅ Services : nettoyage **bureaux, maisons, vitrages, commerces, fin de chantier**  
+✅ Design **responsive** (mobile / tablette / desktop)  
+✅ SEO : **sitemap.xml, robots.txt**  
+✅ Contact : **Formulaire, WhatsApp, Appel**  
+✅ **Google Map** intégrée  
 
 ---
 
@@ -19,6 +40,7 @@ une entreprise spécialisée dans le **nettoyage écologique** à **Annemasse �
 - `index.html` : page principale  
 - `services.html` : services proposés  
 - `contact.html` : page contact  
+- `booking.html` : prise de rendez-vous  
 - `style.css` : styles du site  
 - `script.js` : gestion des langues  
 - `images/` : images optimisées (WebP / PNG)  
@@ -28,9 +50,12 @@ une entreprise spécialisée dans le **nettoyage écologique** à **Annemasse �
 ---
 
 ## 🚀 Déploiement
-1. Cloner ou télécharger ce projet.
-2. Uploader tous les fichiers sur **GitHub Pages** ou un hébergeur web.
-3. Le site est immédiatement accessible en ligne.
+1. Cloner ou télécharger ce projet  
+2. Uploader tous les fichiers sur **GitHub Pages** ou un hébergeur web  
+3. Le site est immédiatement accessible en ligne  
+
+🌍 **Site en ligne** :  
+https://dzcleaning.github.io/dz-cleaning.service/
 
 📧 **Contact** : dz.cleaning@yahoo.com  
 📍 **Localisation** : Annemasse – France  
@@ -45,12 +70,12 @@ a company specialized in **eco-friendly cleaning services** in **Annemasse, Fran
 ---
 
 ## 🌐 Overview
-- ✅ Multilingual: **French / English / Arabic**
-- ✅ Services: **office**, **home**, **window**, **shop**, **post-construction cleaning**
-- ✅ Fully **responsive design**
-- ✅ SEO ready: `sitemap.xml`, `robots.txt`
-- ✅ Contact: **Form**, **WhatsApp**, **Phone**
-- ✅ Integrated **Google Map**
+✅ Multilingual: **French / English / Arabic**  
+✅ Services: **office, home, window, shop, post-construction cleaning**  
+✅ Fully responsive design  
+✅ SEO ready: **sitemap.xml, robots.txt**  
+✅ Contact: **Form, WhatsApp, Phone**  
+✅ Integrated **Google Map**  
 
 ---
 
@@ -58,6 +83,7 @@ a company specialized in **eco-friendly cleaning services** in **Annemasse, Fran
 - `index.html` – main page  
 - `services.html` – services page  
 - `contact.html` – contact page  
+- `booking.html` – booking page  
 - `style.css` – site styling  
 - `script.js` – language switch  
 - `images/` – optimized images  
@@ -67,9 +93,9 @@ a company specialized in **eco-friendly cleaning services** in **Annemasse, Fran
 ---
 
 ## 🚀 Deployment
-1. Clone or download this repository.
-2. Upload all files to **GitHub Pages** or any web host.
-3. Your website is ready!
+1. Clone or download this repository  
+2. Upload all files to **GitHub Pages** or any web host  
+3. Your website is ready instantly  
 
 📧 **Contact**: dz.cleaning@yahoo.com  
 📍 **Location**: Annemasse, France  
@@ -84,12 +110,12 @@ a company specialized in **eco-friendly cleaning services** in **Annemasse, Fran
 ---
 
 ## 🌐 نظرة عامة
-- ✅ دعم ثلاث لغات: **العربية / الفرنسية / الإنجليزية**
-- ✅ الخدمات: تنظيف **المنازل**، **المكاتب**، **الزجاج**، **المحلات**، **بعد انتهاء الورش**
-- ✅ تصميم متجاوب لجميع الأجهزة
-- ✅ تحسين محركات البحث: `sitemap.xml` و `robots.txt`
-- ✅ تواصل مباشر: **نموذج – واتساب – مكالمة هاتفية**
-- ✅ خريطة **Google** مدمجة
+✅ دعم ثلاث لغات: **العربية / الفرنسية / الإنجليزية**  
+✅ الخدمات: تنظيف **المنازل، المكاتب، الزجاج، المحلات، بعد انتهاء الورش**  
+✅ تصميم متجاوب لجميع الأجهزة  
+✅ تحسين محركات البحث: **sitemap.xml و robots.txt**  
+✅ تواصل مباشر: **نموذج – واتساب – مكالمة هاتفية**  
+✅ خريطة **Google** مدمجة  
 
 ---
 
@@ -97,6 +123,7 @@ a company specialized in **eco-friendly cleaning services** in **Annemasse, Fran
 - `index.html` – الصفحة الرئيسية  
 - `services.html` – صفحة الخدمات  
 - `contact.html` – صفحة الاتصال  
+- `booking.html` – صفحة الحجز  
 - `style.css` – التنسيقات  
 - `script.js` – إدارة اللغات  
 - `images/` – صور محسّنة  
@@ -106,9 +133,9 @@ a company specialized in **eco-friendly cleaning services** in **Annemasse, Fran
 ---
 
 ## 🚀 النشر
-1. تحميل أو نسخ المشروع.
-2. رفع جميع الملفات إلى **GitHub Pages** أو أي استضافة.
-3. الموقع يصبح جاهزًا للعمل مباشرة.
+1. تحميل أو نسخ المشروع  
+2. رفع جميع الملفات إلى **GitHub Pages** أو أي استضافة  
+3. الموقع يصبح جاهزًا للعمل مباشرة  
 
 📧 **البريد الإلكتروني**: dz.cleaning@yahoo.com  
-📍 **الموقع**: آنِماس – فرنسا
+📍 **الموقع**: آنِماس – فرنسا  
