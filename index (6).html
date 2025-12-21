@@ -1,258 +1,105 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DZ Cleaning Services</title>
-  <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
+  <meta charset="UTF-8">
+  <title>DZ Cleaning Services – Entreprise de nettoyage à Annemasse</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+  <!-- SEO -->
+  <meta name="description" content="Entreprise de nettoyage écologique à Annemasse : maisons, bureaux, vitrages et commerces. DZ Cleaning Services.">
+  <meta name="keywords" content="nettoyage Annemasse, nettoyage bureaux, nettoyage maisons, nettoyage vitres">
+  <link rel="canonical" href="https://dzcleaning.github.io/dz-cleaning.service/">
 
-  <style>
-    :root {
-      --main-color: #004080;
-      --accent-color: #007BFF;
-      --bg-light: #f8f9fa;
-      --text-dark: #333;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: var(--bg-light);
-      color: var(--text-dark);
-    }
-
-    header {
-      background: url('images/background.jpg') center/cover;
-      color: #fff;
-      text-align: center;
-      padding: 4rem 1rem;
-      position: relative;
-    }
-
-    header::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: rgba(0,0,0,0.5);
-    }
-
-    header * { position: relative; z-index: 2; }
-
-    header img { width: 100px; }
-
-    .lang-switcher button {
-      margin: 5px;
-      padding: 8px 15px;
-      border: none;
-      border-radius: 4px;
-      background: var(--accent-color);
-      color: #fff;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    nav {
-      display: flex;
-      justify-content: center;
-      background: var(--main-color);
-      flex-wrap: wrap;
-    }
-
-    nav a {
-      color: #fff;
-      padding: 1rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    nav a:hover { background: var(--accent-color); }
-
-    main {
-      max-width: 1000px;
-      margin: auto;
-      padding: 2rem;
-      background: #fff;
-    }
-
-    h2 { color: var(--main-color); }
-
-    .services {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-
-    .service-box {
-      flex: 1 1 45%;
-      background: #f1f1f1;
-      padding: 1rem;
-      border-radius: 8px;
-      text-align: center;
-      font-weight: bold;
-    }
-
-    form input, form textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 1rem;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-
-    form button {
-      background: var(--main-color);
-      color: #fff;
-      border: none;
-      padding: 10px 20px;
-      cursor: pointer;
-      border-radius: 4px;
-    }
-
-    [data-lang] { display: none; }
-    .visible { display: block; }
-
-    footer {
-      background: var(--main-color);
-      color: #fff;
-      text-align: center;
-      padding: 2rem 1rem;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-<header data-aos="fade-down">
-  <img src="images/logo.png" alt="DZ Cleaning Services">
+<!-- ===== HEADER / HERO ===== -->
+<header class="hero">
+  <img src="images/logo.png" alt="DZ Cleaning Services Logo">
   <h1>DZ Cleaning Services</h1>
+  <p>Entreprise de nettoyage à Annemasse</p>
 
-  <div class="lang-switcher">
-    <button onclick="switchLang('ar')">العربية</button>
-    <button onclick="switchLang('fr')">Français</button>
-    <button onclick="switchLang('en')">English</button>
+  <div class="lang-switch">
+    <button onclick="switchLang('fr')">FR</button>
+    <button onclick="switchLang('en')">EN</button>
+    <button onclick="switchLang('ar')">AR</button>
   </div>
 </header>
 
+<!-- ===== NAVIGATION ===== -->
 <nav>
-  <a href="#about">About</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
+  <a href="index.html">Accueil</a>
+  <a href="services.html">Services</a>
+  <a href="contact.html">Contact</a>
 </nav>
 
 <main>
 
-<!-- ===== AR ===== -->
-<section data-lang="ar" class="visible">
-  <h2>من نحن</h2>
-  <p>شركة تنظيف محترفة تقدم خدمات شاملة للمنازل والمكاتب والمحلات ونهاية الورشات.</p>
-</section>
-
-<section data-lang="ar" class="visible">
-  <h2>خدماتنا</h2>
-  <div class="services">
-    <div class="service-box">تنظيف المنازل</div>
-    <div class="service-box">تنظيف المكاتب</div>
-    <div class="service-box">تنظيف الزجاج</div>
-    <div class="service-box">تنظيف المحلات التجارية</div>
-    <div class="service-box">نهاية الورشات</div>
-  </div>
-</section>
-
-<section data-lang="ar" class="visible">
-  <h2>اتصل بنا</h2>
-  <form action="https://formspree.io/f/mrbkpwkl" method="POST">
-    <input type="text" name="name" placeholder="الاسم الكامل" required>
-    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-    <textarea name="message" placeholder="رسالتك" required></textarea>
-    <button type="submit">إرسال</button>
-  </form>
-</section>
-
 <!-- ===== FR ===== -->
-<section data-lang="fr">
+<section data-lang="fr" class="visible">
   <h2>Qui sommes-nous</h2>
-  <p>Entreprise de nettoyage professionnelle pour maisons, bureaux, commerces et fins de chantier.</p>
-</section>
+  <p>
+    DZ Cleaning Services est une entreprise de nettoyage professionnelle basée à Annemasse.
+    Nous proposons des services écologiques pour les particuliers et les professionnels.
+  </p>
 
-<section data-lang="fr">
   <h2>Nos services</h2>
-  <div class="services">
-    <div class="service-box">Nettoyage maisons</div>
-    <div class="service-box">Nettoyage bureaux</div>
-    <div class="service-box">Nettoyage vitres</div>
-    <div class="service-box">Nettoyage commerces</div>
-    <div class="service-box">Fin de chantier</div>
-  </div>
-</section>
-
-<section data-lang="fr">
-  <h2>Contact</h2>
-  <form action="https://formspree.io/f/mrbkpwkl" method="POST">
-    <input type="text" name="name" placeholder="Nom complet" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Votre message" required></textarea>
-    <button type="submit">Envoyer</button>
-  </form>
+  <ul>
+    <li>Nettoyage maisons et appartements</li>
+    <li>Nettoyage bureaux</li>
+    <li>Nettoyage vitrages</li>
+    <li>Nettoyage commerces</li>
+    <li>Fin de chantier</li>
+  </ul>
 </section>
 
 <!-- ===== EN ===== -->
 <section data-lang="en">
   <h2>About Us</h2>
-  <p>Professional cleaning services for homes, offices, shops and post-construction cleaning.</p>
-</section>
+  <p>
+    DZ Cleaning Services is a professional cleaning company based in Annemasse,
+    offering eco-friendly services for homes and businesses.
+  </p>
 
-<section data-lang="en">
   <h2>Our Services</h2>
-  <div class="services">
-    <div class="service-box">Home cleaning</div>
-    <div class="service-box">Office cleaning</div>
-    <div class="service-box">Window cleaning</div>
-    <div class="service-box">Shop cleaning</div>
-    <div class="service-box">End of construction</div>
-  </div>
+  <ul>
+    <li>Home & apartment cleaning</li>
+    <li>Office cleaning</li>
+    <li>Window cleaning</li>
+    <li>Shop cleaning</li>
+    <li>Post-construction cleaning</li>
+  </ul>
 </section>
 
-<section data-lang="en">
-  <h2>Contact Us</h2>
-  <form action="https://formspree.io/f/mrbkpwkl" method="POST">
-    <input type="text" name="name" placeholder="Full name" required>
-    <input type="email" name="email" placeholder="Email" required>
-    <textarea name="message" placeholder="Your message" required></textarea>
-    <button type="submit">Send</button>
-  </form>
+<!-- ===== AR ===== -->
+<section data-lang="ar">
+  <h2>من نحن</h2>
+  <p>
+    شركة DZ Cleaning Services هي شركة تنظيف محترفة مقرها مدينة آنِماس،
+    تقدم خدمات تنظيف صديقة للبيئة للأفراد والشركات.
+  </p>
+
+  <h2>خدماتنا</h2>
+  <ul>
+    <li>تنظيف المنازل والشقق</li>
+    <li>تنظيف المكاتب</li>
+    <li>تنظيف الزجاج</li>
+    <li>تنظيف المحلات التجارية</li>
+    <li>نهاية الورشات</li>
+  </ul>
 </section>
 
 </main>
 
+<!-- ===== FOOTER ===== -->
 <footer>
   <p><strong>DZ Cleaning Services</strong></p>
   <p>Annemasse – France</p>
   <p>📞 06 15 65 85 35 | ✉️ dz.cleaning@yahoo.com</p>
+  <p>© 2025 DZ Cleaning Services</p>
 </footer>
 
-<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init();
-
-  function switchLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.remove('visible');
-      if (el.getAttribute('data-lang') === lang) {
-        el.classList.add('visible');
-      }
-    });
-    document.documentElement.lang = lang;
-    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
-  }
-</script>
-
+<script src="script.js"></script>
 </body>
 </html>
-
-</body>
-</html>
-
-
-</body></html>
