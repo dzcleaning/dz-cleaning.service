@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
@@ -6,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>DZ Cleaning Services</title>
   <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
+
   <style>
     :root {
       --main-color: #004080;
@@ -15,180 +15,241 @@
       --bg-light: #f8f9fa;
       --text-dark: #333;
     }
+
     body {
-      margin: 0; padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: var(--bg-light);
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
       color: var(--text-dark);
     }
+
     header {
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
+      background: url('images/background.jpg') center/cover;
+      color: #fff;
       text-align: center;
       padding: 4rem 1rem;
       position: relative;
     }
+
     header::after {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
     }
-    header h1, header img, .lang-switcher {
-      position: relative;
-      z-index: 2;
-    }
-    header img {
-      width: 100px;
-      height: auto;
-    }
-    .lang-switcher {
-      margin-top: 1rem;
-    }
+
+    header * { position: relative; z-index: 2; }
+
+    header img { width: 100px; }
+
     .lang-switcher button {
-      margin: 0.3rem;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      cursor: pointer;
+      margin: 5px;
+      padding: 8px 15px;
       border: none;
       border-radius: 4px;
-      background-color: var(--accent-color);
-      color: white;
+      background: var(--accent-color);
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
     }
+
     nav {
       display: flex;
       justify-content: center;
-      background-color: var(--main-color);
+      background: var(--main-color);
       flex-wrap: wrap;
     }
+
     nav a {
-      color: white;
+      color: #fff;
       padding: 1rem;
       text-decoration: none;
       font-weight: bold;
     }
-    nav a:hover {
-      background-color: var(--accent-color);
-    }
+
+    nav a:hover { background: var(--accent-color); }
+
     main {
-      padding: 2rem;
-      max-width: 960px;
+      max-width: 1000px;
       margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      background: #fff;
     }
-    h2 {
-      color: var(--main-color);
-    }
+
+    h2 { color: var(--main-color); }
+
     .services {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
+
     .service-box {
       flex: 1 1 45%;
       background: #f1f1f1;
       padding: 1rem;
       border-radius: 8px;
-    }
-    [data-lang] { display: none; }
-    .visible { display: block; }
-    footer {
-      background-color: var(--main-color);
-      color: white;
       text-align: center;
-      padding: 1rem;
+      font-weight: bold;
     }
+
     form input, form textarea {
       width: 100%;
+      padding: 10px;
       margin-bottom: 1rem;
-      padding: 0.5rem;
+      border-radius: 4px;
       border: 1px solid #ccc;
+    }
+
+    form button {
+      background: var(--main-color);
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
       border-radius: 4px;
     }
-    form button {
-      background-color: var(--main-color);
-      color: white;
-      padding: 0.7rem 1.5rem;
-      border: none;
-      cursor: pointer;
-    }
-    form button:hover {
-      background-color: var(--accent-color);
+
+    [data-lang] { display: none; }
+    .visible { display: block; }
+
+    footer {
+      background: var(--main-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
     }
   </style>
 </head>
+
 <body>
-  <header data-aos="fade-down">
-    <img src="images/logo.png" alt="DZ Cleaning Services Logo" />
-    <h1>DZ Cleaning Services</h1>
-    <div class="lang-switcher">
-      <button onclick="switchLang('ar')">العربية</button>
-      <button onclick="switchLang('fr')">Français</button>
-      <button onclick="switchLang('en')">English</button>
-    </div>
-  </header>
 
-  <nav>
-    <a href="#about">عن الشركة</a>
-    <a href="#services">الخدمات</a>
-    <a href="#contact">اتصل بنا</a>
-    <a href="#policy">الخصوصية</a>
-    <a href="#terms">الشروط</a>
-  </nav>
+<header data-aos="fade-down">
+  <img src="images/logo.png" alt="DZ Cleaning Services">
+  <h1>DZ Cleaning Services</h1>
 
-  <main>
-    <section id="about" data-lang="ar" class="visible" data-aos="fade-up">
-      <h2>من نحن</h2>
-      <p>نحن شركة تنظيف محترفة تقدم خدمات شاملة للمنازل والمكاتب والورشات. نستخدم منتجات صديقة للبيئة ولدينا فريق مؤهل يضمن الجودة والموثوقية.</p>
-    </section>
+  <div class="lang-switcher">
+    <button onclick="switchLang('ar')">العربية</button>
+    <button onclick="switchLang('fr')">Français</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+</header>
 
-    <section id="services" data-lang="ar" class="visible" data-aos="fade-up">
-      <h2>خدماتنا</h2>
-      <div class="services">
-        <div class="service-box">تنظيف منازل</div>
-        <div class="service-box">تنظيف مكاتب</div>
-        <div class="service-box">نهاية الورشات</div>
-        <div class="service-box">تنظيف المحلات</div>
-      </div>
-    </section>
+<nav>
+  <a href="#about">About</a>
+  <a href="#services">Services</a>
+  <a href="#contact">Contact</a>
+</nav>
 
-    <section id="contact" data-lang="ar" class="visible" data-aos="fade-up">
-      <h2>اتصل بنا</h2>
-      <form action="https://formspree.io/f/mrbkpwkl" method="POST">
-        <input type="text" name="name" placeholder="الاسم الكامل" required>
-        <input type="email" name="email" placeholder="البريد الإلكتروني" required>
-        <textarea name="message" placeholder="رسالتك" rows="4" required></textarea>
-        <button type="submit">إرسال</button>
-      </form>
-    </section>
+<main>
 
-    <section id="policy" data-lang="ar" class="visible">
-      <h2>سياسة الخصوصية</h2>
-      <p>نلتزم بحماية خصوصيتك وبياناتك الشخصية. لا نقوم بمشاركة أي بيانات مع جهات خارجية.</p>
-    </section>
+<!-- ===== AR ===== -->
+<section data-lang="ar" class="visible">
+  <h2>من نحن</h2>
+  <p>شركة تنظيف محترفة تقدم خدمات شاملة للمنازل والمكاتب والمحلات ونهاية الورشات.</p>
+</section>
 
-    <section id="terms" data-lang="ar" class="visible">
-      <h2>شروط الاستخدام</h2>
-      <p>باستخدامك لموقعنا، فإنك توافق على احترام شروطنا وسياساتنا الموضحة هنا.</p>
-    </section>
-  </main>
+<section data-lang="ar" class="visible">
+  <h2>خدماتنا</h2>
+  <div class="services">
+    <div class="service-box">تنظيف المنازل</div>
+    <div class="service-box">تنظيف المكاتب</div>
+    <div class="service-box">تنظيف الزجاج</div>
+    <div class="service-box">تنظيف المحلات التجارية</div>
+    <div class="service-box">نهاية الورشات</div>
+  </div>
+</section>
 
-  <footer>
-    <p>&copy; 2025 DZ Cleaning Services</p>
-  
+<section data-lang="ar" class="visible">
+  <h2>اتصل بنا</h2>
+  <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+    <input type="text" name="name" placeholder="الاسم الكامل" required>
+    <input type="email" name="email" placeholder="البريد الإلكتروني" required>
+    <textarea name="message" placeholder="رسالتك" required></textarea>
+    <button type="submit">إرسال</button>
+  </form>
+</section>
+
+<!-- ===== FR ===== -->
+<section data-lang="fr">
+  <h2>Qui sommes-nous</h2>
+  <p>Entreprise de nettoyage professionnelle pour maisons, bureaux, commerces et fins de chantier.</p>
+</section>
+
+<section data-lang="fr">
+  <h2>Nos services</h2>
+  <div class="services">
+    <div class="service-box">Nettoyage maisons</div>
+    <div class="service-box">Nettoyage bureaux</div>
+    <div class="service-box">Nettoyage vitres</div>
+    <div class="service-box">Nettoyage commerces</div>
+    <div class="service-box">Fin de chantier</div>
+  </div>
+</section>
+
+<section data-lang="fr">
+  <h2>Contact</h2>
+  <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+    <input type="text" name="name" placeholder="Nom complet" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Votre message" required></textarea>
+    <button type="submit">Envoyer</button>
+  </form>
+</section>
+
+<!-- ===== EN ===== -->
+<section data-lang="en">
+  <h2>About Us</h2>
+  <p>Professional cleaning services for homes, offices, shops and post-construction cleaning.</p>
+</section>
+
+<section data-lang="en">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">Home cleaning</div>
+    <div class="service-box">Office cleaning</div>
+    <div class="service-box">Window cleaning</div>
+    <div class="service-box">Shop cleaning</div>
+    <div class="service-box">End of construction</div>
+  </div>
+</section>
+
+<section data-lang="en">
+  <h2>Contact Us</h2>
+  <form action="https://formspree.io/f/mrbkpwkl" method="POST">
+    <input type="text" name="name" placeholder="Full name" required>
+    <input type="email" name="email" placeholder="Email" required>
+    <textarea name="message" placeholder="Your message" required></textarea>
+    <button type="submit">Send</button>
+  </form>
+</section>
+
+</main>
+
 <footer>
-  <div class="footer-info">
-    <p><strong>Dz Cleaning Services</strong></p>
-    <p>14 rue d'Arve, Annemasse 74100</p>
-    <p>Tel: 0033615658535 | Email: dz.cleaning@yahoo.com</p>
-  </div>
-  <div class="footer-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.2176300120364!2d6.235!3d46.195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6484f4cfcd0f%3A0x123!2s14%20Rue%20d'Arve%2C%2074100%20Annemasse!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
-  </div>
+  <p><strong>DZ Cleaning Services</strong></p>
+  <p>Annemasse – France</p>
+  <p>📞 06 15 65 85 35 | ✉️ dz.cleaning@yahoo.com</p>
 </footer>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+  function switchLang(lang) {
+    document.querySelectorAll('[data-lang]').forEach(el => {
+      el.classList.remove('visible');
+      if (el.getAttribute('data-lang') === lang) {
+        el.classList.add('visible');
+      }
+    });
+    document.documentElement.lang = lang;
+    document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+  }
+</script>
+
+</body>
+</html>
+
 
 </body></html>
