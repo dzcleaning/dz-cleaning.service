@@ -14,7 +14,15 @@
 </head>
 <body>
 
-<section class="contact-section">
+<!-- ===== Language Switch ===== -->
+<div class="lang-switch" style="text-align:center; margin-top:20px;">
+  <button onclick="switchLang('fr')">FR</button>
+  <button onclick="switchLang('en')">EN</button>
+  <button onclick="switchLang('ar')">AR</button>
+</div>
+
+<!-- ===== CONTACT : FR ===== -->
+<section class="contact-section visible" data-lang="fr">
   <h1>Contact DZ Cleaning Services</h1>
   <p>Besoin d’un devis ou d’une information ? Contactez-nous facilement.</p>
 
@@ -27,14 +35,59 @@
     </a>
   </div>
 
-  <!-- Google Map -->
   <div class="map-container">
     <iframe
-      src="https://www.google.com/maps?q=14b%20quai%20d'Arve%20Annemasse%2074100&output=embed"
+      src="https://www.google.com/maps?q=14%20Quai%20d'Arve%20Annemasse%2074100&output=embed"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
+<!-- ===== CONTACT : EN ===== -->
+<section class="contact-section" data-lang="en">
+  <h1>Contact DZ Cleaning Services</h1>
+  <p>Need a quote or information? Get in touch with us easily.</p>
+
+  <div class="contact-actions">
+    <a href="https://wa.me/33615658535" target="_blank" class="btn btn-whatsapp">
+      📱 WhatsApp
+    </a>
+    <a href="mailto:dz.cleaning@yahoo.com" class="btn btn-email">
+      ✉️ Email
+    </a>
+  </div>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=14%20Quai%20d'Arve%20Annemasse%2074100&output=embed"
       loading="lazy">
     </iframe>
   </div>
 </section>
 
+<!-- ===== CONTACT : AR ===== -->
+<section class="contact-section" data-lang="ar">
+  <h1>اتصل بـ DZ Cleaning Services</h1>
+  <p>هل تحتاج إلى عرض سعر أو معلومات؟ تواصل معنا بسهولة.</p>
+
+  <div class="contact-actions">
+    <a href="https://wa.me/33615658535" target="_blank" class="btn btn-whatsapp">
+      📱 واتساب
+    </a>
+    <a href="mailto:dz.cleaning@yahoo.com" class="btn btn-email">
+      ✉️ بريد إلكتروني
+    </a>
+  </div>
+
+  <div class="map-container">
+    <iframe
+      src="https://www.google.com/maps?q=14%20Quai%20d'Arve%20Annemasse%2074100&output=embed"
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<script src="script.js"></script>
 </body>
 </html>
