@@ -8,11 +8,11 @@
       }
     });
 
-    // تغيير اتجاه الصفحة
+    // تغيير لغة واتجاه الصفحة
     document.documentElement.lang = lang;
     document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
 
-    // حفظ اللغة
+    // حفظ اللغة المختارة
     localStorage.setItem('lang', lang);
   }
 
