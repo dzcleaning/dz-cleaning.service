@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DZ Cleaning Services</title>
+
   <meta name="description" content="خدمات تنظيف احترافية للمنازل والمكاتب - DZ Cleaning Services">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
   <style>
     :root {
       --main-color: #004080;
@@ -13,166 +16,190 @@
       --bg-light: #f8f9fa;
       --text-dark: #333;
     }
+
     body {
       margin: 0;
-      padding: 0;
-      font-family: 'Arial', sans-serif;
-      background-color: var(--bg-light);
+      font-family: Arial, sans-serif;
+      background: var(--bg-light);
       color: var(--text-dark);
     }
+
     header {
-      background-image: url('images/background.jpg');
-      background-size: cover;
-      background-position: center;
-      color: white;
+      background: url('images/background.jpg') center/cover;
+      color: #fff;
       text-align: center;
       padding: 4rem 1rem;
       position: relative;
     }
+
     header::after {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: rgba(0, 0, 0, 0.5);
-      z-index: 1;
+      inset: 0;
+      background: rgba(0,0,0,0.5);
     }
-    header h1 {
+
+    header * {
       position: relative;
       z-index: 2;
-      font-size: 2.5rem;
     }
+
     header img {
       width: 100px;
-      height: auto;
-      position: relative;
-      z-index: 2;
     }
-    .lang-switcher {
-      text-align: center;
-      margin-top: 1rem;
-      position: relative;
-      z-index: 2;
-    }
+
     .lang-switcher button {
-      margin: 0.3rem;
-      padding: 0.5rem 1rem;
-      font-weight: bold;
-      cursor: pointer;
+      margin: 5px;
+      padding: 8px 14px;
       border: none;
       border-radius: 4px;
-      background-color: var(--accent-color);
-      color: white;
+      background: var(--accent-color);
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
     }
+
     nav {
       display: flex;
       justify-content: center;
-      background-color: var(--main-color);
       flex-wrap: wrap;
+      background: var(--main-color);
     }
+
     nav a {
-      color: white;
+      color: #fff;
       padding: 1rem;
       text-decoration: none;
       font-weight: bold;
     }
+
     nav a:hover {
-      background-color: var(--accent-color);
+      background: var(--accent-color);
     }
+
     main {
-      padding: 2rem;
-      max-width: 960px;
+      max-width: 1000px;
       margin: auto;
-      background-color: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 2rem;
+      background: #fff;
     }
+
     h2 {
       color: var(--main-color);
     }
-    [data-lang] { display: none; }
-    .visible { display: block; }
-    footer {
-      background-color: var(--main-color);
-      color: white;
-      text-align: center;
-      padding: 1rem;
-    }
+
     .services {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
     }
+
     .service-box {
       flex: 1 1 45%;
       background: #f1f1f1;
       padding: 1rem;
       border-radius: 8px;
     }
+
     iframe {
       width: 100%;
       height: 300px;
       border: none;
-      margin-top: 1rem;رفع
+      margin-top: 1rem;
     }
+
+    footer {
+      background: var(--main-color);
+      color: #fff;
+      text-align: center;
+      padding: 2rem 1rem;
+      margin-top: 40px;
+    }
+
+    [data-lang] { display: none; }
+    .visible { display: block; }
   </style>
+
   <script>
     function switchLang(lang) {
-      const sections = document.querySelectorAll('[data-lang]');
-      sections.forEach(s => s.classList.remove('visible'));
-      const active = document.querySelectorAll(`[data-lang="${lang}"]`);
-      active.forEach(s => s.classList.add('visible'));
+      document.querySelectorAll('[data-lang]').forEach(el => {
+        el.classList.remove('visible');
+        if (el.dataset.lang === lang) {
+          el.classList.add('visible');
+        }
+      });
+
+      document.documentElement.lang = lang;
+      document.documentElement.dir = (lang === 'ar') ? 'rtl' : 'ltr';
+      localStorage.setItem('lang', lang);
     }
-    window.onload = () => switchLang('ar');
+
+    window.addEventListener('DOMContentLoaded', () => {
+      switchLang(localStorage.getItem('lang') || 'ar');
+    });
   </script>
 </head>
+
 <body>
-  <header>
-    <img src="images/logo.png" alt="DZ Cleaning Services Logo">
-    <h1>DZ Cleaning Services</h1>
-    <div class="lang-switcher">
-      <button onclick="switchLang('ar')">العربية</button>
-      <button onclick="switchLang('fr')">Français</button>
-      <button onclick="switchLang('en')">English</button>
-    </div>
-  </header>
-  <nav>
-    <a href="#about">عن الشركة</a>
-    <a href="#services">الخدمات</a>
-    <a href="#contact">اتصل بنا</a>
-    <a href="#policy">الخصوصية</a>
-    <a href="#terms">الشروط</a>
-  </nav>
-  <main>
-    <!-- الأقسام السابقة تبقى كما هي -->
 
-    <section id="contact" data-lang="ar" class="visible">
-      <h2>اتصل بنا</h2>
-      <p>الهاتف: 0033615658535<br>البريد الإلكتروني: dz.cleaning@yahoo.com<br>العنوان: 14b quai d'Arve, Annemasse 74100</p>
-      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed"></iframe>
-    </section>
-    <section id="contact" data-lang="fr">
-      <h2>Contact</h2>
-      <p>Téléphone : 0033615658535<br>Email : dz.cleaning@yahoo.com<br>Adresse : 14b quai d'Arve, Annemasse 74100</p>
-      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed"></iframe>
-    </section>
-    <section id="contact" data-lang="en">
-      <h2>Contact Us</h2>
-      <p>Phone: 0033615658535<br>Email: dz.cleaning@yahoo.com<br>Address: 14b quai d'Arve, Annemasse 74100</p>
-      <iframe src="https://www.google.com/maps?q=14b+quai+d'Arve,+Annemasse,+France&output=embed"></iframe>
-    </section>
+<header>
+  <img src="images/logo.png" alt="DZ Cleaning Services Logo">
+  <h1>DZ Cleaning Services</h1>
 
-  </main>
-  <footer>
-    <p>&copy; 2025 DZ Cleaning Services - Tous droits réservés.</p>
-  
+  <div class="lang-switcher">
+    <button onclick="switchLang('ar')">العربية</button>
+    <button onclick="switchLang('fr')">Français</button>
+    <button onclick="switchLang('en')">English</button>
+  </div>
+</header>
+
+<nav>
+  <a href="#contact-ar">Contact</a>
+</nav>
+
+<main>
+
+<!-- ===== AR ===== -->
+<section id="contact-ar" data-lang="ar" class="visible">
+  <h2>اتصل بنا</h2>
+  <p>
+    الهاتف: 06 15 65 85 35<br>
+    البريد الإلكتروني: dz.cleaning@yahoo.com<br>
+    العنوان: 14 Quai d'Arve, Annemasse 74100
+  </p>
+  <iframe src="https://www.google.com/maps?q=14+Quai+d'Arve+Annemasse&output=embed"></iframe>
+</section>
+
+<!-- ===== FR ===== -->
+<section data-lang="fr">
+  <h2>Contact</h2>
+  <p>
+    Téléphone : 06 15 65 85 35<br>
+    Email : dz.cleaning@yahoo.com<br>
+    Adresse : 14 Quai d'Arve, Annemasse 74100
+  </p>
+  <iframe src="https://www.google.com/maps?q=14+Quai+d'Arve+Annemasse&output=embed"></iframe>
+</section>
+
+<!-- ===== EN ===== -->
+<section data-lang="en">
+  <h2>Contact Us</h2>
+  <p>
+    Phone: 06 15 65 85 35<br>
+    Email: dz.cleaning@yahoo.com<br>
+    Address: 14 Quai d'Arve, Annemasse 74100
+  </p>
+  <iframe src="https://www.google.com/maps?q=14+Quai+d'Arve+Annemasse&output=embed"></iframe>
+</section>
+
+</main>
+
 <footer>
-  <div class="footer-info">
-    <p><strong>Dz Cleaning Services</strong></p>
-    <p>14 rue d'Arve, Annemasse 74100</p>
-    <p>Tel: 0033615658535 | Email: dz.cleaning@yahoo.com</p>
-  </div>
-  <div class="footer-map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2780.2176300120364!2d6.235!3d46.195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x478c6484f4cfcd0f%3A0x123!2s14%20Rue%20d'Arve%2C%2074100%20Annemasse!5e0!3m2!1sfr!2sfr!4v1700000000000" width="100%" height="250" style="border:0;" allowfullscreen loading="lazy"></iframe>
-  </div>
+  <p><strong>DZ Cleaning Services</strong></p>
+  <p>Annemasse – France</p>
+  <p>📞 06 15 65 85 35 | ✉️ dz.cleaning@yahoo.com</p>
+  <p>© 2025 DZ Cleaning Services</p>
 </footer>
 
-</body></html>
+</body>
+</html>
