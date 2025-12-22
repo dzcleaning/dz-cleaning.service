@@ -11,6 +11,18 @@
   <link rel="canonical" href="https://dzcleaning.github.io/dz-cleaning.service/services.html">
 
   <link rel="stylesheet" href="style.css">
+
+  <!-- Google Analytics GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <!-- Font Awesome (WhatsApp icon) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
 
@@ -42,7 +54,6 @@
 <section data-lang="fr" class="visible">
   <h2>Nos services</h2>
   <p>Nous proposons des prestations de nettoyage professionnel adaptées à vos besoins.</p>
-
   <ul>
     <li>🧼 Nettoyage maisons et appartements</li>
     <li>🏢 Nettoyage bureaux et locaux professionnels</li>
@@ -56,7 +67,6 @@
 <section data-lang="en">
   <h2>Our Services</h2>
   <p>We provide professional cleaning services tailored to your needs.</p>
-
   <ul>
     <li>🧼 Home & apartment cleaning</li>
     <li>🏢 Office & business premises cleaning</li>
@@ -70,7 +80,6 @@
 <section data-lang="ar">
   <h2>خدماتنا</h2>
   <p>نقدم خدمات تنظيف احترافية تناسب احتياجاتكم.</p>
-
   <ul>
     <li>🧼 تنظيف المنازل والشقق</li>
     <li>🏢 تنظيف المكاتب والمقرات</li>
@@ -90,7 +99,15 @@
   <p>© 2025 DZ Cleaning Services</p>
 </footer>
 
+<!-- WhatsApp Floating Button -->
+<a href="https://wa.me/33615658535?text=Bonjour%20DZ%20Cleaning%20Services%2C%20je%20souhaite%20un%20devis%20de%20nettoyage%20%C3%A0%20Annemasse."
+   class="whatsapp-float"
+   target="_blank"
+   aria-label="WhatsApp DZ Cleaning Services"
+   onclick="gtag('event','click_whatsapp',{event_category:'engagement',event_label:'Services Page'});">
+  <i class="fab fa-whatsapp"></i>
+</a>
+
 <script src="script.js"></script>
 </body>
 </html>
-
