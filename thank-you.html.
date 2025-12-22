@@ -5,15 +5,35 @@
   <title>Merci – DZ Cleaning Services</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- SEO -->
   <meta name="description" content="Merci pour votre message. DZ Cleaning Services vous répondra dans les plus brefs délais.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Analytics / Google Ads (GA4) -->
+  <!-- 🔴 استبدل G-XXXXXXXXXX بالـ ID الحقيقي -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-XXXXXXXXXX');
+
+    /* ✅ Conversion event */
+    gtag('event', 'generate_lead', {
+      event_category: 'form',
+      event_label: 'Contact Form Submission'
+    });
+  </script>
 
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <section class="contact-section">
   <h1>Merci 🙏</h1>
-  <p>Votre message a bien été pris en compte.</p>
+  <p><strong>Votre message a bien été envoyé.</strong></p>
   <p>Nous vous répondrons dans les plus brefs délais.</p>
 
   <a href="index.html" class="btn btn-email">⬅ Retour à l’accueil</a>
