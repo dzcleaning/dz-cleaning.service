@@ -256,19 +256,68 @@ form button:hover {
 }
 
 /* =====================
-   FOOTER
+   GOOGLE QR REVIEW
 ===================== */
 
-footer {
-  background: var(--main-color);
-  color: white;
+.qr-review {
+  margin-top: 25px;
   text-align: center;
-  padding: 2rem 1rem;
-  margin-top: 40px;
 }
 
-footer p {
-  margin: 5px 0;
+.qr-review p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--main-color);
+}
+
+.qr-review img {
+  width: 160px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+}
+
+/* =====================
+   WHATSAPP FLOAT BUTTON
+===================== */
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.whatsapp-float:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+}
+
+html[dir="rtl"] .whatsapp-float {
+  right: auto;
+  left: 20px;
+}
+
+/* =====================
+   MOBILE / TOUCH
+===================== */
+
+button,
+.btn,
+.whatsapp-float {
+  -webkit-tap-highlight-color: transparent;
 }
 
 /* =====================
